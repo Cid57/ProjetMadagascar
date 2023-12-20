@@ -1,0 +1,259 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+#titre {
+  color: #ea3d52;
+}
+
+#bandeau {
+  background: #67a3bc;
+}
+
+/* Effet d'une barre au passage de la souris */
+
+li a {
+  line-height: 35px;
+}
+
+li a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: 0.4s ease, 0.4s ease;
+  background-color: #fff;
+}
+
+a:active {
+  background-color: #ea3d52;
+}
+
+li a:hover:after {
+  width: 90%;
+  background: #fff;
+}
+
+li a:hover {
+  background-color: #ea3d52;
+  /* background-color: #67a3bc; */
+}
+
+a:visited {
+  color: #ea3d52;
+}
+
+#card {
+  background: #67a3bc;
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+}
+
+.card h2 {
+  color: #ea3d52;
+  text-align: center;
+}
+
+.galerie {
+  padding: 0 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vmin;
+}
+
+.galerie li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
+}
+
+.galerie img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container img {
+  position: relative;
+}
+
+/* Element qui superpose l'image */
+.relaxation {
+  position: absolute;
+  color: #fff;
+  top: 430%;
+  right: 8%;
+  width: 45%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2559f6;
+}
+
+.relaxation h2 {
+  padding-bottom: 20px;
+}
+
+.relaxation p {
+  padding-bottom: 20px;
+}
+
+.action-button {
+  padding: 8px 8px 6px 20px;
+  border-radius: 10px;
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+  background-color: #fff;
+  border-bottom: 5px solid #fff;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+.action-button:hover {
+  transform: translate(6px, 6px);
+  background: black;
+  color: #fff;
+}
+
+/* Element qui superpose l'image */
+.arts {
+  position: absolute;
+  color: #fff;
+  top: 595%;
+  width: 45%;
+  margin-left: 50px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #451245;
+}
+
+.arts h2 {
+  padding-bottom: 20px;
+}
+
+.arts p {
+  padding-bottom: 20px;
+}
+
+/* Element qui superpose l'image */
+.activites {
+  position: absolute;
+  color: #fff;
+  top: 746%;
+  right: 8%;
+  width: 45%;
+  margin-left: 50px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ea3d52;
+}
+
+.activites h2 {
+  padding-bottom: 20px;
+}
+
+.activites p {
+  padding-bottom: 20px;
+}
+
+.btn {
+  background-color: #90ed1e;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.header3 {
+  background-image: url(../IMG/header3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header3 h2 {
+  position: absolute;
+  top: 20%;
+  color: white;
+  padding-left: 10%;
+  font-size: 100px;
+  /* text-shadow: 3px 3px #67a3bc; */
+  text-shadow: 3px 3px #ea3d52;
+  text-align: center;
+}
+
+.header {
+  background-image: url(../IMG/animaux/animal3.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header h2 {
+  position: absolute;
+  top: 20%;
+  color: white;
+  padding-left: 10%;
+  font-size: 100px;
+  text-shadow: 3px 3px #ea3d52;
+}
+
+.header1 {
+  background-image: url(../IMG/header1.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header1 h2 {
+  position: absolute;
+  top: 22%;
+  color: white;
+  padding-left: 20%;
+  font-size: 100px;
+  text-shadow: 3px 3px #ea3d52;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.titre-video h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 70px;
+  color: #ea3d52;
+}

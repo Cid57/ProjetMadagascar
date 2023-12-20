@@ -1,0 +1,39 @@
+@media (max-width: 810px) {
+  #barre-navig ul a {
+    text-align: center;
+    line-height: 25px;
+  }
+
+  li a:hover:after {
+    width: 0;
+    background: #fff;
+  }
+
+  .header h2 {
+    font-size: 70px;
+    top: 62%;
+  }
+
+  .header1 h2 {
+    font-size: 70px;
+    top: 20%;
+  }
+
+  .header3 h2 {
+    font-size: 70px;
+    top: 50%;
+    padding-left: 50px;
+  }
+
+  #card {
+    /* width: 100%; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer ul a {
+    text-align: center;
+    line-height: 20px;
+  }
+}
