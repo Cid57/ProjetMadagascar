@@ -37,10 +37,6 @@ li a:after {
   background-color: #fff;
 }
 
-a:active {
-  background-color: #ea3d52;
-}
-
 li a:hover:after {
   width: 90%;
   background: #fff;

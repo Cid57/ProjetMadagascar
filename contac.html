@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
 
-    <title>Excursions</title>
+    <title>Organisez son voyage</title>
   </head>
   <body>
     <nav
@@ -29,6 +29,7 @@
       <div class="container-fluid">
         <img width="7.5%" src="./IMG/logo.png" alt="logo" />
         <a id="titre" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -40,6 +41,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div
           class="collapse navbar-collapse justify-content-lg-center"
           id="navbarSupportedContent"
@@ -62,14 +64,14 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 pe-lg-5 text-white"
-                href="voyage.html"
+              <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="#"
                 >Organisez votre voyage</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="#"
+              <a
+                class="nav-link active p-lg-3 pe-lg-5 text-white"
+                href="contac.html"
                 >Contact</a
               >
             </li>
@@ -77,81 +79,53 @@
         </div>
       </div>
     </nav>
-    <header>
-      <div class="header3">
-        <h2>
-          Nosy Iranja, <br />
-          une escapade paradisiaque
-        </h2>
-      </div>
-    </header>
-    <div class="container mt-5">
-      <h2 class="mb-4">
-        Ce site exceptionnel, séduira même les plus blasés d'exotisme.
-      </h2>
-      <p>
-        Ce site exceptionnel, d’une grande beauté naturelle, séduira même les
-        plus blasés d’exotisme.On mouille devant la petite île “Iranja Hely” qui
-        abrite un complexe hôtelier entièrement noyé dans une végétation
-        luxuriante.Les fonds de sable blanc sont d’une clarté étonnante et vous
-        vous baignerez dans une eau turquoise digne des plus belles cartes
-        postales.Après avoir profité de la très belle plage, vous traverserez un
-        village resté authentique et les plus courageux emprunteront un étroit
-        chemin de terre jusqu’au sommet de l’île où est installée la petite
-        école. Un gardien vous ouvrira les portes du phare du haut duquel vous
-        aurez une vue incroyable sur l’île et les environs.On pourrait presque
-        se croire au paradis… mais la constante houle de travers en fait un
-        mouillage rouleur, peu recommandé pour la nuit, et nous rappelle que le
-        paradis sur terre n’existe pas encore…
-      </p>
-    </div>
-    <div class="titre-video">
-      <h2>Galerie média Nosy Iranja</h2>
-    </div>
-    <div class="video">
-      <iframe
-        width="880"
-        height="495"
-        src="https://www.youtube.com/embed/LGPKNbP5FH4"
-        title="Ile de Nosy Iranja sur la côte nord ouest de Madagascar"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
-
-    <div id="couleur" class="d-flex pb-5">
-      <div class="card bg-dark text-white w-50">
-        <img src="/IMG/plage2.jpg" class="card-img" alt="..." />
-        <div class="card-img-overlay fs-4">
-          <h2 class="card-title fs-1 fw-bold">Les incontournables</h2>
-          <p class="card-text text-center pt-3">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
+    <section>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" />
         </div>
-      </div>
-      <div class="card bg-dark text-white w-50">
-        <img src="/IMG/plage3.jpg" class="card-img" alt="..." />
-        <div class="card-img-overlay fs-4">
-          <h2 class="card-title fs-1 fw-bold">Plongées sur les Radamas</h2>
-          <p class="card-text text-center pt-3">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" />
         </div>
-      </div>
-      <div class="card bg-dark text-white w-50">
-        <img src="/IMG/plage4.jpg" class="card-img" alt="..." />
-        <div class="card-img-overlay fs-4">
-          <h2 class="card-title fs-1 fw-bold">Encore plus au sud</h2>
-          <p class="card-text text-center pt-3">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+          />
         </div>
-      </div>
-    </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip" />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
+    </section>
     <footer class="navbar navbar-expand-lg bg-black py-0">
       <div class="container-fluid">
         <a id="titre" class="navbar-brand" href="index.html">
