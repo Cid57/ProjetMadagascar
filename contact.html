@@ -1,204 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/mobile.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Organisez son voyage</title>
-  </head>
-  <body>
-    <nav id="barre-navig" class="navbar navbar-expand-lg bg-black py-0">
-      <div class="container-fluid">
-        <img width="7.5%" src="./IMG/logo.png" alt="logo" />
-        <a id="titre" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/mobile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<nav id="barre-navig" class="navbar navbar-expand-lg py-0 fixed-top bg-black">
+  <div class="container-fluid">
 
-        <div
-          class="collapse navbar-collapse justify-content-lg-center"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 pe-lg-5 text-white"
-                aria-current="page"
-                href="visites.html"
-                >Visites</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 pe-lg-5 text-white"
-                aria-current="page"
-                href="excursions.html"
-                >Excursions</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 pe-lg-5 text-white"
-                href="voyage.html"
-                >Organisez votre voyage</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 pe-lg-5 text-white"
-                href="contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div>
-      <h2 class="text-center display-3 pb-5 pt-5">
-        Vous voulez en savoir plus <br />Veuillez nous contactez
-      </h2>
+    <img width="7.5%" src="./IMG/logo.png" alt="logo" />
+    <a id="titre" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page" href="visites.html">Visites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page" href="excursions.html">Excursions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="voyage.html">Organisez votre voyage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">
+            &#9742; Contact</a>
+        </li>
+      </ul>
     </div>
-    <section class="formulaire">
-      <div class="row g-3">
-        <div class="col-6">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Prénom"
-            aria-label="Prénom"
-          />
-        </div>
-        <div class="col-6">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nom"
-            aria-label="Nom"
-          />
-        </div>
+  </div>
+</nav>
+<div class="formulaire ">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="contact-form">
 
-        <div class="col-12">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Numéro/Rue"
-            aria-label="Numéro/Rue"
-          />
-        </div>
-        <div class="col-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Code postale"
-            aria-label="Code postale"
-          />
-        </div>
-        <div class="col-4">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Ville"
-            aria-label="Ville"
-          />
-        </div>
-        <div class="col-4">
-          <input
-            type="tel"
-            class="form-control"
-            placeholder="Tel"
-            aria-label="Tel"
-          />
-        </div>
-        <div class="col-12">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Vos commentaire"
-            aria-label="Vos commentaire"
-          />
+          <h2 class="text-center mb-4 fs-1">Contactez-nous</h2>
+          <p>N'hésitez pas à nous contacter pour toute question ou préoccupation. Nous sommes là pour vous aider!</p>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Envoyer</button>
+          </form>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae sunt corrupti dicta voluptate ipsum quia iure, tempora assumenda expedita amet earum magnam veritatis, maiores ut esse ex ullam, dolor voluptatibus.</p>
-    </section>
-    <footer class="navbar navbar-expand-lg bg-black py-0">
-      <div class="container-fluid">
-        <a id="titre" class="navbar-brand" href="index.html">
-          &#169; Copyright</a
-        >
-        <div class="navbar-collapse justify-content-lg-center">
-          <ul class="navbar-nav">
-            <li class="nav-item d-lg-flex">
-              <a
-                class="nav-link active p-lg-3 text-white"
-                aria-current="page"
-                href="presentation.html"
-                >Présentation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 text-white"
-                aria-current="page"
-                href="visites.html"
-                >Visites</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active p-lg-3 text-white"
-                aria-current="page"
-                href="excursions.html"
-                >Excursions</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active p-lg-3 text-white" href="#"
-                >Organisez votre voyage</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active p-lg-3 text-white" href="contac.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </div>
+  </div>
+</div>
+</body>
+
 </html>

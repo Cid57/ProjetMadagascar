@@ -111,23 +111,6 @@ a:visited {
   padding-bottom: 20px;
 }
 
-.action-button {
-  padding: 8px 8px 6px 20px;
-  border-radius: 10px;
-  font-size: 1em;
-  color: black;
-  text-decoration: none;
-  background-color: #fff;
-  border-bottom: 5px solid #fff;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-}
-
-.action-button:hover {
-  transform: translate(6px, 6px);
-  background: black;
-  color: #fff;
-}
 
 /* Element qui superpose l'image */
 .arts {
@@ -254,12 +237,22 @@ a:visited {
   color: #ea3d52;
 }
 
+
+
 .formulaire {
-  background-color: #333;
-  border-radius: 10px;
-  width: 70vw;
-  height: 80vh;
-  margin-bottom: 60px;
-  margin-left: 13%;
-  padding: 40px;
+  background-color: #f8f9fa;
+  margin-top: 180px;
+  width: 50vw;
+  margin-left: 25%;
+
+
+
+}
+
+.h2-formulaire h2 {}
+
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
 }
