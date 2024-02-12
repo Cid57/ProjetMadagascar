@@ -13,21 +13,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <title>Visites</title>
 </head>
 
 <body>
-  <nav id="barre-navig" class="navbar navbar-expand-lg bg-black py-0 fixed-top">
+  <!-- Barre de navigation Bootstrap -->
+  <nav id="barre-navig" class="navbar navbar-expand-lg py-0 fixed-top bg-black">
     <div class="container-fluid">
+
+      <!-- Logo -->
       <img width="7.5%" src="./IMG/logo.png" alt="logo" />
-      <a id="titre" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+
+      <!-- Titre et lien vers la page d'accueil -->
+      <a id="titre-1" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+
+      <!-- Bouton de bascule pour les écrans de petite taille -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Contenu du menu -->
       <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
+          <!-- Liens vers les différentes pages -->
+          <li class="nav-item">
+            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="animaux.html">Animaux</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page" href="visites.html">Visites</a>
           </li>
@@ -36,19 +50,20 @@
               href="excursions.html">Excursions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="voyage.html">Organisez votre voyage</a>
+            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="voyage.html">Organisez votre
+              voyage</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">Contact</a>
+            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">
+              &#9742; Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
   <header>
     <div class="header1">
-      <h2>L'allée des baobabs</h2>
+      <h2 class="animate__animated animate__fadeInUp">L'allée des baobabs</h2>
     </div>
   </header>
   <div class="container m-5 ps-4">

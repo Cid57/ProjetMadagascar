@@ -1,10 +1,58 @@
 * {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   box-sizing: border-box;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: colorchange 30s infinite;
+  animation: colorchange 30s infinite;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    background: #c9eb95;
+  }
+
+  25% {
+    background: #e6ebef;
+  }
+
+  50% {
+    background: #1c87c9;
+  }
+
+  75% {
+    background: #095484;
+  }
+
+  100% {
+    background: #d0e2bc;
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    background: #c9eb95;
+  }
+
+  25% {
+    background: #e6ebef;
+  }
+
+  50% {
+    background: #1c87c9;
+  }
+
+  75% {
+    background: #095484;
+  }
+
+  100% {
+    background: #d0e2bc;
+  }
 }
 
 h1,
@@ -12,8 +60,8 @@ h2 {
   font-family: "Dancing Script", cursive;
 }
 
-#titre {
-  color: #ea3d52;
+#titre-1 {
+  color: #67a3bc;
 }
 
 #bandeau {
@@ -43,12 +91,12 @@ li a:hover:after {
 }
 
 li a:hover {
-  background-color: #ea3d52;
+  background-color: #67a3bc;
   /* background-color: #67a3bc; */
 }
 
 a:visited {
-  color: #ea3d52;
+  color: #67a3bc;
 }
 
 #card {
@@ -157,6 +205,7 @@ a:visited {
 
 .btn {
   background-color: #90ed1e;
+  border: unset;
 }
 
 .btn:hover {
@@ -181,7 +230,7 @@ a:visited {
   padding-left: 10%;
   font-size: 100px;
   /* text-shadow: 3px 3px #67a3bc; */
-  text-shadow: 3px 3px #ea3d52;
+  text-shadow: 3px 3px #67a3bc;
   text-align: center;
 }
 
@@ -201,7 +250,7 @@ a:visited {
   color: white;
   padding-left: 10%;
   font-size: 100px;
-  text-shadow: 3px 3px #ea3d52;
+  text-shadow: 3px 3px #67a3bc;
 }
 
 .header1 {
@@ -210,7 +259,7 @@ a:visited {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -220,7 +269,15 @@ a:visited {
   color: white;
   padding-left: 20%;
   font-size: 100px;
-  text-shadow: 3px 3px #ea3d52;
+  text-shadow: 3px 3px #67a3bc;
+}
+
+
+.titre-video h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 70px;
+  color: #ea3d52;
 }
 
 .video {
@@ -230,13 +287,6 @@ a:visited {
   padding-bottom: 80px;
 }
 
-.titre-video h2 {
-  text-align: center;
-  padding-top: 50px;
-  font-size: 70px;
-  color: #ea3d52;
-}
-
 
 
 .formulaire {
@@ -244,12 +294,11 @@ a:visited {
   margin-top: 180px;
   width: 50vw;
   margin-left: 25%;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 20px;
 
 
 }
-
-.h2-formulaire h2 {}
 
 
 .contact-form {
