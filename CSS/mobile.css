@@ -1,4 +1,5 @@
 @media (max-width: 810px) {
+
   #barre-navig ul a {
     text-align: center;
     line-height: 25px;
@@ -9,9 +10,24 @@
     background: #fff;
   }
 
+  .header {
+    background-size: contain;
+    background-attachment: scroll;
+    height: 300px;
+  }
+
+  #bandeau {
+    padding: 0;
+  }
+
+
+
+
   .header h2 {
     font-size: 70px;
-    top: 62%;
+    top: 14%;
+
+
   }
 
   .header1 h2 {

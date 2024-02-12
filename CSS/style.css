@@ -60,6 +60,27 @@ h2 {
   font-family: "Dancing Script", cursive;
 }
 
+.header-index {
+  background-image: url(/IMG/header-principal.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header-index h2 {
+  position: absolute;
+  top: 40%;
+  color: white;
+  padding-left: 7%;
+  font-size: 120px;
+  text-shadow: 3px 3px #67a3bc;
+  text-align: center;
+
+}
+
 #titre-1 {
   color: #67a3bc;
 }
@@ -105,7 +126,8 @@ a:visited {
 
 .card img {
   width: 100%;
-  height: 320px;
+  /* height: 320px; */
+  height: 250px;
 }
 
 .card h2 {
@@ -242,6 +264,7 @@ a:visited {
   background-size: cover;
   width: 100%;
   height: 100vh;
+
 }
 
 .header h2 {
