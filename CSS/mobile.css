@@ -55,6 +55,8 @@
     /* Espacement entre les cartes */
   }
 
+
+
   .card-img-top {
     /* height: auto; */
     /* Réinitialisez la hauteur de l'image à "auto" */
@@ -86,5 +88,10 @@
     /* Taille de police du bouton */
     padding: 0.375rem 0.75rem;
     /* Espacement interne du bouton */
+  }
+
+  .bateau img {
+    display: flex;
+    max-width: 90%;
   }
 }
