@@ -1,94 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Madagascar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-  <link rel="stylesheet" href="CSS/style.css" />
-  <link rel="stylesheet" href="CSS/mobile.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <title>Madagascar</title>
-</head>
+  <body>
+    <!-- Barre de navigation Bootstrap -->
+    <nav
+      id="barre-navig"
+      class="navbar navbar-expand-lg py-0 fixed-top bg-black"
+    >
+      <div class="container-fluid">
+        <!-- Logo -->
+        <img width="7.5%" src="./IMG/logo.png" alt="logo" />
 
-<body>
+        <!-- Titre et lien vers la page d'accueil -->
+        <a id="titre-1" class="navbar-brand fs-2" href="index.html"
+          >Madagascar</a
+        >
 
+        <!-- Bouton de bascule pour les écrans de petite taille -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- Barre de navigation Bootstrap -->
-  <nav id="barre-navig" class="navbar navbar-expand-lg py-0 fixed-top bg-black">
-    <div class="container-fluid">
-
-      <!-- Logo -->
-      <img width="7.5%" src="./IMG/logo.png" alt="logo" />
-
-      <!-- Titre et lien vers la page d'accueil -->
-      <a id="titre-1" class="navbar-brand fs-2" href="index.html">Madagascar</a>
-
-      <!-- Bouton de bascule pour les écrans de petite taille -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Contenu du menu -->
-      <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <!-- Liens vers les différentes pages -->
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="animaux.html">Animaux</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page" href="visites.html">Visites</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page"
-              href="excursions.html">Excursions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">
-              &#9742; Contact</a>
-          </li>
-        </ul>
+        <!-- Contenu du menu -->
+        <div
+          class="collapse navbar-collapse justify-content-lg-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <!-- Liens vers les différentes pages -->
+            <li class="nav-item">
+              <a
+                class="nav-link active p-lg-3 pe-lg-5 text-white"
+                href="animaux.html"
+                >Animaux</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active p-lg-3 pe-lg-5 text-white"
+                aria-current="page"
+                href="visites.html"
+                >Visites</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active p-lg-3 pe-lg-5 text-white"
+                aria-current="page"
+                href="excursions.html"
+                >Excursions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active p-lg-3 pe-lg-5 text-white"
+                href="contact.html"
+              >
+                &#9742; Contact</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
+    <div class="formulaire">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="contact-form">
+              <h2 class="text-center mb-4 fs-1">Contactez-nous</h2>
+              <p>
+                N'hésitez pas à nous contacter pour toute question ou
+                préoccupation. Nous sommes là pour vous aider!
+              </p>
 
-
-  <div class="formulaire ">
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="contact-form">
-            <h2 class="text-center mb-4 fs-1">Contactez-nous</h2>
-            <p>N'hésitez pas à nous contacter pour toute question ou préoccupation. Nous sommes là pour vous aider!
-            </p>
-            <form action="send_email.php" method="post">
-              <div class="form-group">
-                <label for="name">Votre Nom</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Votre Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Votre Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block mt-4">Envoyer</button>
-            </form>
+              <form action="mail.php" method="post">
+                <div class="form-group">
+                  <label for="name">Votre Nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Votre Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">Votre Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-4">
+                  Envoyer
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
