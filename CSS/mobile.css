@@ -1,4 +1,16 @@
-@media (max-width: 810px) {
+@media (max-width: 700px) {
+
+  .header-index h2 {
+    top: 180px;
+    left: 40px;
+    right: 30px;
+    font-size: 70px;
+    text-shadow: none;
+  }
+
+  .header-index {
+    height: 300vh;
+  }
 
   #barre-navig ul a {
     text-align: center;
@@ -10,29 +22,64 @@
     background: #fff;
   }
 
-  .header {
-    background-size: contain;
-    background-attachment: scroll;
-    height: 300px;
-  }
+
 
   #bandeau {
-    padding: 0;
+    padding: 40px;
+
   }
 
 
 
+  .titre-cameleon h2 {
+    font-size: 43px;
+    padding-top: 55px;
+    margin-bottom: -20px;
+
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    padding-right: 90px;
+    padding-left: 55px;
+    gap: 40px;
+  }
+
+  .cameleon img {
+    width: 280px;
+
+  }
 
   .header h2 {
-    font-size: 70px;
-    top: 14%;
 
-
+    top: 250px;
+    text-shadow: none;
+    font-size: 60px;
   }
+
+  .header {
+    background-size: cover;
+    background-attachment: scroll;
+    height: 50vh;
+  }
+
+  .header1 {
+    top: 180px;
+    left: 40px;
+    right: 30px;
+    font-size: 70px;
+    text-shadow: none;
+    height: 440px;
+    background-attachment: inherit;
+  }
+
+
 
   .header1 h2 {
     font-size: 70px;
     top: 20%;
+    text-shadow: none;
   }
 
   .header3 h2 {
@@ -41,53 +88,67 @@
     padding-left: 50px;
   }
 
+  .header3 h2 {
+    top: 80px;
+    left: 20px;
+    right: 90px;
+    font-size: 60px;
+    text-shadow: none;
+    background-attachment: inherit;
+  }
 
+  .header3 {
+    height: 440px;
+  }
 
   footer ul a {
     text-align: center;
     line-height: 20px;
   }
 
-  /* Ajoutez ceci à votre fichier mobile.css */
-
-  .card {
-    margin-bottom: 20px;
-    /* Espacement entre les cartes */
+  .titre-video h2 {
+    font-size: 50px;
   }
-
 
 
   .card-img-top {
-    /* height: auto; */
-    /* Réinitialisez la hauteur de l'image à "auto" */
     max-width: 100%;
-    /* Ajuste la largeur maximale de l'image à 100% du conteneur */
-    object-fit: contain;
-    /* Redimensionne l'image pour qu'elle s'adapte à la largeur du conteneur tout en conservant son ratio d'aspect */
-    padding-top: 30px;
   }
+
+  #leopard {
+    margin-bottom: 60px;
+  }
+
+
+
+  #card-shadow-1 {
+    margin-bottom: 60px;
+  }
+
 
 
   .card-body {
     padding: 1rem;
-    /* Espacement interne du corps de la carte */
+    text-align: center;
+
+
   }
 
   .card-title {
     font-size: 1.25rem;
-    /* Taille de police du titre */
+
   }
 
   .card-text {
     font-size: 1rem;
-    /* Taille de police du texte */
+
   }
 
   .btn {
     font-size: 0.875rem;
-    /* Taille de police du bouton */
+
     padding: 0.375rem 0.75rem;
-    /* Espacement interne du bouton */
+
   }
 
   .bateau img {
