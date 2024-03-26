@@ -1,11 +1,52 @@
 @media (max-width: 700px) {
 
   .header-index h2 {
-    top: 180px;
+    top: 250px;
     left: 40px;
     right: 30px;
     font-size: 70px;
     text-shadow: none;
+    color: white;
+    font-weight: 900;
+  }
+
+  #image-cameleon {
+    display: flex;
+  }
+
+  .header-cameleon h2 {
+    top: 280px;
+    left: 40px;
+    right: 70px;
+    font-size: 80px;
+    text-shadow: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* .header-cameleon {
+    background-image: url(/IMG/animaux/header-cameleon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: top;
+    height: 100vh;
+  } */
+
+  .header-cameleon {
+    height: 500px;
+    background-attachment: inherit;
+    background-position: top;
+  }
+
+
+
+  .formulaire {
+    width: 100% !important;
+    margin: 0;
+    margin-top: 100px;
+
+
   }
 
   .header-index {
