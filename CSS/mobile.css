@@ -1,56 +1,30 @@
 @media (max-width: 700px) {
 
-  .header-index h2 {
-    top: 250px;
-    left: 40px;
-    right: 30px;
-    font-size: 70px;
-    text-shadow: none;
-    color: white;
-    font-weight: 900;
-  }
 
-  #image-cameleon {
-    display: flex;
+  .btn-index button {
+    border: none;
+    padding: 7px;
+    border-radius: 10px;
   }
-
-  .header-cameleon h2 {
-    top: 280px;
-    left: 40px;
-    right: 70px;
-    font-size: 80px;
-    text-shadow: none;
-    background-position: center;
-    background-size: cover;
-  }
-
-  /* .header-cameleon {
-    background-image: url(/IMG/animaux/header-cameleon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position-y: top;
-    height: 100vh;
-  } */
 
   .header-cameleon {
-    height: 500px;
-    background-attachment: inherit;
-    background-position: top;
+    background-position-x: center;
   }
 
 
 
-  .formulaire {
-    width: 100% !important;
-    margin: 0;
-    margin-top: 100px;
-
-
+  .header-cameleon h2 {
+    text-shadow: none;
+    top: 100px;
+    right: 50px;
+    font-size: 100px;
   }
 
-  .header-index {
-    height: 300vh;
+  .header-index h2 {
+    font-size: 74px;
+    text-shadow: none;
+    right: 30px;
+    top: 230px;
   }
 
   #barre-navig ul a {
@@ -63,88 +37,61 @@
     background: #fff;
   }
 
-
-
-  #bandeau {
-    padding: 40px;
-
-  }
-
-
-
-  .titre-cameleon h2 {
-    font-size: 43px;
-    padding-top: 55px;
-    margin-bottom: -20px;
-
-  }
-
-  #card {
-    display: flex;
-    flex-direction: column;
-    padding-right: 90px;
-    padding-left: 55px;
-    gap: 40px;
-  }
-
-  .cameleon img {
-    width: 280px;
-
-  }
-
-  .header h2 {
-
-    top: 250px;
-    text-shadow: none;
-    font-size: 60px;
-  }
-
   .header {
     background-size: cover;
     background-attachment: scroll;
-    height: 50vh;
+    height: 400px;
   }
 
-  .header1 {
-    top: 180px;
-    left: 40px;
-    right: 30px;
-    font-size: 70px;
+  #bandeau {
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+  .header h2 {
+    font-size: 55px;
+    top: 260px;
     text-shadow: none;
-    height: 440px;
-    background-attachment: inherit;
   }
 
 
 
   .header1 h2 {
-    font-size: 70px;
+    font-size: 80px;
+    right: 50px;
     top: 20%;
     text-shadow: none;
   }
 
   .header3 h2 {
-    font-size: 70px;
-    top: 50%;
-    padding-left: 50px;
-  }
-
-  .header3 h2 {
-    top: 80px;
-    left: 20px;
-    right: 90px;
-    font-size: 60px;
+    font-size: 80px;
+    top: 20%;
+    right: 10px;
     text-shadow: none;
-    background-attachment: inherit;
   }
 
-  .header3 {
-    height: 440px;
+
+  .formulaire {
+    width: 100%;
+    margin-left: 0;
+
   }
 
-  footer ul a {
-    text-align: center;
-    line-height: 20px;
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form h2 {
+    font-size: 60px;
+  }
+
+  .titre-plage {
+    font-size: 40px !important;
+
   }
 
   .titre-video h2 {
@@ -152,20 +99,36 @@
   }
 
 
-  .card-img-top {
-    max-width: 100%;
+
+  footer ul a {
+    text-align: center;
+    line-height: 20px;
   }
 
-  #leopard {
-    margin-bottom: 60px;
+
+  #card {
+    display: grid;
+    padding-left: 60px;
+
+  }
+
+  .card h2 {
+    font-size: 40px;
   }
 
 
+  .incontournable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  #card-shadow-1 {
-    margin-bottom: 60px;
+
   }
 
+  .cameleon img {
+    padding: 5px;
+    margin-top: 10px;
+  }
 
 
   .card-body {
@@ -187,13 +150,12 @@
 
   .btn {
     font-size: 0.875rem;
-
     padding: 0.375rem 0.75rem;
 
   }
 
   .bateau img {
     display: flex;
-    max-width: 90%;
+    width: 100%;
   }
 }
