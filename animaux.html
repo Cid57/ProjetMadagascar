@@ -5,28 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/animaux.css" />
     <link rel="stylesheet" href="CSS/mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
     <title>Madagascar</title>
 </head>
 
 <body>
-
     <!-- Barre de navigation Bootstrap -->
-    <nav id="barre-navig" class="navbar navbar-expand-lg py-0 fixed-top bg-black">
+    <nav id="barre-navig" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-
             <!-- Logo -->
-            <img width="7.5%" src="./IMG/logo.png" alt="logo" />
-
+            <a class="navbar-brand" href="page.html">
+                <img src="./IMG/logo.png" alt="logo" width="50">
+            </a>
             <!-- Titre et lien vers la page d'accueil -->
             <a id="titre-1" class="navbar-brand fs-2" href="page.html">Madagascar</a>
 
@@ -38,87 +35,78 @@
             </button>
 
             <!-- Contenu du menu -->
-            <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <!-- Liens vers les différentes pages -->
                     <li class="nav-item">
-                        <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="animaux.html">Animaux</a>
+                        <a class="nav-link active p-lg-3 pe-lg-5" href="animaux.html">Animaux</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page"
-                            href="visites.html">Visites</a>
+                        <a class="nav-link active p-lg-3 pe-lg-5" href="visites.html">Visites</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page"
-                            href="excursions.html">Excursions</a>
+                        <a class="nav-link active p-lg-3 pe-lg-5" href="excursions.html">Excursions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">
-                            &#9742; Contact</a>
+                        <a class="nav-link active p-lg-3 pe-lg-5" href="contact.html">&#9742; Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
     <header>
         <div class="header">
-            <h2 class="animate__animated animate__fadeInUp">Les animaux à Madagascar.</h2>
+            <h2 class="animate__animated animate__fadeInUp">Les animaux à Madagascar</h2>
         </div>
     </header>
 
-
+    <section class="intro-section mt-5">
+        <div class="container text-center">
+            <h2 class="fs-1 p-2">Découvrez la Faune Unique de Madagascar</h2>
+            <p class="fs-5 p-2">
+                Madagascar est célèbre pour sa biodiversité unique. Les espèces animales que l'on y trouve ne se
+                trouvent
+                nulle part ailleurs. De la forêt tropicale humide aux plages de sable blanc, explorez la diversité
+                fascinante de la faune malgache.
+            </p>
+        </div>
+    </section>
 
     <article>
-        <div id="bandeau" class="container-fluid p-4  mb-5 text-white">
-            <h2 class="p-2">
-                Madagascar : les animaux sauvages emblématiques de l’île rouge (et où
-                les observer)
-            </h2>
+        <div id="bandeau" class="container-fluid p-4 mb-5 text-white">
+            <h2 class="p-2">Madagascar : les animaux sauvages emblématiques de l’île rouge (et où les observer)</h2>
             <p class="p-2">
-                La forêt tropicale humide, située dans la Grande Serre, est peuplée
-                d’oiseaux colorés, tels que les inséparables à tête grise (Agapornis
-                canus) et le pigeon de Madagascar (Nesoenas picturata), et de
-                lémuriens, dont le plus menacé d’entre eux, le grand hapalémur
-                (Prolemur simus). À l’extérieur de la serre, d'autres lémuriens
-                parcourent librement les îles de la biozone tandis que le fossa
-                (Cryptoprocta ferox), le plus grand carnivore malgache, évolue dans
-                une végétation dense aussi peuplée d'un groupe de roussettes.
+                La forêt tropicale humide, située dans la Grande Serre, est peuplée d’oiseaux colorés, tels que les
+                inséparables à tête grise (Agapornis canus) et le pigeon de Madagascar (Nesoenas picturata), et de
+                lémuriens, dont le plus menacé d’entre eux, le grand hapalémur (Prolemur simus). À l’extérieur de la
+                serre,
+                d'autres lémuriens parcourent librement les îles de la biozone tandis que le fossa (Cryptoprocta ferox),
+                le
+                plus grand carnivore malgache, évolue dans une végétation dense aussi peuplée d'un groupe de roussettes.
             </p>
         </div>
     </article>
+
+
+
     <section>
-        <!-- Début du conteneur principal -->
         <div class="container">
-            <!-- Début de la ligne (row) -->
             <div class="row">
-                <!-- Première colonne pour la première carte -->
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
-                    <!-- Début de la carte -->
                     <div id="card-shadow" class="card mb-3 h-100">
-                        <!-- Image de la carte -->
                         <img src="./IMG/animaux/tarryn-myburgh-LsrCPTJNsk8-unsplash.jpg" class="img-fluid d-block"
                             alt="animal1">
-                        <!-- Corps de la carte -->
                         <div class="card-body">
-                            <!-- Titre de la carte -->
                             <h5 class="card-title">Suricate</h5>
-                            <!-- Texte de la carte -->
-                            <p class="card-text">Le Suricate, parfois surnommé «sentinelle du désert», est une espèce
-                                de mammifères diurnes de la famille des
-                                Herpestidés, et la seule connue du genre Suricata. Ce petit carnivore vit dans le
-                                sud-ouest de l'Afrique. Animal très
-                                prolifique, il vit en grands groupes familiaux au sein d'une colonie.</p>
-                            <!-- Bouton de la carte -->
-
+                            <p class="card-text">Le Suricate, parfois surnommé «sentinelle du désert», est une espèce de
+                                mammifères diurnes de la famille des Herpestidés, et la seule connue du genre Suricata.
+                                Ce petit carnivore vit dans le sud-ouest de l'Afrique. Animal très prolifique, il vit en
+                                grands groupes familiaux au sein d'une colonie.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
                     <div id="card-shadow-1" class="card mb-3 h-100">
                         <img src="./IMG/gecko-leopard-closup-bois.jpg" class="img-fluid d-block" alt="animal4">
                         <div class="card-body">
@@ -128,14 +116,10 @@
                                 rappelle celle du léopard, d'où son nom. Ce gecko a une taille moyenne d'un peu plus
                                 20cm, les mâles étant plus grands et massifs que les femelles. Le gecko léopard est un
                                 animal intéressant</p>
-
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
                     <div id="card-shadow-2" class="card mb-3 h-100">
                         <img src="./IMG/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" class="img-fluid d-block"
                             alt="animal5">
@@ -143,66 +127,49 @@
                             <h5 class="card-title">Le phelsuma</h5>
                             <p class="card-text">Le phelsuma de Madagascar, appelé aussi "gecko diurne de Madagascar",
                                 est un lézard aux couleurs éclatantes. Il s'agit d'un des plus grands geckos de
-                                Madagascar : son corps peut atteindre 25 cm de long avec une queue souvent de
-                                même dimension.
-                                Les phelsumas sont diurnes avec une pupille ronde et des couleurs très vives.</p>
-
+                                Madagascar : son corps peut atteindre 25 cm de long avec une queue souvent de même
+                                dimension. Les phelsumas sont diurnes avec une pupille ronde et des couleurs très vives.
+                            </p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
                     <div id="card-shadow-3" class="card mb-3 h-100">
                         <img src="./IMG/animaux/yomex-owo-HuEpYtthas8-unsplash.jpg" class="img-fluid d-block"
                             alt="animal5">
                         <div class="card-body">
                             <h5 class="card-title">LE grand hapalémur </h5>
                             <p class="card-text">Cette espèce arboricole évolue au sein de groupes polygames de 60
-                                individus selon un système social de « fusion-fission
-                                » encore mystérieux pour les éthologues. Ce sont des animaux actifs aussi bien le jour
-                                que la nuit.
-                                Les grands hapalémurs ont vu 90 % de leurs forêts originelles disparaître. On les trouve
-                                encore dans les forêts humides de l’est de
-                                l’île.</p>
-
+                                individus selon un système social de « fusion-fission » encore mystérieux pour les
+                                éthologues. Ce sont des animaux actifs aussi bien le jour que la nuit. Les grands
+                                hapalémurs ont vu 90 % de leurs forêts originelles disparaître. On les trouve encore
+                                dans les forêts humides de l’est de l’île.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
                     <div id="card-shadow-4" class="card mb-3 h-100">
                         <img src="./IMG/animaux/animal10.jpg" class="img-fluid d-block" alt="animal5">
                         <div class="card-body">
                             <h5 class="card-title">Le lémurien</h5>
                             <p class="card-text">Animal emblématique de Madagascar, le lémurien est l’une des espèces
-                                que vous croiserez le plus souvent sur l’île. Le
-                                lémurien saute de branche en branche grâce à sa longue queue qui lui permet de garder sa
-                                balance. Certains mesurent 70cm et pèsent
-                                plus de 10kg (il s’agit de
-                                l’indri, un lémurien noir), alors que les plus petits, aussi les plus petits primates du
-                                monde, font à peine 30g !.
-                            </p>
-
+                                que vous croiserez le plus souvent sur l’île. Le lémurien saute de branche en branche
+                                grâce à sa longue queue qui lui permet de garder sa balance. Certains mesurent 70cm et
+                                pèsent plus de 10kg (il s’agit de l’indri, un lémurien noir), alors que les plus petits,
+                                aussi les plus petits primates du monde, font à peine 30g !.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <!-- <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> -->
                     <div id="card-shadow-5" class="card mb-4 h-100">
                         <img src="./IMG/animaux/animal2.jpg" class="img-fluid d-block" alt="animal9">
                         <div class="card-body">
                             <h5 class="card-title">La tortue étoilée</h5>
                             <p class="card-text">Entre terre et mer, les tortues de Madagascar font aussi partie de
-                                cette planète des merveilles. On en trouve de
-                                nombreuses sortes, mais l’une des plus remarquables est la tortue étoilée. Habitant
-                                notamment le sud de l’ile, la tortue
+                                cette planète des merveilles. On en trouve de nombreuses sortes, mais l’une des plus
+                                remarquables est la tortue étoilée. Habitant notamment le sud de l’ile, la tortue
                                 étoilée est dotée d’une magnifique carapace rayée de jaune. Elle peut vivre jusqu’à cent
-                                ans environ, mais elle est en
-                                danger critique de disparition.</p>
-
+                                ans environ, mais elle est en danger critique de disparition.</p>
                         </div>
                     </div>
                 </div>
@@ -215,26 +182,25 @@
         <div class="titre-cameleon">
             <h2 class="text-center">Caméléon panthère, Furcifer pardalis.</h2>
         </div>
-        <div id="card">
-
-            <div class="cameleon">
-                <img width="80%" class="rounded-5" src="IMG/animaux/animal6.jpg" alt="caméléon" />
-            </div>
-
-
-            <div class="cameleon">
-                <img width="80%" class="rounded-5" src="IMG/animaux/animal7.jpg" alt="caméléon" />
+        <div id="card" class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="IMG/animaux/animal6.jpg" class="img-fluid rounded-5 mb-4" alt="caméléon" />
+                </div>
+                <div class="col-md-6">
+                    <img src="IMG/animaux/animal7.jpg" class="img-fluid rounded-5 mb-4" alt="caméléon" />
+                </div>
             </div>
         </div>
-        <div class="container pt-5">
-            <p class="text-center fs-5 p-5">
-                Les caméléons panthères sont l’une des espèces de caméléons les plus colorées disponibles
-                aujourd’hui. Originaires de
-                Madagascar, ils sont capables de transformer en une grande variété de couleurs en fonction de leur
-                région ou de la
-                région d’origine de leur souche.
-            </p>
-            <a id="btn-cameleon" href="cameleon.html" class="btn btn-primary mb-5">Découvrir</a>
+        <div class="container">
+            <p class="text-center fs-5 p-5">Les caméléons panthères sont l’une des espèces de caméléons les plus
+                colorées
+                disponibles aujourd’hui. Originaires de Madagascar, ils sont capables de transformer en une grande
+                variété
+                de couleurs en fonction de leur région ou de la région d’origine de leur souche.</p>
+            <div class="text-center">
+                <a id="btn-cameleon" href="cameleon.html" class="btn btn-primary mb-5">Découvrir</a>
+            </div>
         </div>
     </section>
 
@@ -243,28 +209,28 @@
 
 
 
-
-    <footer class="navbar navbar-expand-lg bg-black py-0">
-        <div class="container-fluid">
-            <a id="titre" class="navbar-brand" href="page.html">
-                &#169; Copyright</a>
-            <div class="navbar-collapse justify-content-lg-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item d-lg-flex">
-                        <a class="nav-link active p-lg-3 text-white" aria-current="page" href="animaux.html">Animaux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active p-lg-3 text-white" aria-current="page" href="visites.html">Visites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active p-lg-3 text-white" aria-current="page"
-                            href="excursions.html">Excursions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active p-lg-3 text-white" href="contact.html">Contact</a>
-                    </li>
-                </ul>
+    <footer class="footer bg-dark text-white mt-5 p-4 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: contact@madagascar.com</p>
+                    <p>Téléphone: +261 32 12 345 67</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <a href="#">Facebook</a> |
+                    <a href="#">Instagram</a> |
+                    <a href="#">Twitter</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Adresse</h5>
+                    <p>123 Rue de l'Aventure, Antananarivo, Madagascar</p>
+                </div>
             </div>
+        </div>
+        <div class="mt-3">
+            &copy; 2024 Madagascar. Tous droits réservés.
         </div>
     </footer>
 

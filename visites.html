@@ -5,65 +5,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="CSS/bootstrap.min.css" />
-  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/visites.css" />
   <link rel="stylesheet" href="CSS/mobile.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+  <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
   <title>Visites</title>
 </head>
 
 <body>
   <!-- Barre de navigation Bootstrap -->
-  <nav id="barre-navig" class="navbar navbar-expand-lg py-0 fixed-top bg-black">
+  <nav id="barre-navig" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-
       <!-- Logo -->
-      <img width="7.5%" src="./IMG/logo.png" alt="logo" />
-
+      <a class="navbar-brand" href="page.html">
+        <img src="./IMG/logo.png" alt="logo" width="50">
+      </a>
       <!-- Titre et lien vers la page d'accueil -->
-      <a id="titre-1" class="navbar-brand fs-2" href="index.html">Madagascar</a>
+      <a id="titre-1" class="navbar-brand fs-2" href="page.html">Madagascar</a>
 
       <!-- Bouton de bascule pour les écrans de petite taille -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Contenu du menu -->
-      <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <!-- Liens vers les différentes pages -->
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="animaux.html">Animaux</a>
+            <a class="nav-link active p-lg-3 pe-lg-5" href="animaux.html">Animaux</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page" href="visites.html">Visites</a>
+            <a class="nav-link p-lg-3 pe-lg-5" href="visites.html">Visites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" aria-current="page"
-              href="excursions.html">Excursions</a>
+            <a class="nav-link p-lg-3 pe-lg-5" href="excursions.html">Excursions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active p-lg-3 pe-lg-5 text-white" href="contact.html">
-              &#9742; Contact</a>
+            <a class="nav-link p-lg-3 pe-lg-5" href="contact.html">&#9742; Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <header>
     <div class="header1">
       <h2 class="animate__animated animate__fadeInUp">L'allée des baobabs</h2>
     </div>
   </header>
-  <div class="container m-lg-5 ps-lg-4">
+
+  <div class="container my-5">
     <h2 class="ps-lg-2 mt-4">
       L’emblématique arbre malgache, les baobabs sacrés de Madagascar sont
       menacés par un monde en pleine mutation
@@ -71,7 +68,7 @@
     <h3 class="pt-5 pb-5 ps-2">Le baobab, ou « arbre bouteille »</h3>
 
     <div class="container">
-      <div class="article-2">
+      <div class="article-2 mb-4 p-4 rounded shadow-sm bg-light">
         <p>
           Le tronc des baobabs mesure pour certaines espèces jusqu’à 9 mètres
           de diamètre et 30 mètres de haut. On raconte que la forme si
@@ -79,19 +76,12 @@
           l’envers, les racines vers le ciel.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-          molestiae similique animi nulla? Sapiente non eaque amet, aliquid
-          nisi dignissimos nesciunt corporis molestias, sequi esse sit
-          quibusdam illum sunt unde maiores ea culpa nostrum voluptatem
-          aspernatur totam molestiae minima laboriosam quasi debitis? Ducimus
-          quaerat qui, exercitationem recusandae molestiae repellendus
-          asperiores omnis distinctio nemo ipsum aliquid doloribus blanditiis
-          a voluptatibus id! Le lieu idéal pour admirer les baobabs est à
-          Morondava : l’allée des baobabs. Mais vous pourrez également en
-          apercevoir à Majunga et à Tulear.
+          Le lieu idéal pour admirer les baobabs est à Morondava : l’allée des baobabs. Mais vous pourrez également en
+          apercevoir à Majunga et à Tulear. Les baobabs sont un symbole de la richesse écologique de Madagascar, et leur
+          préservation est essentielle pour l'équilibre de l'écosystème local.
         </p>
       </div>
-      <div class="article-2">
+      <div class="article-2 mb-4 p-4 rounded shadow-sm bg-light">
         <p>
           « Sanctuaire de la nature » et « joyau écologique », sont les
           adjectifs qui qualifient la richesse naturelle de Madagascar. Le
@@ -114,17 +104,20 @@
       </div>
     </div>
   </div>
-  <div>
+
+  <div class="container mt-5">
     <ul class="galerie">
       <li>
-        <img src="  ./IMG/gemmmm-T6_qtrex1Qw-unsplash.jpg" alt="image_3" />
+        <img src="./IMG/gemmmm-T6_qtrex1Qw-unsplash.jpg" alt="image_3" />
       </li>
       <li>
-        <img src=" ./IMG/holly-bartley-4h0Y-cYky0Y-unsplash.jpg" alt="image_4" />
+        <img src="./IMG/holly-bartley-4h0Y-cYky0Y-unsplash.jpg" alt="image_4" />
       </li>
-      <li><img src="./IMG/plage2.jpg" alt="image_4" /></li>
       <li>
-        <img src="./IMG/gemmmm-7FBT4cmKszo-unsplash.jpg " alt="image_4" />
+        <img src="./IMG/plage2.jpg" alt="image_4" />
+      </li>
+      <li>
+        <img src="./IMG/gemmmm-7FBT4cmKszo-unsplash.jpg" alt="image_4" />
       </li>
       <li>
         <img src="./IMG/tree-1491652_1280.jpg" alt="image_5" />
@@ -136,155 +129,137 @@
         <img src="./IMG/jacques-dillies-ITM82DCj6i8-unsplash.jpg" alt="image_7" />
       </li>
       <li>
-        <img src="./IMG/image1.jpg " alt="image_8" />
+        <img src="./IMG/image1.jpg" alt="image_8" />
       </li>
     </ul>
   </div>
+
   <article>
-    <div class="container m-lg-5">
-      <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+    <div class="container my-5 p-4 rounded shadow-sm bg-light">
+      <h2>Les trésors cachés de Madagascar</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-        distinctio voluptatem odit temporibus porro dolores consequuntur.
-        Cumque dolores voluptate dolorum, labore molestiae facere fugit
-        exercitationem hic tempore nam aliquid aperiam!
+        Madagascar est une île aux multiples facettes, connue pour sa biodiversité unique et ses paysages à couper le
+        souffle.
+        Des plages paradisiaques aux forêts denses, chaque recoin de l'île offre une aventure inoubliable. La culture
+        malgache,
+        riche en traditions et en histoires, se reflète dans les sourires chaleureux des habitants et dans les festivals
+        colorés
+        qui animent les villages.
+      </p>
+      <p>
+        L'île est également célèbre pour ses parcs nationaux, comme le parc national de l'Isalo, où les formations
+        rocheuses
+        impressionnantes contrastent avec les prairies verdoyantes. Les amateurs de nature seront ravis de découvrir la
+        faune
+        locale, notamment les lémuriens, les caméléons et une variété d'oiseaux endémiques.
+      </p>
+      <p>
+        Que vous soyez à la recherche d'aventures en plein air, de détente sur une plage de sable blanc, ou d'une
+        immersion
+        culturelle profonde, Madagascar a quelque chose à offrir à chacun. Préparez-vous à être émerveillé par cette
+        destination
+        exceptionnelle.
       </p>
     </div>
   </article>
-  <div class="container d-flex justify-content-center ">
+
+  <div class="container my-5">
     <img class="img-thumbnail w-75" src="./IMG/mot-paradis-fond-plage-ecrit-dans-sable.jpg" alt="plage" />
   </div>
-  <div class="container mt-5 mb-5">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-      voluptatem cupiditate fugiat voluptate eveniet dicta aspernatur quos
-      tempore corrupti! Cum sequi dolorum eius reiciendis placeat voluptatem
-      ipsa expedita tempore facere suscipit libero autem, illo a porro quaerat
-      eligendi sint totam quia culpa deleniti ducimus numquam. Deleniti
-      consectetur quas architecto quod a aliquid, vel illo consequuntur
-      delectus eos, ipsa cum! Excepturi, eos facilis distinctio sed eius
-      dolores expedita culpa deleniti corrupti?
-    </p>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      dolores quaerat dolore repudiandae neque hic, quod ullam. Sed assumenda
-      quidem temporibus odit eius qui neque debitis quisquam voluptatem
-      ducimus, ea voluptas magnam incidunt. Ducimus consequuntur ut distinctio
-      harum ipsa doloribus natus, consequatur deserunt, cumque, est numquam!
-      Consectetur impedit minima voluptatibus, quibusdam a ea? Rerum libero ex
-      dolore totam aut accusamus.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia
-      aperiam et, excepturi commodi quia dolor ullam assumenda possimus
-      consequatur omnis expedita odit enim autem cum debitis dicta laboriosam
-      molestiae quisquam illum rem nisi. Laborum, repellat quia? Repellat
-      dolorum rerum esse commodi consequatur quibusdam inventore praesentium a
-      iste impedit? Qui assumenda atque suscipit eligendi voluptatibus at,
-      exercitationem quo, ducimus repellendus harum, ipsam eum tempora! Sint
-      placeat cum minima suscipit praesentium.
-    </p>
-  </div>
-  <div class="container d-flex justify-content-between">
-    <img class="rounded-3" width="40%" src="./IMG/nature-1568850_1280.jpg" alt="baobab" />
-    <img class="rounded-3" width="40%" src="./IMG/baobab-577761_1280.jpg" alt="baobab" />
-  </div>
 
-  <div class="container mt-5 mb-5">
+  <div class="container my-5">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-      voluptatem cupiditate fugiat voluptate eveniet dicta aspernatur quos
-      tempore corrupti! Cum sequi dolorum eius reiciendis placeat voluptatem
-      ipsa expedita tempore facere suscipit libero autem, illo a porro quaerat
-      eligendi sint totam quia culpa deleniti ducimus numquam. Deleniti
-      consectetur quas architecto quod a aliquid, vel illo consequuntur
-      delectus eos, ipsa cum! Excepturi, eos facilis distinctio sed eius
-      dolores expedita culpa deleniti corrupti?
+      Les plages de Madagascar sont parmi les plus belles au monde. Avec leurs sables blancs immaculés et leurs eaux
+      cristallines,
+      elles sont idéales pour se détendre et profiter du soleil. Parmi les plages les plus célèbres, on trouve celles de
+      Nosy Be,
+      une petite île au large de la côte nord-ouest, connue pour ses plages idylliques et ses spots de plongée
+      exceptionnels.
+
+      Les amateurs de sports nautiques trouveront également leur bonheur à Madagascar. Que ce soit pour le surf, la
+      plongée sous-marine
+      ou le snorkeling, les eaux entourant l'île offrent des conditions parfaites pour une multitude d'activités. Les
+      récifs coralliens,
+      abritant une biodiversité marine incroyable, sont un véritable paradis pour les plongeurs.
+
+      En explorant l'intérieur des terres, vous découvrirez une variété de paysages impressionnants, des rizières en
+      terrasse des Hautes-Terres
+      aux massifs montagneux du sud. Chaque région de Madagascar a ses propres particularités et charmes, promettant des
+      découvertes inoubliables
+      à chaque étape de votre voyage.
     </p>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      dolores quaerat dolore repudiandae neque hic, quod ullam. Sed assumenda
-      quidem temporibus odit eius qui neque debitis quisquam voluptatem
-      ducimus, ea voluptas magnam incidunt. Ducimus consequuntur ut distinctio
-      harum ipsa doloribus natus, consequatur deserunt, cumque, est numquam!
-      Consectetur impedit minima voluptatibus, quibusdam a ea? Rerum libero ex
-      dolore totam aut accusamus.
+      N'oubliez pas de goûter à la cuisine locale lors de votre visite. Les saveurs de Madagascar sont un mélange unique
+      d'influences africaines,
+      asiatiques et européennes. Les plats typiques, tels que le ravitoto (feuilles de manioc pilées avec de la viande)
+      ou le romazava (ragoût de
+      viande et de légumes), raviront vos papilles.
     </p>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia
-      aperiam et, excepturi commodi quia dolor ullam assumenda possimus
-      consequatur omnis expedita odit enim autem cum debitis dicta laboriosam
-      molestiae quisquam illum rem nisi. Laborum, repellat quia? Repellat
-      dolorum rerum esse commodi consequatur quibusdam inventore praesentium a
-      iste impedit? Qui assumenda atque suscipit eligendi voluptatibus at,
-      exercitationem quo, ducimus repellendus harum, ipsam eum tempora! Sint
-      placeat cum minima suscipit praesentium.
+      Avec ses paysages diversifiés, sa faune et sa flore uniques, et sa culture riche, Madagascar est une destination
+      qui ne manquera pas de vous
+      surprendre et de vous émerveiller. Préparez-vous à vivre une aventure inoubliable sur cette île magnifique.
     </p>
   </div>
 
-  <div class="container w-50">
-    <img class="img-fluid card-img" src="./IMG/baobabs-2708289_1280.jpg" alt="baobab" />
+  <div class="container d-flex justify-content-between my-5 small-images">
+    <img class="rounded-3 img-fluid" src="./IMG/nature-1568850_1280.jpg" alt="baobab" />
+    <img class="rounded-3 img-fluid" src="./IMG/baobab-577761_1280.jpg" alt="baobab" />
   </div>
 
-  <div class="container mt-5 mb-5">
+  <div class="container my-5">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-      voluptatem cupiditate fugiat voluptate eveniet dicta aspernatur quos
-      tempore corrupti! Cum sequi dolorum eius reiciendis placeat voluptatem
-      ipsa expedita tempore facere suscipit libero autem, illo a porro quaerat
-      eligendi sint totam quia culpa deleniti ducimus numquam. Deleniti
-      consectetur quas architecto quod a aliquid, vel illo consequuntur
-      delectus eos, ipsa cum! Excepturi, eos facilis distinctio sed eius
-      dolores expedita culpa deleniti corrupti?
+      Madagascar est également un paradis pour les amoureux de la nature et de la photographie. Les paysages variés,
+      allant des montagnes aux plages
+      en passant par les forêts tropicales, offrent des opportunités infinies pour capturer des moments époustouflants.
+      La lumière dorée des couchers
+      de soleil, les couleurs vibrantes des marchés locaux, et les sourires accueillants des habitants, tout cela
+      contribue à faire de Madagascar une
+      destination de rêve pour tout photographe.
     </p>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      dolores quaerat dolore repudiandae neque hic, quod ullam. Sed assumenda
-      quidem temporibus odit eius qui neque debitis quisquam voluptatem
-      ducimus, ea voluptas magnam incidunt. Ducimus consequuntur ut distinctio
-      harum ipsa doloribus natus, consequatur deserunt, cumque, est numquam!
-      Consectetur impedit minima voluptatibus, quibusdam a ea? Rerum libero ex
-      dolore totam aut accusamus.
+      Pour ceux qui cherchent à en savoir plus sur l'histoire et la culture de Madagascar, une visite des sites
+      historiques comme le Palais de la Reine
+      à Antananarivo ou les ruines de l'ancienne ville royale d'Ambohimanga est incontournable. Ces sites offrent un
+      aperçu fascinant de l'héritage
+      riche et complexe de l'île.
     </p>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae mollitia
-      aperiam et, excepturi commodi quia dolor ullam assumenda possimus
-      consequatur omnis expedita odit enim autem cum debitis dicta laboriosam
-      molestiae quisquam illum rem nisi. Laborum, repellat quia? Repellat
-      dolorum rerum esse commodi consequatur quibusdam inventore praesentium a
-      iste impedit? Qui assumenda atque suscipit eligendi voluptatibus at,
-      exercitationem quo, ducimus repellendus harum, ipsam eum tempora! Sint
-      placeat cum minima suscipit praesentium.
+      En conclusion, que vous soyez un aventurier en quête de sensations fortes, un amateur de détente à la plage, un
+      passionné de culture ou un amoureux
+      de la nature, Madagascar a quelque chose à offrir à chacun. Préparez-vous à être enchanté par la diversité et la
+      beauté de cette île extraordinaire.
     </p>
   </div>
-  <footer class="navbar navbar-expand-lg bg-black py-0">
-    <div class="container-fluid">
-      <a id="titre" class="navbar-brand" href="page.html">
-        &#169; Copyright</a>
-      <div class="navbar-collapse justify-content-lg-center">
-        <ul class="navbar-nav">
-          <li class="nav-item d-lg-flex">
-            <a class="nav-link active p-lg-3 text-white" aria-current="page" href="animaux.html">Animaux</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 text-white" aria-current="page" href="visites.html">Visites</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 text-white" aria-current="page" href="excursions.html">Excursions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active p-lg-3 text-white" aria-current="page" href="contact.html">Contact</a>
-          </li>
-        </ul>
+
+  <footer class="footer bg-dark text-white mt-5 p-4 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>Email: contact@madagascar.com</p>
+          <p>Téléphone: +261 32 12 345 67</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Suivez-nous</h5>
+          <a href="#">Facebook</a> |
+          <a href="#">Instagram</a> |
+          <a href="#">Twitter</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Adresse</h5>
+          <p>123 Rue de l'Aventure, Antananarivo, Madagascar</p>
+        </div>
       </div>
     </div>
+    <div class="mt-3">
+      &copy; 2024 Madagascar. Tous droits réservés.
+    </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
