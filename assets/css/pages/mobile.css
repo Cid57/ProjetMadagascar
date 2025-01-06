@@ -1,0 +1,181 @@
+@media (max-width: 700px) {
+
+  .btn-index button {
+    border: none;
+    padding: 7px;
+    border-radius: 10px;
+  }
+
+  .header-cameleon {
+    background-position-x: center;
+  }
+
+  .header-cameleon h2 {
+    text-shadow: none;
+    top: 100px;
+    right: 50px;
+    font-size: 100px;
+  }
+
+  .header-index h2 {
+    font-size: 74px;
+    text-shadow: none;
+    right: 30px;
+    top: 230px;
+  }
+
+  #barre-navig ul a {
+    text-align: center;
+    line-height: 25px;
+  }
+
+  li a:hover:after {
+    width: 0;
+    background: #fff;
+  }
+
+  .header {
+    background-size: cover;
+    background-attachment: scroll;
+    height: 400px;
+  }
+
+  #bandeau {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header h2 {
+    font-size: 55px;
+    top: 260px;
+    text-shadow: none;
+  }
+
+  .header1 h2 {
+    font-size: 80px;
+    right: 50px;
+    top: 20%;
+    text-shadow: none;
+  }
+
+  .header3 h2 {
+    font-size: 80px;
+    top: 20%;
+    right: 10px;
+    text-shadow: none;
+  }
+
+  .formulaire {
+    width: 100%;
+    margin-left: 0;
+
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form h2 {
+    font-size: 60px;
+  }
+
+  .titre-plage {
+    font-size: 40px !important;
+
+  }
+
+  .titre-video h2 {
+    font-size: 50px;
+  }
+
+  footer ul a {
+    text-align: center;
+    line-height: 20px;
+  }
+
+  #card {
+    display: grid;
+    padding-left: 60px;
+
+  }
+
+  .card h2 {
+    font-size: 40px;
+  }
+
+  .incontournable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .cameleon img {
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .card-body {
+    padding: 1rem;
+    text-align: center;
+
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+
+  }
+
+  .card-text {
+    font-size: 1rem;
+
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+
+  }
+
+  .bateau img {
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* Styles mobiles globaux */
+@media (max-width: 768px) {
+    /* Styles des titres */
+    .hero-section h1,
+    .section-title h1,
+    .page-title h1,
+    .main-title,
+    h1 {
+        font-size: 3rem !important;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-section p,
+    .section-description,
+    .page-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+
+    /* Ajustement des sous-titres */
+    h2, .h2 {
+        font-size: 2.25rem !important;
+        margin-bottom: 1.25rem;
+        line-height: 1.2;
+    }
+
+    h3, .h3 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+}

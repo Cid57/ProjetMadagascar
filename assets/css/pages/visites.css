@@ -1,0 +1,944 @@
+/* Variables */
+:root {
+    --primary-color: #e67e22;
+    --secondary-color: #d35400;
+    --text-color: #2c3e50;
+    --bg-color: #ffffff;
+    --heading-color: #2c3e50;
+    --section-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --primary-rgb: 230, 126, 34;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Common Components */
+.subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    background-color: rgba(230, 126, 34, 0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 1rem;
+    margin-top: 85px;
+}
+
+
+
+.hero__content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+.hero__content p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    margin: 2rem auto 0;
+    max-width: 800px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styles */
+.section {
+    padding: 6rem 0;
+}
+
+/* Réinitialisation du padding uniquement pour la section des filtres */
+.section .filters {
+    margin: 2rem 0 3rem;
+}
+
+.section:has(.filters) {
+    padding: 0;
+}
+
+/* Maintien des paddings spécifiques pour les autres sections */
+.section-weather-info {
+    margin-top: 4rem;
+    padding: 6rem 0;
+    background-color: var(--bg-color);
+}
+
+.section-circuits {
+    margin-top: 4rem;
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.top-destinations {
+    margin-top: 4rem;
+    padding: 6rem 0;
+}
+
+.section-experiences {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.section + .section {
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+
+.section-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Experiences Section */
+.section-experiences {
+    text-align: center;
+
+}
+
+.section__title {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+
+.section__title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section__title p {
+ 
+    font-size: 1.5rem;
+    color: var(--text-color);
+  
+    opacity: 0.9;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.experience-card {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1) 0%, rgba(var(--primary-rgb), 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card:hover::after {
+    opacity: 1;
+}
+
+.experience-icon {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    transition: transform 0.4s ease;
+}
+
+.experience-card:hover .experience-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.experience-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    transition: transform 0.4s ease;
+}
+
+.experience-card:hover .experience-icon i {
+    transform: scale(1.1);
+}
+
+.experience-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.experience-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.experience-card p {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.experience-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    background-color: rgba(var(--primary-rgb), 0.03);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.experience-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.experience-details li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-details li:hover {
+    transform: translateX(5px);
+}
+
+.experience-details li i {
+    color: var(--primary-color);
+    margin-right: 1rem;
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+/* Top Destinations */
+.top-destinations {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.destination-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.destination-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.destination-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+}
+
+.destination-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.destination-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    line-height: 1;
+}
+
+.destination-info i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.2rem;
+}
+
+.destination-content p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+.destination-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.destination-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    padding: 0.75rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.destination-features i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.destination-type {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Quand Visiter */
+.section-weather-info {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.season-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.season-card:hover {
+    transform: translateY(-5px);
+}
+
+.season-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.best-season {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.best-season h4 {
+    font-size: 1.2rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.season-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.best-season p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.season-details {
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 1.5rem;
+    text-align: center;
+}
+
+.detail-item span {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.season-tips {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+}
+
+.season-tips h4 {
+    font-size: 1.2rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.season-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.season-tips li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.season-tips li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Filtres */
+.filters {
+    margin: 2rem 0 3rem;
+}
+
+.btn-filter {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-counter {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+}
+
+/* Galerie */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.gallery-card {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.gallery-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    padding: 1.5rem;
+    color: white;
+    pointer-events: none;
+}
+
+.gallery-card__overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.gallery-card__overlay p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Modal Styles */
+.modal-gallery .modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Circuits Suggérés */
+.section-circuits {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.circuit-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.circuit-card:hover {
+    transform: translateY(-5px);
+}
+
+.circuit-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.circuit-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+.circuit-duration {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+}
+
+.circuit-content {
+    padding: 2rem;
+}
+
+.circuit-stops {
+    margin-bottom: 2rem;
+}
+
+.stop {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.stop:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+.stop i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stop i.fa-arrow-down {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.stop span {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.circuit-highlights {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+}
+
+.circuit-highlights h4 {
+    font-size: 1.2rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.circuit-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.circuit-highlights li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.circuit-highlights li:before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Section Conseils */
+.section-conseils {
+    background-color: var(--bg-color);
+    margin-top: 4rem;
+    padding: 6rem 0;
+}
+
+.conseils-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 200px;
+}
+
+.conseil-item {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.conseil-item:hover {
+    transform: translateY(-5px);
+}
+
+.conseil-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(var(--primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.conseil-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.conseil-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.conseil-content p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.conseil-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.conseil-details li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.conseil-details li:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+.conseil-details li:last-child {
+    margin-bottom: 0;
+}
+
+.conseil-details i {
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 1.2rem;
+    text-align: center;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Espacement du titre */
+.mt-header {
+    margin-top: 5rem;
+}

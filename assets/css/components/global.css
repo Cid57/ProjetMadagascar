@@ -1,0 +1,43 @@
+/* Correction du double scroll */
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Suppression de l'outline bleu au clic */
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Style spécifique pour les boutons primaires */
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Style spécifique pour les boutons secondaires */
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* Style pour les boutons outline */
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: transparent !important;
+    border-color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}

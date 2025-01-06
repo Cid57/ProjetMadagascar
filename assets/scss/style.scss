@@ -1,0 +1,388 @@
+// Variables
+$primary-color: #2C3E50;
+$secondary-color: #E67E22;
+$text-color: #333;
+$light-bg: #f8f9fa;
+$dark-bg: #343a40;
+$light: #fff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin section-padding {
+  padding: 5rem 0;
+}
+
+// Styles généraux
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+body.dark-mode {
+  background-color: $dark-bg;
+  color: $light;
+
+  .navbar {
+    background-color: rgba($dark-bg, 0.95);
+    
+    .nav-link {
+      color: $light !important;
+      
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+
+  .section-title,
+  .subtitle,
+  h1, h2, h3, h4, h5, h6 {
+    color: $light;
+  }
+
+  .card,
+  .stat-item,
+  .habitat-card {
+    background: lighten($dark-bg, 5%);
+    color: $light;
+    
+    p {
+      color: rgba($light, 0.9);
+    }
+  }
+
+  .modal-content {
+    background-color: lighten($dark-bg, 5%);
+    color: $light;
+  }
+
+  .habitat-details {
+    background-color: lighten($dark-bg, 5%);
+    
+    p, li {
+      color: rgba($light, 0.9);
+    }
+  }
+
+  .btn-custom {
+    background-color: $primary-color;
+    color: $light;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .footer {
+    background-color: lighten($dark-bg, 3%);
+    
+    h5 {
+      color: $light;
+    }
+    
+    p, a {
+      color: rgba($light, 0.9);
+    }
+  }
+
+  .hero__content {
+    h1, p {
+      color: $light;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .biodiversity-section,
+  .conservation-section,
+  .habitats-section,
+  .species-section {
+    background-color: $dark-bg;
+    
+    p {
+      color: rgba($light, 0.9);
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+  &--small {
+    height: 60vh;
+  }
+  
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  
+  &__content {
+    @include flex-center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    color: white;
+    text-align: center;
+    
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  transition: background-color 0.3s ease;
+
+  
+  &.scrolled {
+    background-color: rgba($dark-bg, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+
+// Galerie
+.gallery {
+  &-item {
+    transition: all 0.3s ease;
+  }
+}
+
+.gallery-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 2rem;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      font-size: 1rem;
+      margin: 0;
+      opacity: 0.8;
+    }
+  }
+  
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-card__overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Filtres
+.filters {
+  .btn {
+    transition: all 0.3s ease;
+    
+    &.active {
+      background-color: $secondary-color;
+      color: white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Sections
+.section {
+  @include section-padding;
+  
+  &__title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary-color;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: lighten($text-color, 20%);
+    }
+  }
+}
+
+// Boutons
+.btn-custom {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  &--primary {
+    background-color: $secondary-color;
+    border: none;
+    color: white;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Boutons flottants
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba($primary-color, 0.9);
+  color: $light;
+  border: none;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  &:hover {
+    background: darken($primary-color, 10%);
+    transform: translateY(-3px);
+  }
+  
+  &.visible {
+    display: flex;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 85px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba($dark-bg, 0.9);
+  color: $light;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  
+  &:hover {
+    background: lighten($dark-bg, 10%);
+    transform: translateY(-3px);
+  }
+}
+
+// Footer
+.footer {
+  background-color: $dark-bg;
+  color: white;
+  padding: 4rem 0;
+  
+  a {
+    color: rgba(white, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .hero {
+    &__content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  .section {
+    &__title {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  .gallery-card {
+    img {
+      height: 250px;
+    }
+  }
+}

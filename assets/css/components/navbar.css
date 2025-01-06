@@ -1,0 +1,222 @@
+/* Navbar */
+.navbar {
+    transition: all 0.4s ease;
+    padding: 1.2rem 0;
+    background: transparent;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgba(44, 62, 80, 0.98);
+    backdrop-filter: blur(15px);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.navbar-dark .navbar-nav {
+    gap: 0.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.navbar-dark .navbar-nav .nav-link:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #E37446;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover:before,
+.navbar-dark .navbar-nav .nav-link:focus:before,
+.navbar-dark .navbar-nav .nav-link.active:before {
+    width: 70%;
+    opacity: 1;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(8px);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        background-color: rgba(44, 62, 80, 0.98) !important;
+        backdrop-filter: blur(15px);
+        padding: 0.8rem 0;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(44, 62, 80, 0.98);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 0.8rem 1rem;
+        text-align: center;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:before {
+        bottom: auto;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover:before,
+    .navbar-dark .navbar-nav .nav-link:focus:before,
+    .navbar-dark .navbar-nav .nav-link.active:before {
+        width: 3px;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        background-color: #2E3238;
+        padding: 0.5rem 0;
+    }
+
+    .navbar.scrolled {
+        background-color: #2E3238;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-collapse {
+        background-color: #2E3238;
+        padding: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: left;
+        position: relative;
+        transform: translateX(-10px);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navbar-collapse.show .nav-item {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+        color: white !important;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 10px 15px !important;
+        display: block;
+        color: white !important;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+    }
+}

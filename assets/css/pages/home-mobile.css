@@ -1,0 +1,688 @@
+/* Styles mobiles pour la page d'accueil */
+@media screen and (max-width: 768px) {
+    /* Correction overflow */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        min-height: auto;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero__content {
+        padding: 0 20px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        transform: translateY(-15%);
+        margin-top: 150px;
+    }
+
+    .hero__content h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        padding: 31px 10px;
+    }
+
+    .hero__content .lead {
+        font-size: 1.5rem !important;
+        line-height: 1.4;
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .hero__content .btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .hero__overlay {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    /* Section Destinations */
+    .section {
+        padding: 40px 0;
+    }
+
+    .row.g-4 {
+        margin: 0;
+    }
+
+    .col-md-4 {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Reset des animations desktop */
+    .destination-card {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: default;
+    }
+
+    .destination-card__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .destination-card:hover .destination-card__img {
+        transform: none !important;
+    }
+
+    .destination-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+        z-index: 2;
+    }
+
+    .destination-card__title {
+        position: absolute;
+        top: 70px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        color: white;
+        font-size: 1.8rem !important;
+        font-weight: 600;
+        z-index: 3;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        margin: 0;
+        text-align: center;
+        width: 90%;
+        transition: none !important;
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .destination-card__content {
+        position: absolute;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 3;
+        transform: none !important;
+        opacity: 1 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: none !important;
+    }
+
+    .destination-card__content p {
+        color: rgba(255, 255, 255, 0.95);
+        margin: 0 0 15px 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .destination-card__content .btn,
+    .destination-card__content .btn-custom,
+    .destination-card__content .btn-custom--primary {
+        background: #fff !important;
+        color: #333 !important;
+        padding: 10px 25px;
+        border-radius: 25px;
+        font-weight: 500;
+        border: none;
+        display: inline-block !important;
+        text-align: center;
+        text-decoration: none;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: background 0.3s ease !important;
+        margin-top: 5px;
+        min-width: 150px;
+    }
+
+    .destination-card:hover .destination-card__content,
+    .destination-card:hover p,
+    .destination-card:hover .btn {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .destination-card:hover .destination-card__title {
+        transform: translateX(-50%) !important;
+    }
+
+    /* Section Météo */
+    .weather-section {
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .weather-section h2 {
+     
+        margin-bottom: 20px;
+    }
+
+    .weather-card {
+        padding: 15px;
+        margin: 10px 0;
+        height: auto;
+        text-align: center;
+    }
+
+    /* Section Témoignages */
+    .testimonials-section {
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .testimonials-section h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px 15px;
+        margin: 10px 0;
+        height: auto;
+    }
+
+    .testimonial-content {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .author-info h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .author-info p {
+        font-size: 0.85rem;
+    }
+
+    /* Section À Propos */
+    .about-section {
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .about-section .row {
+        margin: 0;
+    }
+
+    .about-section .col-lg-6 {
+        padding: 0 15px;
+    }
+
+    .about-section h2.display-4 {
+        font-size: 2rem !important;
+        margin-bottom: 20px;
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .about-section .lead {
+        font-size: 1rem !important;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+        color: #666;
+    }
+
+    .about-section p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        text-align: justify;
+        color: #666;
+    }
+
+    .about-section .btn {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto;
+        padding: 12px 25px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 25px;
+    }
+
+    .about-image {
+        height: inherit !important;
+        margin-top: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Ajustements généraux */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 0px !important;
+    }
+
+    /* Fix pour le carousel */
+    .carousel {
+        overflow: hidden;
+    }
+
+    .carousel-inner {
+        overflow: hidden;
+    }
+
+    /* Animation des éléments de la navbar */
+    .nav-item {
+        margin: 10px 0;
+        text-align: left;
+        position: relative;
+        transform: translateX(-10px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show .nav-item {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .navbar-collapse.show .nav-item:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+}
+
+/* Media query pour tablettes */
+@media (max-width: 992px) {
+    .about-content {
+        padding-right: 2rem;
+    }
+
+    .hero__content h1.display-3 {
+        font-size: 3.5rem;
+    }
+
+    .hero__content p {
+        font-size: 1.8rem;
+    }
+
+    /* Ajustements des cartes de destination */
+    .destination-card {
+        height: 450px;
+    }
+
+    .destination-card__title {
+        font-size: 2.2rem;
+    }
+
+    .destination-card__content {
+        padding: 2rem;
+    }
+
+    .destination-card__content p {
+        font-size: 1.1rem;
+    }
+
+    /* Galerie photos */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Media query pour mobiles */
+@media screen and (max-width: 768px) {
+    /* Cartes de destination */
+    .destination-card {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .destination-card__title {
+        font-size: 2rem;
+    }
+
+    .destination-card__content {
+        padding: 1.5rem;
+    }
+
+    .destination-card__content p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .destination-card:hover .destination-card__title {
+        top: 25%;
+    }
+
+    .destination-cards-row {
+        margin: 0 -10px;
+    }
+
+    .destination-cards-row > div {
+        padding: 0 10px;
+    }
+
+    /* Galerie photos */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .gallery-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-section {
+        padding: 2rem 0;
+    }
+
+    /* Styles des titres */
+    .hero-section h1,
+    .section-title h1,
+    .main-title,
+    h1 {
+        font-size: 3rem !important;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-section p,
+    .section-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Media query pour très petits écrans */
+@media screen and (max-width: 576px) {
+  
+
+    /* Cartes de destination */
+    .destination-card {
+        height: 350px;
+        margin-bottom: 15px;
+    }
+
+    .destination-card__title {
+        font-size: 1.8rem;
+    }
+
+    .destination-card__content {
+        padding: 1.2rem;
+    }
+
+    .destination-card__content p {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .destination-card:hover .destination-card__title {
+        top: 20%;
+    }
+
+    /* Galerie photos */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Styles mobiles pour le footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .newsletter-form .input-group {
+        flex-direction: column;
+    }
+
+    .btn-subscribe {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+}
+
+/* Styles mobile pour la galerie */
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 2rem 0;
+        background: #f8f9fa;
+    }
+
+    .gallery-mobile-container {
+        padding: 0;
+        margin: 0 -15px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .gallery-swiper {
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        height: 280px;
+        position: relative;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Style des flèches */
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 140px !important; /* Centre vertical avec la hauteur de l'image divisée par 2 */
+        width: 35px !important;
+        height: 35px !important;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-button-prev {
+        left: 15px !important;
+    }
+
+    .swiper-button-next {
+        right: 15px !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 1rem !important;
+        font-weight: bold;
+        color: #D0833C;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Style de la pagination */
+    .swiper-pagination {
+        bottom: 15px !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: var(--primary-color) !important;
+        opacity: 0.5;
+        margin: 0 4px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: var(--primary-color) !important;
+        width: 24px !important;
+        border-radius: 4px !important;
+    }
+
+    /* Effet de transition sur les images */
+    .swiper-slide img {
+        transition: transform 0.3s ease;
+        border-radius: 20px;
+    }
+
+    .swiper-slide-active img {
+        transform: scale(1.02);
+    }
+}

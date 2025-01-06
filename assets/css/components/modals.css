@@ -1,0 +1,392 @@
+/* Styles généraux des modales */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.modal-header {
+    border: none;
+    padding: 1.75rem 1.75rem 1rem;
+    position: relative;
+}
+
+.modal-header .modal-title {
+    background: #E86343;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.625rem 1.75rem;
+    border-radius: 10px;
+    display: inline-block;
+    letter-spacing: 0.3px;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 50%;
+    padding: 0.5rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 1rem 1.75rem 1.75rem;
+}
+
+.modal-body h2 {
+    color: #111827;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.modal-body h3 {
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 2rem 0 1rem;
+}
+
+/* Style général des listes */
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.75rem;
+}
+
+/* Styles pour la modale de don */
+.donation-options h6 {
+    color: #111827;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.2px;
+}
+
+.donation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.donation-btn {
+    flex: 1;
+    min-width: 90px;
+    border: 1.5px solid #E5E7EB;
+    background: transparent;
+    color: #374151;
+    padding: 0.625rem 1.25rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+}
+
+.donation-btn:hover {
+    border-color: #E86343;
+    color: #E86343;
+    background: rgba(232, 99, 67, 0.04);
+}
+
+.donation-btn.active {
+    background-color: #E86343;
+    border-color: #E86343;
+    color: #fff;
+}
+
+/* Don mensuel */
+.donation-options h6:nth-of-type(2) {
+    margin-top: 1.5rem;
+}
+
+.donation-buttons.monthly {
+    justify-content: flex-start;
+}
+
+.donation-buttons.monthly .donation-btn {
+    flex: 0 1 auto;
+    min-width: 120px;
+}
+
+/* Message de sélection */
+.selected-donation {
+    background: #F9FAFB;
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.selected-donation p {
+    color: #111827;
+    font-size: 1.125rem;
+    margin: inherit !important;
+    font-weight: 500;
+}
+
+.selected-donation .selected-amount {
+    color: #E86343;
+    font-weight: 600;
+}
+
+/* Message de remerciement */
+.thank-you-message {
+    background: #F9FAFB;
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.thank-you-message i {
+    color: #E86343;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.thank-you-message p {
+    color: #111827;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Boutons d'action */
+.modal-footer {
+  
+    padding: 0.75rem 1.75rem 1.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background: #E86343;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 12px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #D94E2E;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232, 99, 67, 0.15);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1.5px solid #E5E7EB;
+    color: #374151;
+    padding: 0.75rem 2rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #9CA3AF;
+    background: #F9FAFB;
+    color: black;
+}
+
+/* Styles pour la modale de sensibilisation */
+.sharing-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.sharing-options .btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    color: #374151;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: #fff;
+    text-align: left;
+}
+
+.sharing-options .btn:hover {
+    border-color: #E86343;
+    color: #E86343;
+}
+
+.sharing-options .btn i {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    color: #E86343;
+}
+
+.other-options {
+    margin-top: 1rem;
+}
+
+.other-options li {
+    display: flex;
+    align-items: center;
+    color: #374151;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.other-options li i {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 1rem;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1.5rem 0.75rem;
+    }
+
+    .modal-body {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .donation-buttons {
+        flex-direction: column;
+    }
+
+    .donation-buttons .donation-btn {
+        width: 100%;
+    }
+
+    .modal-footer {
+        padding: 0.75rem 1.5rem 1.5rem;
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+}
+
+/* Styles pour la modale bénévole */
+#volunteerForm .form-label {
+    color: #2c4021;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#volunteerForm .form-control,
+#volunteerForm .form-select {
+    border: 2px solid #e9ecef;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#volunteerForm .form-control:focus,
+#volunteerForm .form-select:focus {
+    border-color: #4a6741;
+    box-shadow: 0 0 0 0.2rem rgba(74, 103, 65, 0.25);
+}
+
+#volunteerForm .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%234a6741' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Message de confirmation */
+#confirmationMessage {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.success-animation {
+    text-align: center;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    background: #4a6741;
+    animation: checkmark-circle 0.3s ease-in-out;
+}
+
+.checkmark_circle {
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark_check {
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes checkmark-circle {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.submission-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #4a6741;
+}
