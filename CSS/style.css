@@ -1,0 +1,424 @@
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1,
+h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.navbar {
+  background-color: #262626;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #67a3bc;
+  background-color: transparent;
+  text-decoration: non;
+}
+
+.header-index {
+  background-image: url('../IMG/header-principal.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-index .content {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-index h2 {
+  font-size: 4em;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.intro-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.card-group .card {
+  margin: 20px;
+}
+
+.card-title {
+  color: #67a3bc;
+}
+
+.card-text {
+  color: #333;
+}
+
+.btn-index button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #67a3bc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-index button:hover {
+  background-color: #005f73;
+  color: white;
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.footer {
+  background-color: #262626;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.incontournable {
+  display: flex;
+  justify-content: space-around;
+}
+
+#titre-1 {
+  color: #67a3bc;
+}
+
+#bandeau {
+  background: #262626;
+}
+
+li a {
+  line-height: 35px;
+}
+
+li a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: 0.4s ease, 0.4s ease;
+  background-color: #fff;
+}
+
+li a:hover:after {
+  width: 90%;
+  background: #fff;
+}
+
+li a:hover {
+  background-color: transparent;
+}
+
+a:visited {
+  color: #67a3bc;
+}
+
+.lien-page button {
+  border: none;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.lien-page button:hover {
+  background-color: #67a3bc;
+  color: white;
+}
+
+.titre-cameleon h2 {
+  padding-top: 150px;
+  font-size: 70px;
+}
+
+.titre-cameleon2 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.titre-container {
+  font-size: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.cameleon img {
+  box-shadow: 11px 15px 65px 0px #000000;
+}
+
+#btn-cameleon {
+  display: block;
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  color: white;
+}
+
+#card {
+  display: flex;
+  padding-left: 80px;
+  margin-top: 100px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+}
+
+.card h2 {
+  color: #ea3d52;
+  text-align: center;
+  font-size: 50px;
+}
+
+.galerie {
+  padding: 0 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vmin;
+}
+
+.galerie li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
+}
+
+.galerie img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container img {
+  position: relative;
+}
+
+.relaxation {
+  position: absolute;
+  color: #fff;
+  top: 430%;
+  right: 8%;
+  width: 45%;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2559f6;
+}
+
+.relaxation h2 {
+  padding-bottom: 20px;
+}
+
+.relaxation p {
+  padding-bottom: 20px;
+}
+
+.arts {
+  position: absolute;
+  color: #fff;
+  top: 595%;
+  width: 45%;
+  margin-left: 50px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #451245;
+}
+
+.arts h2 {
+  padding-bottom: 20px;
+}
+
+.arts p {
+  padding-bottom: 20px;
+}
+
+.activites {
+  position: absolute;
+  color: #fff;
+  top: 746%;
+  right: 8%;
+  width: 45%;
+  margin-left: 50px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ea3d52;
+}
+
+.activites h2 {
+  padding-bottom: 20px;
+}
+
+.activites p {
+  padding-bottom: 20px;
+}
+
+.btn {
+  background-color: #67a3bc;
+  border: unset;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.header3 {
+  background-image: url(../IMG/header3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header3 h2 {
+  position: absolute;
+  top: 20%;
+  color: white;
+  padding-left: 10%;
+  font-size: 100px;
+  text-shadow: 3px 3px #67a3bc;
+  text-align: center;
+}
+
+.header {
+  background-image: url(../IMG/animaux/animal3.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header h2 {
+  position: absolute;
+  top: 20%;
+  color: white;
+  padding-left: 10%;
+  font-size: 100px;
+  text-shadow: 3px 3px #67a3bc;
+}
+
+.header1 {
+  background-image: url(../IMG/header1.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header1 h2 {
+  position: absolute;
+  top: 22%;
+  color: white;
+  padding-left: 20%;
+  font-size: 100px;
+  text-shadow: 3px 3px #67a3bc;
+}
+
+.titre-video h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 70px;
+  color: black;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.formulaire {
+  background-color: #f8f9fa;
+  margin-top: 180px;
+  width: 50vw;
+  margin-left: 25%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.contact-form h2 {
+  font-size: 60px;
+}
+
+.header-cameleon {
+  background-image: url(../IMG/animaux/header-cameleon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: top;
+  height: 100vh;
+}
+
+.header-cameleon h2 {
+  position: absolute;
+  top: 250px;
+  color: white;
+  padding-left: 9%;
+  font-size: 120px;
+  text-shadow: 3px 3px #67a3bc;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header-index h2 {
+    font-size: 2.5em;
+  }
+
+  .btn-index button {
+    width: 100%;
+  }
+} */

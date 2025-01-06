@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "Agapornis",
+    "canus",
+    "Cryptoprocta",
+    "ferox",
+    "hapalémur",
+    "îles",
+    "l’île",
+    "madagascar",
+    "Nesoenas",
+    "picturata",
+    "prenom",
+    "Prolemur",
+    "simus"
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-folder-projetmadagascar": {
+      "name": "custom-dictionary-folder-projetmadagascar",
+      "path": "${workspaceFolder:ProjetMadagascar}/.cspell/custom-dictionary-folder-projetmadagascar.txt",
+      "addWords": true,
+      "scope": "folder"
+    }
+  }
+}
