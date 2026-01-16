@@ -21,5 +21,6 @@
       "addWords": true,
       "scope": "folder"
     }
-  }
+  },
+  "liveServer.settings.port": 5501
 }

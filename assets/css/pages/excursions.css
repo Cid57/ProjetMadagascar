@@ -681,7 +681,7 @@ footer {
 /* Header */
 .header {
     margin: 0;
-    background: url('../IMG/plage1.jpg') no-repeat center center;
+    background: url('../../images/visites/plage1.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     height: 66vh;

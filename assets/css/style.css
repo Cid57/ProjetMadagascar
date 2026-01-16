@@ -1,4 +1,6 @@
-/* Variables globales */
+/* =====================================================
+   VARIABLES GLOBALES
+   ===================================================== */
 :root {
     --primary-color: #e67e22;
     --secondary-color: #d35400;
@@ -10,17 +12,22 @@
     --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Reset et styles de base */
+/* =====================================================
+   RESET ET STYLES DE BASE
+   ===================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -28,12 +35,56 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     line-height: 1.6;
-    min-height: 100%;
+    min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
 }
 
-/* Section Styles */
+/* =====================================================
+   TITRES
+   ===================================================== */
+h2,
+.section h2,
+.section-title,
+.display-4,
+.gallery-section h2,
+.weather-section h2,
+.testimonials h2,
+#destinations h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+h2::after,
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
 section {
     padding: 5rem 0;
 }
@@ -46,63 +97,18 @@ section {
 
 .section-title h2 {
     font-size: 2.5rem;
-    color: var(--heading-color);
     margin-bottom: 1.5rem;
-    position: relative;
     display: inline-block;
 }
 
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color);
-    transform: translateX(-50%);
-}
-
 .section-title p {
-    color: var(--text-color);
     max-width: 600px;
-    margin: 0 auto;
+    margin: 2rem auto 0;
 }
 
-/* Cards */
-.card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    margin-bottom: 2rem;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.card-title {
-    color: var(--heading-color);
-    margin-bottom: 1rem;
-}
-
-.card-text {
-    color: var(--text-color);
-    margin-bottom: inherit !important;
-}
-
-/* Hero Section */
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
 .hero {
     position: relative;
     background-size: cover;
@@ -176,58 +182,76 @@ section {
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive styles for hero section */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-    
-    .hero p {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.5rem;
-    }
-}
-
-/* Buttons */
-.btn {
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* =====================================================
+   CARDS
+   ===================================================== */
+.card {
     border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
 }
 
-.btn-custom {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--text-color);
+}
+
+/* =====================================================
+   BOUTONS
+   ===================================================== */
+.btn {
     display: inline-block;
     padding: 15px 40px;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
     border: none;
-    background: #fff;
-    color: #333;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-custom {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 .btn-custom:hover {
-    transform: translateY(-1px);
+    background: #fff;
+    color: #333;
+    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -257,12 +281,12 @@ section {
 }
 
 .btn-lg {
-    padding: 15px 40px;
+    padding: 18px 48px;
     font-size: 1.1rem;
 }
 
 .btn-sm {
-    padding: 8px 20px;
+    padding: 12px 32px;
     font-size: 0.9rem;
 }
 
@@ -272,7 +296,9 @@ section {
     color: #fff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     transform: translateY(-2px);
@@ -290,94 +316,22 @@ section {
     transform: translateY(-2px);
 }
 
-/* Styles globaux pour les titres */
-h2 {
-
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    position: relative;
-    text-align: center;
-}
-
-h2:after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 15px auto 0;
-}
-
-/* Pour éviter que certaines sections n'écrasent ces styles */
-.section h2,
-.section-title,
-.display-4,
-.gallery-section h2,
-.weather-section h2,
-.testimonials h2,
-#destinations h2 {
-    font-family: 'Playfair Display', serif !important;
- 
-    font-weight: 600 !important;
-    color: #2c3e50 !important;
-}
-
-/* Style pour les h2 avec text-align center */
-.text-center h2,
-.section-title h2,
-.container > h2 {
-    text-align: center;
-    display: block;
-}
-
-/* Style pour le span.subtitle */
-.subtitle {
-    display: block;
-    text-align: center;
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: transparent;
+    border-color: var(--primary-color);
     color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
-.fade-in {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Bouton de thème */
-.theme-toggle {
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-    margin-left: 1rem;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-.theme-toggle i {
-    font-size: 1.2rem;
-}
-
-/* Loader */
+/* =====================================================
+   LOADER
+   ===================================================== */
 .loader-wrapper {
     position: fixed;
     top: 0;
@@ -405,7 +359,9 @@ h2:after {
     100% { transform: rotate(360deg); }
 }
 
-/* Bouton retour en haut */
+/* =====================================================
+   BOUTON RETOUR EN HAUT
+   ===================================================== */
 .back-to-top {
     position: fixed;
     right: 30px;
@@ -441,26 +397,9 @@ h2:after {
     font-size: 1.2rem;
 }
 
-/* Animation AOS */
-[data-aos] {
-    pointer-events: none;
-}
-
-[data-aos].aos-animate {
-    pointer-events: auto;
-}
-
-/* Effets de survol */
-.btn-custom {
-    transition: all 0.3s ease;
-}
-
-.btn-custom:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Testimonials Carousel */
+/* =====================================================
+   TESTIMONIALS CAROUSEL
+   ===================================================== */
 .testimonials {
     background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
     padding: 4rem 0;
@@ -517,7 +456,6 @@ h2:after {
     font-size: 0.9rem;
 }
 
-/* Carousel Controls */
 #testimonialCarousel .carousel-control-prev,
 #testimonialCarousel .carousel-control-next {
     width: 40px;
@@ -563,72 +501,76 @@ h2:after {
     opacity: 1;
 }
 
-/* Modification du style pour ajouter le trait orange sous tous les h2 */
-section h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-section h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    width: 80px;
-    height: 3px;
-    background: var(--primary-color);
-    transform: translateX(-50%);
+.fade-in {
+    animation: fadeIn 1s ease-out;
 }
 
-section h2 + p,
-section h2 + .lead,
-.text-center h2 + p,
-.text-center h2 + .lead {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+[data-aos] {
+    pointer-events: none;
 }
 
-.text-center h2 {
-    margin-left: auto;
-    margin-right: auto;
+[data-aos].aos-animate {
+    pointer-events: auto;
 }
 
-/* Styles responsifs */
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.8rem;
+    }
+
     #testimonialCarousel {
         padding: 1rem;
     }
-    
+
     .testimonial-card {
         padding: 1.5rem;
     }
-    
+
     .testimonial-content {
         font-size: 1rem;
     }
-    
+
     h1, .h1 {
         font-size: 3rem !important;
         margin-bottom: 1.5rem;
         line-height: 1.2;
     }
 
-    .hero-title,
-    .section-title h1,
-    .page-title h1,
-    .main-title,
-    .header-title {
-        font-size: 3rem !important;
-        margin-bottom: 1.5rem;
-        line-height: 1.2;
-    }
-
-    /* Ajustement des sous-titres pour la cohérence */
     h2, .h2 {
         font-size: 2.25rem !important;
         margin-bottom: 1.25rem;
         line-height: 1.2;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
     }
 }
 

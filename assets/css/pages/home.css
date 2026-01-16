@@ -1,13 +1,11 @@
-/* Styles spécifiques à la page d'accueil */
+/* =====================================================
+   STYLES SPÉCIFIQUES À LA PAGE D'ACCUEIL
+   ===================================================== */
 
-/* Hero Section */
+/* Hero Section - Extension des styles de base */
 .hero {
-    position: relative;
     height: 120vh;
     min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     margin-top: -76px;
 }
