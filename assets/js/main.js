@@ -147,7 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'showImageNumberLabel': false
     });
 
-    // Animations GSAP
+    // Animations GSAP - Désactivées car GSAP n'est pas chargé
+    // Utilisez AOS (Animate On Scroll) qui est déjà chargé via CDN
+    // Pour activer GSAP, ajoutez dans le HTML:
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    /*
     gsap.registerPlugin(ScrollTrigger);
 
     // Animation du hero
@@ -180,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: 'power3.out'
         });
     });
+    */
 
     // Smooth scroll pour les liens de navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
