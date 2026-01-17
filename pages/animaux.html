@@ -25,7 +25,11 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/components/navbar.css">
     <link rel="stylesheet" href="../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../assets/css/components/buttons.css">
     <link rel="stylesheet" href="../assets/css/components/floating-buttons.css">
+    <link rel="stylesheet" href="../assets/css/components/floating-buttons-mobile.css">
+    <link rel="stylesheet" href="../assets/css/components/chat-widget.css">
+    <link rel="stylesheet" href="../assets/css/components/chat-widget-mobile.css">
     <link rel="stylesheet" href="../assets/css/pages/animaux.css">
     <link rel="stylesheet" href="../assets/css/pages/animaux-mobile.css">
    
@@ -656,7 +660,7 @@
                     <ul class="footer-links">
                         <li><a href="../index.html">Accueil</a></li>
                         <li><a href="animaux.html">Animaux</a></li>
-                        <li><a href="visites.html">Visites</a></li>
+                        <li><a href="../visites.html">Visites</a></li>
                         <li><a href="excursions.html">Excursions</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -711,6 +715,21 @@
     <script src="../assets/js/donation.js"></script>
     <script src="../assets/js/benevole.js"></script>
     <script src="../assets/js/counter.js"></script>
-    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Initialisation AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialisation du loader
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
