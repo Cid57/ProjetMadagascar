@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="CSS/page.css" />
+  <link rel="stylesheet" href="CSS/mobile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
+  <title>Madagascar</title>
+</head>
+
+<body>
+  <!-- Barre de navigation Bootstrap -->
+  <nav id="barre-navig" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="page.html">
+        <img src="./IMG/logo.png" alt="logo" width="50">
+      </a>
+      <!-- Titre et lien vers la page d'accueil -->
+      <a id="titre-1" class="navbar-brand fs-2" href="page.html">Madagascar</a>
+
+      <!-- Bouton de bascule pour les écrans de petite taille -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenu du menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <!-- Liens vers les différentes pages -->
+          <li class="nav-item">
+            <a class="nav-link active p-lg-3 pe-lg-5" href="animaux.html">Animaux</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active p-lg-3 pe-lg-5" href="visites.html">Visites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active p-lg-3 pe-lg-5" href="excursions.html">Excursions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active p-lg-3 pe-lg-5" href="contact.html">&#9742; Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header-index d-flex align-items-center justify-content-center text-center">
+    <div class="content">
+      <h1 id="bienvenue" class="animate__animated animate__fadeInUp">Bienvenue à Madagascar</h1>
+    </div>
+  </header>
+
+  <section class="intro-section mt-5">
+    <div class="container text-center">
+      <h2 class="fs-1">Découvrez la beauté de Madagascar</h2>
+      <p class="fs-5">
+        Madagascar est une île unique en son genre, riche en biodiversité et en paysages à couper le souffle. De ses
+        plages paradisiaques à ses forêts tropicales denses, chaque coin de l'île offre une nouvelle aventure. Plongez
+        dans l'univers fascinant de cette île et découvrez ses trésors cachés, ses traditions culturelles et sa faune et
+        flore exceptionnelles.
+      </p>
+    </div>
+  </section>
+
+  <section id="cards-section" class="d-flex justify-content-center mt-5">
+    <div id="card-mobile" class="card-group gap-5 mt-5">
+      <div class="card">
+        <img src="./IMG/animaux/singe-ecureuil-arbre-dans-foret-gros-plan.jpg" class="card-img-top" alt="Animaux" />
+        <div class="card-body">
+          <h5 class="card-title fs-2">Nos animaux</h5>
+          <p class="card-text">
+            Lors de votre voyage à Madagascar, gardez les yeux grands ouverts et vos jumelles à portée de main, car les
+            rencontres avec les animaux seront fréquentes. Voici quelques-uns des nombreux animaux que vous pourrez
+            observer à Madagascar.
+          </p>
+          <a class="btn-index" href="animaux.html"><button class="btn btn-primary">Cliquez ici</button></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./IMG/mere-fils-regardant-vue-rizieres-ubud-bali.jpg" class="card-img-top" alt="Visites" />
+        <div class="card-body">
+          <h5 class="card-title fs-2">Nos visites</h5>
+          <p class="card-text">
+            Si vous effectuez un séjour à Madagascar, il est indispensable pour vous de venir admirer la mythique allée
+            des baobabs. Située dans la région de Menabe dans l’Ouest de Madagascar, l’allée des baobabs est l’un des
+            sites les plus visités du pays.
+          </p>
+          <a class="btn-index" href="visites.html"><button class="btn btn-primary">Cliquez ici</button></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./IMG/mot-paradis-fond-plage-ecrit-dans-sable.jpg" class="card-img-top" alt="Excursions" />
+        <div class="card-body">
+          <h5 class="card-title fs-2">Nos excursions</h5>
+          <p class="card-text">
+            Venez découvrir la biodiversité marine de la région. Vivre une journée pleine de surprises, entre terre et
+            mer… La suite du programme de la sortie : découverte, déjeuner et détente sur une des plus belles îles du
+            monde !
+          </p>
+          <a class="btn-index" href="excursions.html"><button class="btn btn-primary">Cliquez ici</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-section mt-5">
+    <div class="container text-center">
+      <h2 class="fs-1">À propos de Madagascar</h2>
+      <p class="fs-5">
+        Madagascar est la quatrième plus grande île du monde, située dans l'océan Indien au large de la côte sud-est de
+        l'Afrique. Elle est célèbre pour sa biodiversité unique, avec de nombreuses espèces animales et végétales qui ne
+        se trouvent nulle part ailleurs sur Terre. Les visiteurs peuvent explorer des paysages variés allant des forêts
+        tropicales luxuriantes aux plages de sable blanc, en passant par des formations rocheuses spectaculaires et des
+        baobabs géants.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer bg-dark text-white mt-5 p-4 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>Email: contact@madagascar.com</p>
+          <p>Téléphone: +261 32 12 345 67</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Suivez-nous</h5>
+          <a href="#">Facebook</a> |
+          <a href="#">Instagram</a> |
+          <a href="#">Twitter</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Adresse</h5>
+          <p>123 Rue de l'Aventure, Antananarivo, Madagascar</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3">
+      &copy; 2024 Madagascar. Tous droits réservés.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

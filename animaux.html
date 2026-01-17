@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaux de Madagascar</title>
+    
+    <!-- Meta tags pour SEO -->
+    <meta name="description" content="Découvrez la faune unique de Madagascar : lémuriens, caméléons et autres espèces endémiques.">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animaux.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Madagascar Logo"> Madagascar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="animaux.html">Animaux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="visites.html">Visites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="excursions.html">Excursions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero--small" style="background-image: url('assets/images/animaux/header-cameleon.jpg');">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="container text-center">
+                <h1 class="display-3 text-white mb-4">La Faune Unique de Madagascar</h1>
+                <p class="lead text-white mb-0">Découvrez des espèces qu'on ne trouve nulle part ailleurs au monde</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 mb-3">Notre Faune Exceptionnelle</h2>
+                <p class="lead text-muted">Découvrez les espèces uniques qui font la richesse de Madagascar</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="gallery-filters text-center">
+                <button class="btn active" data-filter="all">
+                    <i class="fas fa-globe-africa me-2"></i>Tous
+                </button>
+                <button class="btn" data-filter="lemuriens">
+                    <i class="fas fa-paw me-2"></i>Lémuriens
+                </button>
+                <button class="btn" data-filter="cameleons">
+                    <i class="fas fa-dragon me-2"></i>Caméléons
+                </button>
+                <button class="btn" data-filter="oiseaux">
+                    <i class="fas fa-feather-alt me-2"></i>Oiseaux
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="gallery">
+                <!-- Lémuriens -->
+                <div class="col-md-4 gallery-item lemuriens" data-aos="fade-up">
+                    <a href="assets/images/animaux/sifaka-6027010_1280.jpg" data-lightbox="gallery" data-title="Lémurien Sifaka">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/sifaka-6027010_1280.jpg" alt="Lémurien Sifaka" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Lémurien Sifaka</h3>
+                                <p>Le plus emblématique des lémuriens de Madagascar</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Caméléons -->
+                <div class="col-md-4 gallery-item cameleons" data-aos="fade-up" data-aos-delay="100">
+                    <a href="assets/images/animaux/header-cameleon.jpg" data-lightbox="gallery" data-title="Caméléon Panthère">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/header-cameleon.jpg" alt="Caméléon Panthère" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Caméléon Panthère</h3>
+                                <p>Le plus grand caméléon du monde</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Oiseaux -->
+                <div class="col-md-4 gallery-item oiseaux" data-aos="fade-up" data-aos-delay="200">
+                    <a href="assets/images/animaux/hans-jurgen-mager-bhD_CcqQR0c-unsplash.jpg" data-lightbox="gallery" data-title="Vanga de Pollen">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/hans-jurgen-mager-bhD_CcqQR0c-unsplash.jpg" alt="Vanga de Pollen" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Vanga de Pollen</h3>
+                                <p>Une espèce endémique de Madagascar</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Plus de lémuriens -->
+                <div class="col-md-4 gallery-item lemuriens" data-aos="fade-up">
+                    <a href="assets/images/animaux/singe-ecureuil-arbre-dans-foret-gros-plan.jpg" data-lightbox="gallery" data-title="Lémurien dans son habitat naturel">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/singe-ecureuil-arbre-dans-foret-gros-plan.jpg" alt="Lémurien dans son habitat naturel" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Lémurien dans son habitat</h3>
+                                <p>Observer les lémuriens dans leur environnement naturel</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Plus de caméléons -->
+                <div class="col-md-4 gallery-item cameleons" data-aos="fade-up" data-aos-delay="100">
+                    <a href="assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" data-lightbox="gallery" data-title="Caméléon coloré">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" alt="Caméléon coloré" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Caméléon coloré</h3>
+                                <p>Les magnifiques couleurs des caméléons de Madagascar</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Plus d'oiseaux -->
+                <div class="col-md-4 gallery-item oiseaux" data-aos="fade-up" data-aos-delay="200">
+                    <a href="assets/images/animaux/yomex-owo-HuEpYtthas8-unsplash.jpg" data-lightbox="gallery" data-title="Oiseau tropical">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/yomex-owo-HuEpYtthas8-unsplash.jpg" alt="Oiseau tropical" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Oiseau tropical</h3>
+                                <p>La diversité des oiseaux de Madagascar</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Encore plus de lémuriens -->
+                <div class="col-md-4 gallery-item lemuriens" data-aos="fade-up">
+                    <a href="assets/images/animaux/animal2.jpg" data-lightbox="gallery" data-title="Lémurien curieux">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/animal2.jpg" alt="Lémurien curieux" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Lémurien curieux</h3>
+                                <p>La curiosité naturelle des lémuriens</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Encore plus de caméléons -->
+                <div class="col-md-4 gallery-item cameleons" data-aos="fade-up" data-aos-delay="100">
+                    <a href="assets/images/animaux/animal3.jpg" data-lightbox="gallery" data-title="Caméléon sur une branche">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/animal3.jpg" alt="Caméléon sur une branche" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Caméléon sur une branche</h3>
+                                <p>L'agilité des caméléons dans leur habitat naturel</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Encore plus d'oiseaux -->
+                <div class="col-md-4 gallery-item oiseaux" data-aos="fade-up" data-aos-delay="200">
+                    <a href="assets/images/animaux/animal5.jpg" data-lightbox="gallery" data-title="Oiseau rare">
+                        <div class="gallery-card">
+                            <img src="assets/images/animaux/animal5.jpg" alt="Oiseau rare" class="img-fluid">
+                            <div class="gallery-card__overlay">
+                                <h3>Oiseau rare</h3>
+                                <p>Une des nombreuses espèces rares de Madagascar</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Info -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2>Une Biodiversité Exceptionnelle</h2>
+                    <p>Madagascar abrite une faune unique au monde, avec plus de 90% d'espèces endémiques. Cette biodiversité exceptionnelle est le résultat de millions d'années d'évolution isolée.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> Plus de 100 espèces de lémuriens</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Plus de 300 espèces d'oiseaux</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Plus de 400 espèces de reptiles</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/VOTRE_VIDEO_ID" title="La faune de Madagascar" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- À propos -->
+                <div class="col-lg-4 mb-4">
+                    <h5>À propos de Madagascar</h5>
+                    <p class="mb-4">Découvrez la beauté unique de Madagascar, son incroyable biodiversité et ses paysages à couper le souffle. Une destination qui vous marquera à jamais.</p>
+                    <ul class="footer-social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Liens rapides -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Liens Rapides</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="animaux.html">Animaux</a></li>
+                        <li><a href="visites.html">Visites</a></li>
+                        <li><a href="excursions.html">Excursions</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="footer-links footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</li>
+                        <li><i class="fas fa-phone"></i> +261 20 12 345 67</li>
+                        <li><i class="fas fa-envelope"></i> info@madagascar-tourisme.com</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="mb-3">Restez informé de nos dernières actualités</p>
+                    <div class="footer-newsletter">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" aria-label="Votre email">
+                            <button class="btn" type="button">S'abonner</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-filters .btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            // Fonction pour filtrer les éléments
+            function filterGallery(filter) {
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.classList.remove('hidden');
+                        }, 10);
+                    } else {
+                        item.classList.add('hidden');
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 400);
+                    }
+                });
+            }
+
+            // Ajouter les écouteurs d'événements aux boutons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe active de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Ajouter la classe active au bouton cliqué
+                    this.classList.add('active');
+                    // Filtrer la galerie
+                    filterGallery(this.getAttribute('data-filter'));
+                });
+            });
+
+            // Initialiser avec "tous" sélectionné
+            filterGallery('all');
+        });
+    </script>
+</body>
+</html>
