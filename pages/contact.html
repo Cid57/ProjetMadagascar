@@ -1,317 +1,422 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Madagascar Tourisme</title>
-    
+
     <!-- Meta tags pour SEO -->
-    <meta name="description" content="Contactez-nous pour planifier votre voyage à Madagascar. Notre équipe est là pour vous aider à organiser votre séjour sur la Grande Île.">
-    <meta name="keywords" content="contact Madagascar, voyage Madagascar, tourisme Madagascar, agence voyage Madagascar">
-    
+    <meta
+      name="description"
+      content="Contactez-nous pour planifier votre voyage à Madagascar. Notre équipe est là pour vous aider à organiser votre séjour sur la Grande Île."
+    />
+    <meta
+      name="keywords"
+      content="contact Madagascar, voyage Madagascar, tourisme Madagascar, agence voyage Madagascar"
+    />
+
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/components/navbar.css">
-    <link rel="stylesheet" href="../assets/css/components/floating-buttons.css">
-    <link rel="stylesheet" href="../assets/css/components/loader.css">
-    <link rel="stylesheet" href="../assets/css/pages/contact.css">
-    <link rel="stylesheet" href="../assets/css/pages/contact-mobile.css">
-    <link rel="stylesheet" href="../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../assets/css/map.css">
-   
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../assets/images/logo.png" alt="Madagascar Logo" height="40">
-                Madagascar
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="animaux.html">Animaux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="visites.html">Visites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="excursions.html">Excursions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/logo.png"
+            alt="Madagascar Logo"
+            height="40"
+          />
+          Madagascar
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="animaux.html">Animaux</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visites.html">Visites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="excursions.html">Excursions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero hero--small" style="background-image: url('../assets/images/contact/header-contact.jpg'); background-size: cover; background-position: center;">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <div class="container">
-                <h1 class="with-underline">Contactez-nous</h1>
-                <p>Notre équipe est là pour vous aider à planifier votre voyage à Madagascar</p>
-            </div>
+    <section
+      class="hero hero--small"
+      style="
+        background-image: url('../assets/images/contact/header-contact.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="with-underline">Contactez-nous</h1>
+          <p>
+            Notre équipe est là pour vous aider à planifier votre voyage à
+            Madagascar
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section py-5">
-        <div class="container">
-            <div class="row g-4 mb-5">
-                <!-- Adresse -->
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3 class="h5 mb-3">Notre Adresse</h3>
-                        <p class="mb-0">123 Avenue de l'Indépendance</p>
-                        <p>Antananarivo, Madagascar</p>
-                    </div>
-                </div>
-                <!-- Email -->
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="h5 mb-3">Email</h3>
-                        <p class="mb-0">cindy@madagascar-tourisme.com</p>
-                        <p>cindy@madagascar-tourisme.com</p>
-                    </div>
-                </div>
-                <!-- Téléphone -->
-                <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3 class="h5 mb-3">Téléphone</h3>
-                        <p class="mb-0">+261 20 12 345 67</p>
-                        <p>Lun-Ven: 9h-18h</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <!-- Adresse -->
+          <div class="col-md-4">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="h5 mb-3">Notre Adresse</h3>
+              <p class="mb-0">123 Avenue de l'Indépendance</p>
+              <p>Antananarivo, Madagascar</p>
             </div>
-
-            <div class="row g-4">
-                <!-- Formulaire de contact -->
-                <div class="col-lg-6">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="contact-form bg-white p-4 rounded shadow-sm">
-                                <h2 class="text-center mb-4">Envoyez-nous un message</h2>
-                                <form id="contactForm" class="row g-3">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control" id="contactName" placeholder="Votre nom" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="email" class="form-control" id="contactEmail" placeholder="Votre email" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" id="contactSubject" placeholder="Sujet" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control" id="contactMessage" rows="5" placeholder="Votre message" required></textarea>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-primary">ENVOYER LE MESSAGE</button>
-                                    </div>
-                                </form>
-                                <!-- Message de succès -->
-                                <div id="contactSuccess" class="alert alert-success mt-3" style="display: none;">
-                                    <i class="fas fa-check-circle me-2"></i>
-                                    Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
-                                </div>
-                                <!-- Message d'erreur -->
-                                <div id="contactError" class="alert alert-danger mt-3" style="display: none;">
-                                    <i class="fas fa-exclamation-circle me-2"></i>
-                                    Une erreur s'est produite. Veuillez réessayer plus tard.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carte -->
-                <div class="col-lg-6">
-                    <div class="map-container mb-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242638.21514195518!2d47.41015549771733!3d-18.91311785599945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07de34f1f4eb3%3A0xdf110608bcc082f9!2sAntananarivo%2C%20Madagascar!5e0!3m2!1sfr!2sfr!4v1703786155599!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
+          </div>
+          <!-- Email -->
+          <div class="col-md-4">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 class="h5 mb-3">Email</h3>
+              <p class="mb-0">cindy@madagascar-tourisme.com</p>
+              <p>cindy@madagascar-tourisme.com</p>
             </div>
+          </div>
+          <!-- Téléphone -->
+          <div class="col-md-4">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3 class="h5 mb-3">Téléphone</h3>
+              <p class="mb-0">+261 20 12 345 67</p>
+              <p>Lun-Ven: 9h-18h</p>
+            </div>
+          </div>
         </div>
+
+        <div class="row g-4">
+          <!-- Formulaire de contact -->
+          <div class="col-lg-6">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="contact-form bg-white p-4 rounded shadow-sm">
+                  <h2 class="text-center mb-4">Envoyez-nous un message</h2>
+                  <form id="contactForm" class="row g-3">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactName"
+                        placeholder="Votre nom"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="contactEmail"
+                        placeholder="Votre email"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactSubject"
+                        placeholder="Sujet"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                        class="form-control"
+                        id="contactMessage"
+                        rows="5"
+                        placeholder="Votre message"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary">
+                        ENVOYER LE MESSAGE
+                      </button>
+                    </div>
+                  </form>
+                  <!-- Message de succès -->
+                  <div
+                    id="contactSuccess"
+                    class="alert alert-success mt-3"
+                    style="display: none"
+                  >
+                    <i class="fas fa-check-circle me-2"></i>
+                    Votre message a été envoyé avec succès ! Nous vous
+                    répondrons dans les plus brefs délais.
+                  </div>
+                  <!-- Message d'erreur -->
+                  <div
+                    id="contactError"
+                    class="alert alert-danger mt-3"
+                    style="display: none"
+                  >
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    Une erreur s'est produite. Veuillez réessayer plus tard.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte -->
+          <div class="col-lg-6">
+            <div class="map-container mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242638.21514195518!2d47.41015549771733!3d-18.91311785599945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07de34f1f4eb3%3A0xdf110608bcc082f9!2sAntananarivo%2C%20Madagascar!5e0!3m2!1sfr!2sfr!4v1703786155599!5m2!1sfr!2sfr"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Réservation Rapide -->
     <section class="quick-booking-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Réservation Rapide</h2>
-            <div class="booking-form bg-white p-4 rounded shadow-sm">
-                <form id="quickBookingForm" class="row g-3">
-                    <!-- Nom et Email -->
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Votre nom" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Votre email" required>
-                    </div>
-
-                    <!-- Destination et Durée -->
-                    <div class="col-md-6">
-                        <select class="form-select" required>
-                            <option value="" selected disabled>Choisissez une destination</option>
-                            <option value="antananarivo">Antananarivo</option>
-                            <option value="nosy-be">Nosy Be</option>
-                            <option value="diego-suarez">Diego-Suarez</option>
-                            <option value="fort-dauphin">Fort-Dauphin</option>
-                            <option value="morondava">Morondava</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <select class="form-select" required>
-                            <option value="" selected disabled>Durée du séjour</option>
-                            <option value="3">3 jours</option>
-                            <option value="5">5 jours</option>
-                            <option value="7">7 jours</option>
-                            <option value="10">10 jours</option>
-                            <option value="14">14 jours</option>
-                        </select>
-                    </div>
-
-                    <!-- Date et Nombre de voyageurs -->
-                    <div class="col-md-6">
-                        <input type="date" class="form-control" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="number" class="form-control" placeholder="Nombre de voyageurs" min="1" required>
-                    </div>
-
-                    <!-- Bouton de soumission -->
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-custom btn-custom--primary w-100">DEMANDER UN DEVIS</button>
-                    </div>
-                </form>
+      <div class="container">
+        <h2 class="text-center mb-5">Réservation Rapide</h2>
+        <div class="booking-form bg-white p-4 rounded shadow-sm">
+          <form id="quickBookingForm" class="row g-3">
+            <!-- Nom et Email -->
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Votre nom"
+                required
+              />
             </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Votre email"
+                required
+              />
+            </div>
+
+            <!-- Destination et Durée -->
+            <div class="col-md-6">
+              <select class="form-select" required>
+                <option value="" selected disabled>
+                  Choisissez une destination
+                </option>
+                <option value="antananarivo">Antananarivo</option>
+                <option value="nosy-be">Nosy Be</option>
+                <option value="diego-suarez">Diego-Suarez</option>
+                <option value="fort-dauphin">Fort-Dauphin</option>
+                <option value="morondava">Morondava</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select class="form-select" required>
+                <option value="" selected disabled>Durée du séjour</option>
+                <option value="3">3 jours</option>
+                <option value="5">5 jours</option>
+                <option value="7">7 jours</option>
+                <option value="10">10 jours</option>
+                <option value="14">14 jours</option>
+              </select>
+            </div>
+
+            <!-- Date et Nombre de voyageurs -->
+            <div class="col-md-6">
+              <input type="date" class="form-control" required />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Nombre de voyageurs"
+                min="1"
+                required
+              />
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="col-12">
+              <button
+                type="submit"
+                class="btn btn-custom btn-custom--primary w-100"
+              >
+                DEMANDER UN DEVIS
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- À propos -->
-                <div class="footer-section">
-                    <h3>À propos de Madagascar</h3>
-                    <p>Découvrez la beauté unique de Madagascar, son incroyable biodiversité et ses paysages à couper le souffle. Une destination qui vous marquera à jamais.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Liens Rapides -->
-                <div class="footer-section">
-                    <h3>Liens Rapides</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="animaux.html">Animaux</a></li>
-                        <li><a href="../visites.html">Visites</a></li>
-                        <li><a href="excursions.html">Excursions</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</p>
-                        <p><i class="fas fa-phone"></i> +261 20 12 345 67</p>
-                        <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
-                        <p><i class="fas fa-envelope"></i> info@madagascar-tourisme.com</p>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Restez informé de nos dernières actualités</p>
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" placeholder="Votre email" required>
-                            <button type="submit" class="btn-subscribe">S'abonner</button>
-                        </div>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- À propos -->
+          <div class="footer-section">
+            <h3>À propos de Madagascar</h3>
+            <p>
+              Découvrez la beauté unique de Madagascar, son incroyable
+              biodiversité et ses paysages à couper le souffle. Une destination
+              qui vous marquera à jamais.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+          <!-- Liens Rapides -->
+          <div class="footer-section">
+            <h3>Liens Rapides</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Accueil</a></li>
+              <li><a href="animaux.html">Animaux</a></li>
+              <li><a href="../visites.html">Visites</a></li>
+              <li><a href="excursions.html">Excursions</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar
+              </p>
+              <p><i class="fas fa-phone"></i> +261 20 12 345 67</p>
+              <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
+              <p>
+                <i class="fas fa-envelope"></i> info@madagascar-tourisme.com
+              </p>
             </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Restez informé de nos dernières actualités</p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" placeholder="Votre email" required />
+                <button type="submit" class="btn-subscribe">S'abonner</button>
+              </div>
+            </form>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
 
-    
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/floating-buttons.js"></script>
+    <script>
+      // Active link
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const currentLocation = window.location.pathname;
 
-   <script>
-       // Active link
-       document.addEventListener('DOMContentLoaded', function() {
-           const navLinks = document.querySelectorAll('.nav-link');
-           const currentLocation = window.location.pathname;
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentLocation.split("/").pop()) {
+            link.classList.add("active");
+          }
+        });
+      });
 
-           navLinks.forEach(link => {
-               if (link.getAttribute('href') === currentLocation.split('/').pop()) {
-                   link.classList.add('active');
-               }
-           });
-       });
-
-       // Form submission
-       document.getElementById('contactForm').addEventListener('submit', function(e) {
-           e.preventDefault();
-           // Ici vous pouvez ajouter le code pour envoyer le formulaire
-           alert('Message envoyé avec succès !');
-           this.reset();
-       });
-   </script>
-
-
-
-  
-</body>
+      // Form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Ici vous pouvez ajouter le code pour envoyer le formulaire
+          alert("Message envoyé avec succès !");
+          this.reset();
+        });
+    </script>
+  </body>
 </html>

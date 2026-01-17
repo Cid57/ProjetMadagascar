@@ -1,0 +1,61 @@
+/* ==========================================
+   FLOATING BUTTONS - Boutons flottants
+   ========================================== */
+
+/* Bouton flottant de base */
+.floating-btn {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xl);
+    color: var(--white);
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-lg);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: var(--z-fixed);
+}
+
+.floating-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--shadow-2xl);
+    color: var(--white);
+}
+
+/* Positionnement des boutons - empilés verticalement à droite */
+.back-to-top {
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.whatsapp-btn {
+    bottom: 100px;
+    right: 30px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+}
+
+.email-btn {
+    bottom: 170px;
+    right: 30px;
+    background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+}
+
+.email-btn:hover {
+    background: linear-gradient(135deg, #C5221F 0%, #A50E0E 100%);
+}

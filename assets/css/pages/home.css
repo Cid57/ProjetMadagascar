@@ -1,0 +1,404 @@
+/**
+ * ==========================================
+ * HOME PAGE - PAGE D'ACCUEIL
+ * ==========================================
+ *
+ * Fichier: home.css
+ * Description: Styles spécifiques à la page index.html (SANS media queries)
+ * Auteur: Équipe Développement Madagascar Tourisme
+ * Version: 1.0.0
+ *
+ * IMPORTANT: Ce fichier ne contient AUCUNE media query.
+ * Toutes les règles responsive sont dans home-mobile.css
+ *
+ * Sections:
+ * 1. Section Statistiques
+ * 2. Section Météo
+ * 3. Section Témoignages
+ * 4. Section Galerie
+ * 5. Section Écosystème
+ * ==========================================
+ */
+
+/* ==========================================
+   1. SECTION STATISTIQUES
+   ========================================== */
+
+.stats-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: var(--spacing-3xl) 0;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border-top: 4px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-top-color: var(--primary-color);
+}
+
+.stat-icon {
+    font-size: var(--fs-4xl);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    display: inline-block;
+    transition: transform var(--transition-base);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+    color: var(--medium-gray);
+    font-size: var(--fs-base);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.stat-description {
+    color: var(--medium-gray);
+    font-size: var(--fs-base);
+    line-height: 1.5;
+}
+
+/* ==========================================
+   2. SECTION MÉTÉO
+   ========================================== */
+
+/* Cartes météo personnalisées */
+.weather-card h3 {
+    font-size: var(--fs-xl);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.current-time {
+    font-size: var(--fs-md);
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.current-time i {
+    color: var(--primary-color);
+}
+
+.weather-desc {
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--light-gray);
+}
+
+.weather-details span {
+    font-size: var(--fs-sm);
+    color: var(--medium-gray);
+}
+
+.weather-details i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+}
+
+/* Meilleures périodes */
+.best-periods {
+    text-align: left;
+}
+
+.period {
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.period:hover {
+    background: var(--primary-light);
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.period h4 {
+    font-size: var(--fs-md);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.period:hover h4 {
+    color: var(--white);
+}
+
+.period p {
+    font-size: var(--fs-sm);
+    margin: 0;
+}
+
+/* Conseils voyage */
+.travel-tips {
+    text-align: left;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.tip-item:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.tip-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tip-item p {
+    margin: 0;
+    font-size: var(--fs-sm);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   3. SECTION TÉMOIGNAGES
+   ========================================== */
+
+.testimonials {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.testimonials .section-title {
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Contrôles du carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 107, 53, 0.8);
+    border-radius: var(--radius-full);
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all var(--transition-base);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: var(--primary-color);
+}
+
+.carousel-control-prev {
+    left: -60px;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    margin-bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    background: var(--primary-color);
+    opacity: 0.5;
+    border: none;
+    transition: all var(--transition-base);
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   4. SECTION GALERIE
+   ========================================== */
+
+/* Swiper Gallery pour mobile */
+.gallery-mobile-container {
+    position: relative;
+}
+
+.gallery-swiper {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.gallery-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-swiper img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.swiper-pagination-bullet {
+    background: var(--primary-color);
+    opacity: 0.5;
+    transition: all var(--transition-base);
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primary-color);
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: var(--fs-md);
+}
+
+/* ==========================================
+   5. SECTION ÉCOSYSTÈME
+   ========================================== */
+
+.ecosystem-section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.ecosystem-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.feature-item {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-3xl);
+    transition: all var(--transition-base);
+}
+
+.feature-item:hover .feature-icon {
+    transform: rotate(360deg);
+    background: var(--gradient-ocean);
+}
+
+.feature-item h3 {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-item p {
+    color: var(--medium-gray);
+    margin: 0;
+}
+
+/* Animation de montée au chargement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation aux éléments */
+.stat-card,
+.feature-item,
+.weather-card {
+    animation: fadeInUp 0.6s ease;
+}

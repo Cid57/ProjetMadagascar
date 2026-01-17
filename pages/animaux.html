@@ -1,735 +1,1118 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Faune de Madagascar</title>
-    
-    <!-- Meta tags pour SEO -->
-    <meta name="description" content="Découvrez la faune unique de Madagascar - lémuriens, caméléons, oiseaux et autres espèces endémiques.">
-    <meta name="keywords" content="Madagascar, faune, lémuriens, caméléons, oiseaux, espèces endémiques">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/components/navbar.css">
-    <link rel="stylesheet" href="../assets/css/components/footer.css">
-    <link rel="stylesheet" href="../assets/css/components/buttons.css">
-    <link rel="stylesheet" href="../assets/css/components/floating-buttons.css">
-    <link rel="stylesheet" href="../assets/css/components/floating-buttons-mobile.css">
-    <link rel="stylesheet" href="../assets/css/components/chat-widget.css">
-    <link rel="stylesheet" href="../assets/css/components/chat-widget-mobile.css">
-    <link rel="stylesheet" href="../assets/css/pages/animaux.css">
-    <link rel="stylesheet" href="../assets/css/pages/animaux-mobile.css">
-   
 
-</head>
-<body>
+    <!-- Meta tags pour SEO -->
+    <meta
+      name="description"
+      content="Découvrez la faune unique de Madagascar - lémuriens, caméléons, oiseaux et autres espèces endémiques."
+    />
+    <meta
+      name="keywords"
+      content="Madagascar, faune, lémuriens, caméléons, oiseaux, espèces endémiques"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html" data-aos="fade-right" data-aos-duration="1000">
-                <img src="../assets/images/logo.png" alt="Madagascar Logo" height="40">
-                Madagascar
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="animaux.html" aria-current="page">Animaux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="visites.html">Visites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="excursions.html">Excursions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="0"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="../index.html"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <img
+            src="../assets/images/logo.png"
+            alt="Madagascar Logo"
+            height="40"
+          />
+          Madagascar
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="animaux.html" aria-current="page"
+                >Animaux</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visites.html">Visites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="excursions.html">Excursions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero hero--small" style="background-image: url('../assets/images/animaux/header-cameleon.jpg');" data-aos="fade-up" data-aos-duration="1000">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <div class="container">
-                <h1 class="with-underline">Faune Unique</h1>
-                <p>Découvrez les espèces emblématiques de Madagascar</p>
-            </div>
+    <section
+      class="hero hero--small"
+      style="
+        background-image: url('../assets/images/animaux/header-cameleon.jpg');
+      "
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="with-underline">Faune Unique</h1>
+          <p>Découvrez les espèces emblématiques de Madagascar</p>
         </div>
+      </div>
     </section>
 
     <!-- Section Biodiversité -->
-    <section class="biodiversity-section py-5" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <!-- En-tête de section -->
-            <div class="text-center mb-5">
-                <span class="subtitle" data-aos="fade-up">DÉCOUVERTE</span>
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Une Biodiversité Exceptionnelle</h2>
-                <p class="section-description" data-aos="fade-up" data-aos-delay="400">
-                    Madagascar abrite une faune unique au monde, avec plus de 90% d'espèces endémiques.
-                </p>
-            </div>
-
-            <!-- Statistiques -->
-            <div class="stats-container">
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-icon">
-                        <i class="fas fa-paw"></i>
-                    </div>
-                    <span class="stat-number" data-value="90">0%</span>
-                    <p class="stat-description">d'espèces endémiques</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <span class="stat-number" data-value="11000">0</span>
-                    <p class="stat-description">plantes endémiques</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-icon">
-                        <i class="fas fa-spider"></i>
-                    </div>
-                    <span class="stat-number" data-value="100">0</span>
-                    <p class="stat-description">espèces de lémuriens</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-icon">
-                        <i class="fas fa-feather"></i>
-                    </div>
-                    <span class="stat-number" data-value="280">0</span>
-                    <p class="stat-description">espèces d'oiseaux</p>
-                </div>
-            </div>
-
-            <!-- Images avec description -->
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center p-5">
-                    <div class="content-box biodiversity-content" data-aos="fade-up" data-aos-duration="1000">
-
-                        <div class="ecosystem-section">
-                            <div class="container">
-                                <div class="section-header text-center" data-aos="fade-up">
-                                    <span class="subtitle">MADAGASCAR</span>
-                                    <h2>Un Écosystème Unique</h2>
-                                    <p>La Grande Île abrite certaines des espèces les plus rares et les plus fascinantes au monde. Son isolement géographique a permis le développement d'une biodiversité extraordinaire.</p>
-                                </div>
-
-                                <div class="ecosystem-features" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-leaf"></i>
-                                        </div>
-                                        <h3>90% Endémiques</h3>
-                                        <p>Des espèces uniques au monde</p>
-                                    </div>
-
-                                    <div class="feature-item" data-aos="fade-up" data-aos-delay="800">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-tree"></i>
-                                        </div>
-                                        <h3>Habitat Préservé</h3>
-                                        <p>Des écosystèmes protégés</p>
-                                    </div>
-
-                                    <div class="feature-item" data-aos="fade-up" data-aos-delay="1000">
-                                        <div class="feature-icon">
-                                            <i class="fas fa-paw"></i>
-                                        </div>
-                                        <h3>Faune Unique</h3>
-                                        <p>Une diversité exceptionnelle</p>
-                                    </div>
-                                </div>
-
-                                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="1200">
-                                    <a href="#gallery" class="btn-discover">
-                                        DÉCOUVRIR LA GALERIE
-                                        <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section
+      class="biodiversity-section py-5"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="container">
+        <!-- En-tête de section -->
+        <div class="text-center mb-5">
+          <span class="subtitle" data-aos="fade-up">DÉCOUVERTE</span>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">
+            Une Biodiversité Exceptionnelle
+          </h2>
+          <p
+            class="section-description"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            Madagascar abrite une faune unique au monde, avec plus de 90%
+            d'espèces endémiques.
+          </p>
         </div>
+
+        <!-- Statistiques -->
+        <div class="stats-container">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-icon">
+              <i class="fas fa-paw"></i>
+            </div>
+            <span class="stat-number" data-value="90">0%</span>
+            <p class="stat-description">d'espèces endémiques</p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <span class="stat-number" data-value="11000">0</span>
+            <p class="stat-description">plantes endémiques</p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-icon">
+              <i class="fas fa-spider"></i>
+            </div>
+            <span class="stat-number" data-value="100">0</span>
+            <p class="stat-description">espèces de lémuriens</p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-icon">
+              <i class="fas fa-feather"></i>
+            </div>
+            <span class="stat-number" data-value="280">0</span>
+            <p class="stat-description">espèces d'oiseaux</p>
+          </div>
+        </div>
+
+        <!-- Images avec description -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center p-5">
+            <div
+              class="content-box biodiversity-content"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="ecosystem-section">
+                <div class="container">
+                  <div class="section-header text-center" data-aos="fade-up">
+                    <span class="subtitle">MADAGASCAR</span>
+                    <h2>Un Écosystème Unique</h2>
+                    <p>
+                      La Grande Île abrite certaines des espèces les plus rares
+                      et les plus fascinantes au monde. Son isolement
+                      géographique a permis le développement d'une biodiversité
+                      extraordinaire.
+                    </p>
+                  </div>
+
+                  <div
+                    class="ecosystem-features"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="feature-item"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                    >
+                      <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                      </div>
+                      <h3>90% Endémiques</h3>
+                      <p>Des espèces uniques au monde</p>
+                    </div>
+
+                    <div
+                      class="feature-item"
+                      data-aos="fade-up"
+                      data-aos-delay="800"
+                    >
+                      <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                      </div>
+                      <h3>Habitat Préservé</h3>
+                      <p>Des écosystèmes protégés</p>
+                    </div>
+
+                    <div
+                      class="feature-item"
+                      data-aos="fade-up"
+                      data-aos-delay="1000"
+                    >
+                      <div class="feature-icon">
+                        <i class="fas fa-paw"></i>
+                      </div>
+                      <h3>Faune Unique</h3>
+                      <p>Une diversité exceptionnelle</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="text-center mt-5"
+                    data-aos="fade-up"
+                    data-aos-delay="1200"
+                  >
+                    <a href="#gallery" class="btn-discover">
+                      DÉCOUVRIR LA GALERIE
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section Espèces en Danger -->
     <section class="endangered-species-section py-5">
-        <div class="container text-center">
-            <span class="subtitle mb-3" data-aos="fade-up">PROTECTION</span>
-            <h2 class="section-title mb-4" data-aos="fade-up" data-aos-delay="100">Espèces en Danger</h2>
-            <p class="section-description mb-5" data-aos="fade-up" data-aos-delay="200">
-                Madagascar fait face à des défis majeurs pour la protection de sa faune unique. 
-                Découvrez les chiffres alarmants qui soulignent l'urgence d'agir pour préserver ce patrimoine naturel exceptionnel.
-            </p>
+      <div class="container text-center">
+        <span class="subtitle mb-3" data-aos="fade-up">PROTECTION</span>
+        <h2 class="section-title mb-4" data-aos="fade-up" data-aos-delay="100">
+          Espèces en Danger
+        </h2>
+        <p
+          class="section-description mb-5"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Madagascar fait face à des défis majeurs pour la protection de sa
+          faune unique. Découvrez les chiffres alarmants qui soulignent
+          l'urgence d'agir pour préserver ce patrimoine naturel exceptionnel.
+        </p>
 
-            <div class="stats-container">
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="stat-number" data-value="98">0%</div>
-                    <p class="stat-description">des lémuriens sont menacés d'extinction</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="stat-number" data-value="80">0%</div>
-                    <p class="stat-description">D'importante perte de forêt naturelle</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="stat-number" data-value="1800">0+</div>
-                    <p class="stat-description">plantes endémiques menacées</p>
-                </div>
-
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="stat-number" data-value="300">0+</div>
-                    <p class="stat-description">espèces découvertes chaque année</p>
-                </div>
+        <div class="stats-container">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-icon">
+              <i class="fas fa-exclamation-triangle"></i>
             </div>
+            <div class="stat-number" data-value="98">0%</div>
+            <p class="stat-description">
+              des lémuriens sont menacés d'extinction
+            </p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-icon">
+              <i class="fas fa-tree"></i>
+            </div>
+            <div class="stat-number" data-value="80">0%</div>
+            <p class="stat-description">
+              D'importante perte de forêt naturelle
+            </p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="stat-number" data-value="1800">0+</div>
+            <p class="stat-description">plantes endémiques menacées</p>
+          </div>
+
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="stat-number" data-value="300">0+</div>
+            <p class="stat-description">espèces découvertes chaque année</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Section Comment Aider -->
     <section class="help-section py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="subtitle" data-aos="fade-up">AGIR</span>
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Comment Aider ?</h2>
-                <p class="section-description" data-aos="fade-up" data-aos-delay="200">Découvrez comment vous pouvez contribuer à la protection de la biodiversité malgache</p>
-            </div>
-            
-            <div class="action-cards-container">
-                <div class="row g-4 justify-content-center">
-                    <!-- Carte Don -->
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                        <div class="action-card">
-                            <div class="icon-container">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h3>Faire un Don</h3>
-                            <p>Soutenez financièrement les projets de conservation</p>
-                            <ul>
-                                <li>Financement de projets de conservation</li>
-                                <li>Soutien aux communautés locales</li>
-                                <li>Protection des habitats naturels</li>
-                            </ul>
-                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#donationModal">
-                                FAIRE UN DON
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Carte Bénévolat -->
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="action-card">
-                            <div class="icon-container">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Devenir Bénévole</h3>
-                            <p>Participez à des missions de conservation sur le terrain</p>
-                            <ul>
-                                <li>Programmes de recherche</li>
-                                <li>Sensibilisation des populations</li>
-                                <li>Restauration des habitats</li>
-                            </ul>
-                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#benevoleModal">
-                                S'ENGAGER
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Carte Sensibilisation -->
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                        <div class="action-card">
-                            <div class="icon-container">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <h3>Sensibiliser</h3>
-                            <p>Partagez l'importance de la biodiversité malgache</p>
-                            <ul>
-                                <li>Partage sur les réseaux sociaux</li>
-                                <li>Organisation d'événements</li>
-                                <li>Éducation environnementale</li>
-                            </ul>
-                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#sensibiliserModal">
-                                PARTAGER
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="subtitle" data-aos="fade-up">AGIR</span>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+            Comment Aider ?
+          </h2>
+          <p
+            class="section-description"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Découvrez comment vous pouvez contribuer à la protection de la
+            biodiversité malgache
+          </p>
         </div>
+
+        <div class="action-cards-container">
+          <div class="row g-4 justify-content-center">
+            <!-- Carte Don -->
+            <div
+              class="col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <div class="action-card">
+                <div class="icon-container">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h3>Faire un Don</h3>
+                <p>Soutenez financièrement les projets de conservation</p>
+                <ul>
+                  <li>Financement de projets de conservation</li>
+                  <li>Soutien aux communautés locales</li>
+                  <li>Protection des habitats naturels</li>
+                </ul>
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#donationModal"
+                >
+                  FAIRE UN DON
+                </button>
+              </div>
+            </div>
+
+            <!-- Carte Bénévolat -->
+            <div
+              class="col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+            >
+              <div class="action-card">
+                <div class="icon-container">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h3>Devenir Bénévole</h3>
+                <p>Participez à des missions de conservation sur le terrain</p>
+                <ul>
+                  <li>Programmes de recherche</li>
+                  <li>Sensibilisation des populations</li>
+                  <li>Restauration des habitats</li>
+                </ul>
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#benevoleModal"
+                >
+                  S'ENGAGER
+                </button>
+              </div>
+            </div>
+
+            <!-- Carte Sensibilisation -->
+            <div
+              class="col-md-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
+              <div class="action-card">
+                <div class="icon-container">
+                  <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Sensibiliser</h3>
+                <p>Partagez l'importance de la biodiversité malgache</p>
+                <ul>
+                  <li>Partage sur les réseaux sociaux</li>
+                  <li>Organisation d'événements</li>
+                  <li>Éducation environnementale</li>
+                </ul>
+                <button
+                  class="btn btn-outline-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#sensibiliserModal"
+                >
+                  PARTAGER
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section Nos Plus Beaux Clichés -->
     <section class="gallery-section py-5" id="gallery">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-4 mb-3">Nos Plus Beaux Clichés</h2>
-                <p class="lead text-muted">Les plus belles photos de la faune malgache</p>
-            </div>
-
-            <!-- Version Desktop -->
-            <div class="gallery-grid d-none d-md-grid">
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/sifaka-6027010_1280.jpg" data-lightbox="gallery" data-title="Sifaka">
-                        <img src="../assets/images/animaux/sifaka-6027010_1280.jpg" alt="Sifaka">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal10.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal10.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal2.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal2.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal5.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal5.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal6.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal6.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal7.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal7.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/animal8.jpg" data-lightbox="gallery" data-title="Animal de Madagascar">
-                        <img src="../assets/images/animaux/animal8.jpg" alt="Animal de Madagascar">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" data-lightbox="gallery" data-title="Caméléon">
-                        <img src="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" alt="Caméléon">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Version Mobile (Swiper) -->
-            <div class="gallery-mobile-container d-block d-md-none">
-                <div class="swiper gallery-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/sifaka-6027010_1280.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/sifaka-6027010_1280.jpg" alt="Sifaka">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal10.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal10.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal2.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal2.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal5.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal5.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal6.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal6.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal7.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal7.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/animal8.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/animal8.jpg" alt="Animal de Madagascar">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" data-lightbox="gallery-mobile">
-                                <img src="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg" alt="Caméléon">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="display-4 mb-3">Nos Plus Beaux Clichés</h2>
+          <p class="lead text-muted">
+            Les plus belles photos de la faune malgache
+          </p>
         </div>
+
+        <!-- Version Desktop -->
+        <div class="gallery-grid d-none d-md-grid">
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/sifaka-6027010_1280.jpg"
+              data-lightbox="gallery"
+              data-title="Sifaka"
+            >
+              <img
+                src="../assets/images/animaux/sifaka-6027010_1280.jpg"
+                alt="Sifaka"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal10.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal10.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal2.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal2.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal5.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal5.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal6.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal6.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal7.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal7.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/animal8.jpg"
+              data-lightbox="gallery"
+              data-title="Animal de Madagascar"
+            >
+              <img
+                src="../assets/images/animaux/animal8.jpg"
+                alt="Animal de Madagascar"
+              />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
+              data-lightbox="gallery"
+              data-title="Caméléon"
+            >
+              <img
+                src="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
+                alt="Caméléon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Version Mobile (Swiper) -->
+        <div class="gallery-mobile-container d-block d-md-none">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/sifaka-6027010_1280.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/sifaka-6027010_1280.jpg"
+                    alt="Sifaka"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal10.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal10.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal2.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal2.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal5.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal5.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal6.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal6.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal7.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal7.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/animal8.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/animal8.jpg"
+                    alt="Animal de Madagascar"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
+                  data-lightbox="gallery-mobile"
+                >
+                  <img
+                    src="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
+                    alt="Caméléon"
+                  />
+                </a>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Habitat Modal -->
     <div class="modal fade" id="habitatModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Découvrir l'Habitat</h5>
-                    <button type="button" class="close-modal" data-bs-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <!-- Le contenu sera chargé dynamiquement -->
-                </div>
-            </div>
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Découvrir l'Habitat</h5>
+            <button type="button" class="close-modal" data-bs-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Le contenu sera chargé dynamiquement -->
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal Faire un Don -->
-    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title-wrapper">
-                        <i class="fas fa-heart"></i>
-                        <h5 class="modal-title">Faire un don</h5>
-                    </div>
-                    <button type="button" class="close-modal" data-bs-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <div class="donation-section-main">
-                        <div class="donation-intro">
-                            <p>Votre don aide à protéger la biodiversité unique de Madagascar et soutient nos actions de conservation.</p>
-                        </div>
-                        
-                        <div class="donation-options">
-                            <div class="donation-section">
-                                <h6 class="section-title">
-                                    <i class="fas fa-gift"></i>
-                                    Don unique
-                                </h6>
-                                <div class="donation-buttons">
-                                    <button class="btn donation-btn" data-amount="5" data-recurring="false">5€</button>
-                                    <button class="btn donation-btn" data-amount="10" data-recurring="false">10€</button>
-                                    <button class="btn donation-btn" data-amount="20" data-recurring="false">20€</button>
-                                    <button class="btn donation-btn" data-amount="50" data-recurring="false">50€</button>
-                                    <button class="btn donation-btn custom-amount" data-amount="autre">
-                                        <i class="fas fa-pencil-alt"></i>
-                                        Autre montant
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="donation-section">
-                                <h6 class="section-title">
-                                    <i class="fas fa-sync-alt"></i>
-                                    Don mensuel
-                                </h6>
-                                <div class="donation-buttons monthly">
-                                    <button class="btn donation-btn" data-amount="5" data-recurring="true">5€/mois</button>
-                                    <button class="btn donation-btn" data-amount="10" data-recurring="true">10€/mois</button>
-                                    <button class="btn donation-btn" data-amount="20" data-recurring="true">20€/mois</button>
-                                </div>
-                            </div>
-
-                            <div class="custom-amount-input" style="display: none;">
-                                <div class="input-group">
-                                    <input type="number" class="form-control" id="customAmount" placeholder="Montant personnalisé">
-                                    <span class="input-group-text">€</span>
-                                </div>
-                            </div>
-
-                            <div class="selected-donation" style="display: none;">
-                                <div class="selected-amount-wrapper">
-                                    <i class="fas fa-check-circle"></i>
-                                    <p>Vous avez sélectionné un don de <span class="selected-amount"></span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="thank-you-section" style="display: none;">
-                        <div class="thank-you-content text-center">
-                            <div class="thank-you-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h4>Merci pour votre générosité !</h4>
-                            <p class="donation-amount">Votre don de <span class="final-amount"></span> fait la différence.</p>
-                            <p class="redirect-message">Vous allez être redirigé vers notre système de paiement sécurisé...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary proceed-donation">
-                        <i class="fas fa-lock"></i>
-                        Procéder au don
-                    </button>
-                </div>
+    <div
+      class="modal fade"
+      id="donationModal"
+      tabindex="-1"
+      aria-labelledby="donationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title-wrapper">
+              <i class="fas fa-heart"></i>
+              <h5 class="modal-title">Faire un don</h5>
             </div>
+            <button type="button" class="close-modal" data-bs-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="donation-section-main">
+              <div class="donation-intro">
+                <p>
+                  Votre don aide à protéger la biodiversité unique de Madagascar
+                  et soutient nos actions de conservation.
+                </p>
+              </div>
+
+              <div class="donation-options">
+                <div class="donation-section">
+                  <h6 class="section-title">
+                    <i class="fas fa-gift"></i>
+                    Don unique
+                  </h6>
+                  <div class="donation-buttons">
+                    <button
+                      class="btn donation-btn"
+                      data-amount="5"
+                      data-recurring="false"
+                    >
+                      5€
+                    </button>
+                    <button
+                      class="btn donation-btn"
+                      data-amount="10"
+                      data-recurring="false"
+                    >
+                      10€
+                    </button>
+                    <button
+                      class="btn donation-btn"
+                      data-amount="20"
+                      data-recurring="false"
+                    >
+                      20€
+                    </button>
+                    <button
+                      class="btn donation-btn"
+                      data-amount="50"
+                      data-recurring="false"
+                    >
+                      50€
+                    </button>
+                    <button
+                      class="btn donation-btn custom-amount"
+                      data-amount="autre"
+                    >
+                      <i class="fas fa-pencil-alt"></i>
+                      Autre montant
+                    </button>
+                  </div>
+                </div>
+
+                <div class="donation-section">
+                  <h6 class="section-title">
+                    <i class="fas fa-sync-alt"></i>
+                    Don mensuel
+                  </h6>
+                  <div class="donation-buttons monthly">
+                    <button
+                      class="btn donation-btn"
+                      data-amount="5"
+                      data-recurring="true"
+                    >
+                      5€/mois
+                    </button>
+                    <button
+                      class="btn donation-btn"
+                      data-amount="10"
+                      data-recurring="true"
+                    >
+                      10€/mois
+                    </button>
+                    <button
+                      class="btn donation-btn"
+                      data-amount="20"
+                      data-recurring="true"
+                    >
+                      20€/mois
+                    </button>
+                  </div>
+                </div>
+
+                <div class="custom-amount-input" style="display: none">
+                  <div class="input-group">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="customAmount"
+                      placeholder="Montant personnalisé"
+                    />
+                    <span class="input-group-text">€</span>
+                  </div>
+                </div>
+
+                <div class="selected-donation" style="display: none">
+                  <div class="selected-amount-wrapper">
+                    <i class="fas fa-check-circle"></i>
+                    <p>
+                      Vous avez sélectionné un don de
+                      <span class="selected-amount"></span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="thank-you-section" style="display: none">
+              <div class="thank-you-content text-center">
+                <div class="thank-you-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h4>Merci pour votre générosité !</h4>
+                <p class="donation-amount">
+                  Votre don de <span class="final-amount"></span> fait la
+                  différence.
+                </p>
+                <p class="redirect-message">
+                  Vous allez être redirigé vers notre système de paiement
+                  sécurisé...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Annuler
+            </button>
+            <button type="button" class="btn btn-primary proceed-donation">
+              <i class="fas fa-lock"></i>
+              Procéder au don
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal Devenir Bénévole -->
-    <div class="modal fade" id="benevoleModal" tabindex="-1" aria-labelledby="benevoleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title-wrapper">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h5 class="modal-title">Devenir Bénévole</h5>
-                    </div>
-                    <button type="button" class="close-modal" data-bs-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <div class="benevole-section-main">
-                        <div class="benevole-intro">
-                            <h2>Rejoignez notre équipe de bénévoles !</h2>
-                            <p>Votre aide est précieuse pour la protection des espèces menacées de Madagascar.</p>
-                        </div>
-                        
-                        <form id="benevoleForm" class="benevole-form">
-                            <div class="form-group">
-                                <label for="benevoleName">Nom complet</label>
-                                <input type="text" class="form-control" id="benevoleName" name="benevoleName" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="benevoleEmail">Email</label>
-                                <input type="email" class="form-control" id="benevoleEmail" name="benevoleEmail" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="benevolePhone">Téléphone</label>
-                                <input type="tel" class="form-control" id="benevolePhone" name="benevolePhone">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="benevoleDispo">Disponibilités</label>
-                                <select class="form-control" id="benevoleDispo" name="benevoleDispo" required>
-                                    <option value="">Choisissez vos disponibilités</option>
-                                    <option value="weekend">Week-ends</option>
-                                    <option value="semaine">En semaine</option>
-                                    <option value="vacances">Pendant les vacances</option>
-                                    <option value="flexible">Flexible</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="benevoleMessage">Message (Parlez-nous de vos motivations) *</label>
-                                <textarea class="form-control" id="benevoleMessage" name="benevoleMessage" rows="4" required></textarea>
-                            </div>
-                            
-                            <div class="alert alert-success" id="benevoleSuccess" style="display: none;">
-                                Votre demande a été envoyée avec succès ! Nous vous contacterons bientôt.
-                            </div>
-                            
-                            <div class="alert alert-danger" id="benevoleError" style="display: none;">
-                                Une erreur est survenue. Veuillez réessayer plus tard.
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Envoyer ma candidature</button>
-                        </form>
-                    </div>
-                </div>
+    <div
+      class="modal fade"
+      id="benevoleModal"
+      tabindex="-1"
+      aria-labelledby="benevoleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title-wrapper">
+              <i class="fas fa-hand-holding-heart"></i>
+              <h5 class="modal-title">Devenir Bénévole</h5>
             </div>
+            <button type="button" class="close-modal" data-bs-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="benevole-section-main">
+              <div class="benevole-intro">
+                <h2>Rejoignez notre équipe de bénévoles !</h2>
+                <p>
+                  Votre aide est précieuse pour la protection des espèces
+                  menacées de Madagascar.
+                </p>
+              </div>
+
+              <form id="benevoleForm" class="benevole-form">
+                <div class="form-group">
+                  <label for="benevoleName">Nom complet</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="benevoleName"
+                    name="benevoleName"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="benevoleEmail">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="benevoleEmail"
+                    name="benevoleEmail"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="benevolePhone">Téléphone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="benevolePhone"
+                    name="benevolePhone"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="benevoleDispo">Disponibilités</label>
+                  <select
+                    class="form-control"
+                    id="benevoleDispo"
+                    name="benevoleDispo"
+                    required
+                  >
+                    <option value="">Choisissez vos disponibilités</option>
+                    <option value="weekend">Week-ends</option>
+                    <option value="semaine">En semaine</option>
+                    <option value="vacances">Pendant les vacances</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="benevoleMessage"
+                    >Message (Parlez-nous de vos motivations) *</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="benevoleMessage"
+                    name="benevoleMessage"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+
+                <div
+                  class="alert alert-success"
+                  id="benevoleSuccess"
+                  style="display: none"
+                >
+                  Votre demande a été envoyée avec succès ! Nous vous
+                  contacterons bientôt.
+                </div>
+
+                <div
+                  class="alert alert-danger"
+                  id="benevoleError"
+                  style="display: none"
+                >
+                  Une erreur est survenue. Veuillez réessayer plus tard.
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Envoyer ma candidature
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="modal fade" id="benevoleConfirmationModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center py-4">
-                    <div class="confirmation-icon mb-4">
-                        <i class="fas fa-hands-helping fa-3x"></i>
-                    </div>
-                    <h4 class="confirmation-title mb-3">Merci pour votre engagement !</h4>
-                    <p class="confirmation-text mb-3">Votre demande de bénévolat a été envoyée avec succès.</p>
-                    <p class="confirmation-text">Notre équipe vous contactera très prochainement pour discuter des possibilités de collaboration.</p>
-                    <div class="mt-4">
-                        <i class="fas fa-heart text-warning"></i>
-                        <span class="ms-2">Ensemble, protégeons la faune malgache</span>
-                    </div>
-                </div>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center py-4">
+            <div class="confirmation-icon mb-4">
+              <i class="fas fa-hands-helping fa-3x"></i>
             </div>
+            <h4 class="confirmation-title mb-3">
+              Merci pour votre engagement !
+            </h4>
+            <p class="confirmation-text mb-3">
+              Votre demande de bénévolat a été envoyée avec succès.
+            </p>
+            <p class="confirmation-text">
+              Notre équipe vous contactera très prochainement pour discuter des
+              possibilités de collaboration.
+            </p>
+            <div class="mt-4">
+              <i class="fas fa-heart text-warning"></i>
+              <span class="ms-2">Ensemble, protégeons la faune malgache</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Modal Sensibiliser -->
     <div class="modal fade" id="sensibiliserModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title-wrapper">
-                        <i class="fas fa-bullhorn"></i>
-                        <h5 class="modal-title">Sensibiliser</h5>
-                    </div>
-                    <button type="button" class="close-modal" data-bs-dismiss="modal">×</button>
-                </div>
-                <div class="modal-body">
-                    <div class="sensibiliser-intro">
-                        <h2>Aidez-nous à sensibiliser le plus grand nombre sur l'importance de la biodiversité malgache !</h2>
-                        <p>Partagez notre message et contribuez à la protection de la faune unique de Madagascar.</p>
-                    </div>
-                    
-                    <div class="share-options">
-                        <div class="share-option">
-                            <i class="fab fa-facebook"></i>
-                            <h3>Facebook</h3>
-                            <p>Partagez notre mission avec vos amis</p>
-                            <button class="btn btn-share facebook">Partager sur Facebook</button>
-                        </div>
-                        
-                        <div class="share-option">
-                            <i class="fab fa-twitter"></i>
-                            <h3>Twitter</h3>
-                            <p>Diffusez notre message à vos followers</p>
-                            <button class="btn btn-share twitter">Partager sur Twitter</button>
-                        </div>
-                        
-                        <div class="share-option">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p>Envoyez notre histoire par email</p>
-                            <button class="btn btn-share email">Partager par Email</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title-wrapper">
+              <i class="fas fa-bullhorn"></i>
+              <h5 class="modal-title">Sensibiliser</h5>
             </div>
+            <button type="button" class="close-modal" data-bs-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="sensibiliser-intro">
+              <h2>
+                Aidez-nous à sensibiliser le plus grand nombre sur l'importance
+                de la biodiversité malgache !
+              </h2>
+              <p>
+                Partagez notre message et contribuez à la protection de la faune
+                unique de Madagascar.
+              </p>
+            </div>
+
+            <div class="share-options">
+              <div class="share-option">
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+                <p>Partagez notre mission avec vos amis</p>
+                <button class="btn btn-share facebook">
+                  Partager sur Facebook
+                </button>
+              </div>
+
+              <div class="share-option">
+                <i class="fab fa-twitter"></i>
+                <h3>Twitter</h3>
+                <p>Diffusez notre message à vos followers</p>
+                <button class="btn btn-share twitter">
+                  Partager sur Twitter
+                </button>
+              </div>
+
+              <div class="share-option">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Envoyez notre histoire par email</p>
+                <button class="btn btn-share email">Partager par Email</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- À propos -->
-                <div class="footer-section">
-                    <h3>À propos de Madagascar</h3>
-                    <p>Découvrez la beauté unique de Madagascar, son incroyable biodiversité et ses paysages à couper le souffle. Une destination qui vous marquera à jamais.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Liens Rapides -->
-                <div class="footer-section">
-                    <h3>Liens Rapides</h3>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="animaux.html">Animaux</a></li>
-                        <li><a href="../visites.html">Visites</a></li>
-                        <li><a href="excursions.html">Excursions</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</p>
-                        <p><i class="fas fa-phone"></i> +261 20 12 345 67</p>
-                        <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
-                        <p><i class="fas fa-envelope"></i> info@madagascar-tourisme.com</p>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Restez informé de nos dernières actualités</p>
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" placeholder="Votre email" required>
-                            <button class="btn-subscribe">S'abonner</button>
-                        </div>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- À propos -->
+          <div class="footer-section">
+            <h3>À propos de Madagascar</h3>
+            <p>
+              Découvrez la beauté unique de Madagascar, son incroyable
+              biodiversité et ses paysages à couper le souffle. Une destination
+              qui vous marquera à jamais.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+          <!-- Liens Rapides -->
+          <div class="footer-section">
+            <h3>Liens Rapides</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Accueil</a></li>
+              <li><a href="animaux.html">Animaux</a></li>
+              <li><a href="../visites.html">Visites</a></li>
+              <li><a href="excursions.html">Excursions</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar
+              </p>
+              <p><i class="fas fa-phone"></i> +261 20 12 345 67</p>
+              <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
+              <p>
+                <i class="fas fa-envelope"></i> info@madagascar-tourisme.com
+              </p>
             </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Restez informé de nos dernières actualités</p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" placeholder="Votre email" required />
+                <button class="btn-subscribe">S'abonner</button>
+              </div>
+            </form>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
 
-
     <!-- Back to top button -->
-<button class="back-to-top" aria-label="Retour en haut">
-    <i class="fas fa-chevron-up"></i>
-</button>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../assets/js/navbar.js"></script>
-    <script src="../assets/js/floating-buttons.js"></script>
-    <script src="../assets/js/chat.js"></script>
-    <script src="../assets/js/animaux.js"></script>
-    <script src="../assets/js/donation.js"></script>
-    <script src="../assets/js/benevole.js"></script>
-    <script src="../assets/js/counter.js"></script>
+    <button class="back-to-top" aria-label="Retour en haut">
+      <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script>
-        // Initialisation AOS
-        // AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Initialisation du loader
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            if (loader) {
-                loader.style.display = 'none';
-            }
-        });
+      // Initialisation du loader
+      window.addEventListener("load", function () {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.display = "none";
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

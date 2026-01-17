@@ -4,45 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madagascar - Découvrez la Grande Île</title>
-    
-    <!-- Meta tags pour SEO -->
+
+    <!-- Meta tags SEO -->
     <meta name="description" content="Découvrez Madagascar, ses paysages uniques, sa faune exceptionnelle et ses traditions culturelles. Planifiez votre voyage sur la Grande Île.">
     <meta name="keywords" content="Madagascar, voyage, tourisme, lémuriens, baobabs, plages, culture malgache">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    
-    <!-- Fonts -->
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
+
+    <!-- CSS Externes -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <!-- CSS Personnalisés - Styles de base (SANS media queries) -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components/navbar.css">
     <link rel="stylesheet" href="assets/css/components/footer.css">
     <link rel="stylesheet" href="assets/css/components/buttons.css">
     <link rel="stylesheet" href="assets/css/components/floating-buttons.css">
-    <link rel="stylesheet" href="assets/css/components/floating-buttons-mobile.css">
     <link rel="stylesheet" href="assets/css/components/chat-widget.css">
-    <link rel="stylesheet" href="assets/css/components/chat-widget-mobile.css">
+    <link rel="stylesheet" href="assets/css/components/loader.css">
     <link rel="stylesheet" href="assets/css/pages/home.css">
-    <link rel="stylesheet" href="assets/css/pages/home-mobile.css">
 
+    <!-- CSS Responsive (AVEC media queries) -->
+    <link rel="stylesheet" href="assets/css/components/navbar-mobile.css">
+    <link rel="stylesheet" href="assets/css/components/buttons-mobile.css">
+    <link rel="stylesheet" href="assets/css/components/floating-buttons-mobile.css">
+    <link rel="stylesheet" href="assets/css/components/chat-widget-mobile.css">
+    <link rel="stylesheet" href="assets/css/pages/home-mobile.css">
 </head>
 <body>
     <!-- Loader -->
     <div class="loader-wrapper" id="loader">
         <div class="loader"></div>
     </div>
-    
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="0">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html" data-aos="fade-right" data-aos-duration="1000">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo.png" alt="Madagascar Logo" height="40">
                 Madagascar
             </a>
@@ -51,19 +57,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                    <li class="nav-item">
                         <a class="nav-link active" href="index.html">Accueil</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <li class="nav-item">
                         <a class="nav-link" href="pages/animaux.html">Animaux</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
-                        <a class="nav-link" href="pages/pages/visites.html">Visites</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/visites.html">Visites</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">
+                    <li class="nav-item">
                         <a class="nav-link" href="pages/excursions.html">Excursions</a>
                     </li>
-                    <li class="nav-item" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+                    <li class="nav-item">
                         <a class="nav-link" href="pages/contact.html">Contact</a>
                     </li>
                 </ul>
@@ -72,16 +78,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="accueil" data-aos="fade-down" data-aos-duration="1500">
-        <div class="hero-image" data-aos="fade-up" data-aos-duration="1000">
-            <img src="assets/images/visites/nature-1568850_1280.jpg" alt="Paysage de Madagascar" loading="lazy">
+    <section class="hero" id="accueil">
+        <div class="hero-image">
+            <img src="assets/images/visites/nature-1568850_1280.jpg" alt="Paysage de Madagascar">
         </div>
         <div class="hero__overlay"></div>
-        <div class="hero__content text-center">
+        <div class="hero__content">
             <div class="container">
-                <h1 class="display-3 mb-4 text-white" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">Bienvenue à Madagascar</h1>
-                <p class="lead mb-5 text-white" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Découvrez la magie de la Grande Île, ses paysages uniques et sa biodiversité exceptionnelle</p>
-                <a href="#destinations" class="btn btn-custom btn-custom--primary btn-lg" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">Découvrir</a>
+                <h1 class="display-3 mb-4 text-white">Bienvenue à Madagascar</h1>
+                <p class="lead mb-5 text-white">Découvrez la magie de la Grande Île, ses paysages uniques et sa biodiversité exceptionnelle</p>
+                <a href="#destinations" class="btn btn-custom btn-custom--primary btn-lg">Découvrir</a>
             </div>
         </div>
     </section>
@@ -90,13 +96,13 @@
     <section class="section" id="destinations">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="subtitle" data-aos="fade-up">DÉCOUVERTE</span>
-                <h2 class="display-4 mb-3" data-aos="fade-up" data-aos-delay="200">Destinations Populaires</h2>
-                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="400">Explorez les merveilles de Madagascar</p>
+                <span class="subtitle">DÉCOUVERTE</span>
+                <h2 class="display-4 mb-3">Destinations Populaires</h2>
+                <p class="lead text-muted">Explorez les merveilles de Madagascar</p>
             </div>
             <div class="row g-4">
                 <!-- Carte Animaux -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-md-4">
                     <div class="destination-card">
                         <h3 class="destination-card__title">Faune Unique</h3>
                         <img src="assets/images/animaux/sifaka-6027010_1280.jpg" alt="Lémuriens de Madagascar" class="destination-card__img">
@@ -106,9 +112,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Carte Visites -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="col-md-4">
                     <div class="destination-card">
                         <h3 class="destination-card__title">Sites Naturels</h3>
                         <img src="assets/images/visites/baobabs-2708289_1280.jpg" alt="Allée des Baobabs" class="destination-card__img">
@@ -118,9 +124,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Carte Excursions -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="col-md-4">
                     <div class="destination-card">
                         <h3 class="destination-card__title">Aventures</h3>
                         <img src="assets/images/visites/plage1.jpg" alt="Plage de Madagascar" class="destination-card__img">
@@ -134,19 +140,65 @@
         </div>
     </section>
 
-    <!-- Section Météo -->
-    <section class="weather-section py-5">
+    <!-- Section Statistiques Biodiversité -->
+    <section class="stats-section">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Climat à Madagascar</h2>
-                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="200">Découvrez la météo et planifiez votre voyage au meilleur moment</p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="display-4 mb-3">Biodiversité Exceptionnelle</h2>
+                <p class="lead text-muted">Madagascar abrite une faune et une flore uniques au monde</p>
             </div>
             <div class="row g-4">
-                <!-- Carte Météo -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
-                    <div class="weather-card h-100">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="stat-number" data-value="100">100+</div>
+                        <div class="stat-label">Espèces de Lémuriens</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="stat-number" data-value="90">90%</div>
+                        <div class="stat-label">Espèces Endémiques</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-number" data-value="12000">12 000+</div>
+                        <div class="stat-label">Espèces Végétales</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="stat-number" data-value="47">47</div>
+                        <div class="stat-label">Parcs Nationaux</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Météo -->
+    <section class="weather-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Climat à Madagascar</h2>
+                <p class="lead text-muted">Découvrez la météo et planifiez votre voyage au meilleur moment</p>
+            </div>
+            <div class="row g-4">
+                <!-- Carte Météo Actuelle -->
+                <div class="col-md-4">
+                    <div class="weather-card">
                         <div class="weather-icon">
                             <i class="fas fa-sun"></i>
                         </div>
@@ -163,10 +215,10 @@
                     </div>
                 </div>
 
-                <!-- Meilleures périodes -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="weather-card h-100">
-                        <h3>Meilleures périodes</h3>
+                <!-- Meilleures Périodes -->
+                <div class="col-md-4">
+                    <div class="weather-card">
+                        <h3>Meilleures Périodes</h3>
                         <div class="best-periods">
                             <div class="period">
                                 <h4>Avril - Octobre</h4>
@@ -185,29 +237,29 @@
                 </div>
 
                 <!-- Conseils Voyage -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="weather-card h-100">
-                        <h3 data-aos="fade-up" data-aos-duration="1000">Conseils Voyage</h3>
+                <div class="col-md-4">
+                    <div class="weather-card">
+                        <h3>Conseils Voyage</h3>
                         <div class="travel-tips">
-                            <div class="tip-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="tip-item">
                                 <div class="tip-icon">
                                     <i class="fas fa-umbrella"></i>
                                 </div>
                                 <p>Évitez la saison des pluies (Novembre - Mars)</p>
                             </div>
-                            <div class="tip-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="tip-item">
                                 <div class="tip-icon">
                                     <i class="fas fa-sun"></i>
                                 </div>
                                 <p>Protection solaire indispensable toute l'année</p>
                             </div>
-                            <div class="tip-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                            <div class="tip-item">
                                 <div class="tip-icon">
                                     <i class="fas fa-tshirt"></i>
                                 </div>
                                 <p>Vêtements légers et imperméables recommandés</p>
                             </div>
-                            <div class="tip-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                            <div class="tip-item">
                                 <div class="tip-icon">
                                     <i class="fas fa-bug"></i>
                                 </div>
@@ -221,9 +273,11 @@
     </section>
 
     <!-- Section Témoignages -->
-    <section class="testimonials py-5">
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title text-center">Ce que disent nos visiteurs</h2>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Ce que disent nos visiteurs</h2>
+            </div>
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -283,30 +337,10 @@
         </div>
     </section>
 
-    <!-- Section À Propos -->
-    <section class="about-section" id="a-propos">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h2 class="display-4 mb-4">À Propos de Madagascar</h2>
-                    <p class="lead mb-4">Madagascar, quatrième plus grande île du monde, est un véritable paradis de la biodiversité. Avec ses paysages variés, allant des forêts tropicales aux déserts en passant par les plages paradisiaques, l'île offre une expérience unique à chaque visiteur.</p>
-                    <p class="mb-4">Plus de 90% de sa faune et de sa flore sont endémiques, faisant de Madagascar une destination incontournable pour les amateurs de nature et d'aventure.</p>
-                    <a href="pages/visites.html" class="btn btn-lg btn-custom btn-custom--primary">Découvrir nos sites</a>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="about-image">
-                        <img src="assets/images/visites/baobab-577761_1280.jpg" alt="Baobab de Madagascar" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Section Galerie -->
     <section class="gallery-section" id="galerie">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
+            <div class="text-center mb-5">
                 <h2 class="display-4 mb-3">Galerie Photo</h2>
                 <p class="lead text-muted">Découvrez la beauté de Madagascar en images</p>
             </div>
@@ -341,16 +375,6 @@
                 <div class="gallery-item">
                     <a href="assets/images/visites/bateau.jpg" data-lightbox="gallery" data-title="Bateau traditionnel">
                         <img src="assets/images/visites/bateau.jpg" alt="Bateau traditionnel">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="assets/images/visites/plage2.jpg" data-lightbox="gallery" data-title="Plage tropicale">
-                        <img src="assets/images/visites/plage2.jpg" alt="Plage tropicale">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="assets/images/animaux/animal6.jpg" data-lightbox="gallery" data-title="Faune endémique">
-                        <img src="assets/images/animaux/animal6.jpg" alt="Faune endémique">
                     </a>
                 </div>
             </div>
@@ -389,20 +413,8 @@
                                 <img src="assets/images/visites/bateau.jpg" alt="Bateau traditionnel">
                             </a>
                         </div>
-                        <div class="swiper-slide">
-                            <a href="assets/images/visites/plage2.jpg" data-lightbox="gallery-mobile">
-                                <img src="assets/images/visites/plage2.jpg" alt="Plage tropicale">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="assets/images/animaux/animal6.jpg" data-lightbox="gallery-mobile">
-                                <img src="assets/images/animaux/animal6.jpg" alt="Faune endémique">
-                            </a>
-                        </div>
                     </div>
-                    <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
@@ -410,17 +422,24 @@
         </div>
     </section>
 
-
-    <!-- Modal pour la galerie -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <img src="" id="modalImage" class="img-fluid w-100">
+    <!-- Section À Propos -->
+    <section class="about-section" id="a-propos">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-4 mb-4">À Propos de Madagascar</h2>
+                    <p class="lead mb-4">Madagascar, quatrième plus grande île du monde, est un véritable paradis de la biodiversité. Avec ses paysages variés, allant des forêts tropicales aux déserts en passant par les plages paradisiaques, l'île offre une expérience unique à chaque visiteur.</p>
+                    <p class="mb-4">Plus de 90% de sa faune et de sa flore sont endémiques, faisant de Madagascar une destination incontournable pour les amateurs de nature et d'aventure.</p>
+                    <a href="pages/visites.html" class="btn btn-lg btn-custom btn-custom--primary">Découvrir nos sites</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="assets/images/visites/baobab-577761_1280.jpg" alt="Baobab de Madagascar">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -480,6 +499,19 @@
         </div>
     </footer>
 
+    <!-- Boutons Flottants -->
+    <a href="#" class="floating-btn back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="#" class="floating-btn whatsapp-btn" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="#" class="floating-btn email-btn" aria-label="Envoyez-nous un email">
+        <i class="fas fa-envelope"></i>
+    </a>
+
     <!-- Chat Widget -->
     <div id="chatWidget" class="chat-widget">
         <div id="chatHeader" class="chat-header">
@@ -502,47 +534,18 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts Externes -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Scripts Personnalisés -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/floating-buttons.js"></script>
     <script src="assets/js/chat.js"></script>
     <script src="assets/js/home.js"></script>
-    <script>
-        // Initialisation AOS - DÉSACTIVÉ pour éviter les animations au scroll
-        // AOS.init({
-        //     duration: 1000,
-        //     once: true
-        // });
-
-        // Configuration Lightbox
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'showImageNumberLabel': false,
-            'fadeDuration': 300
-        });
-
-        // Affichage de l'heure actuelle à Madagascar (UTC+3)
-        function showCurrentTime() {
-            const currentTimeElement = document.getElementById('currentTime');
-            const currentTime = new Date();
-            
-            // Ajout de 2 heures pour avoir l'heure de Madagascar (UTC+3 au lieu de UTC+1)
-            currentTime.setHours(currentTime.getHours() + 2);
-            
-            const hours = currentTime.getHours().toString().padStart(2, '0');
-            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-            currentTimeElement.textContent = `${hours}:${minutes}`;
-        }
-
-        showCurrentTime();
-        setInterval(showCurrentTime, 1000);
-    </script>
 </body>
 </html>

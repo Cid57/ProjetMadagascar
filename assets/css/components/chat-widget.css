@@ -1,0 +1,294 @@
+/* ==========================================
+   CHAT WIDGET - Widget de chat moderne
+   ========================================== */
+
+.chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    width: 350px;
+    max-height: 500px;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+    z-index: 1040;
+    transition: all var(--transition-base);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+}
+
+.chat-widget.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Header du chat */
+.chat-header {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    position: relative;
+}
+
+.chat-header::after {
+    content: '▼';
+    position: absolute;
+    right: var(--spacing-md);
+    font-size: var(--fs-sm);
+    transition: transform var(--transition-base);
+}
+
+.chat-widget.open .chat-header::after {
+    transform: rotate(180deg);
+}
+
+.chat-header-text {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xl);
+}
+
+.chat-title h3 {
+    font-size: var(--fs-md);
+    margin: 0;
+    color: var(--white);
+}
+
+.chat-title p {
+    font-size: var(--fs-xs);
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Body du chat */
+.chat-body {
+    display: none;
+}
+
+.chat-widget.open .chat-body {
+    display: block;
+}
+
+.chat-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+}
+
+/* Scrollbar personnalisée */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: var(--radius-sm);
+}
+
+/* Message */
+.message {
+    margin-bottom: var(--spacing-md);
+    animation: slideInMessage 0.3s ease;
+}
+
+@keyframes slideInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-bubble {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.bot .message-bubble {
+    background: var(--white);
+    border-bottom-left-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message.user .message-bubble {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-bottom-right-radius: 4px;
+    display: inline-block;
+    margin-left: auto;
+}
+
+/* Input du chat */
+.chat-input {
+    display: flex;
+    padding: var(--spacing-md);
+    background: var(--white);
+    border-top: 1px solid var(--light-gray);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    transition: all var(--transition-base);
+}
+
+.chat-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.chat-input button {
+    margin-left: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-input button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+/* Bouton d'ouverture du chat */
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-2xl);
+    cursor: pointer;
+    box-shadow: var(--shadow-xl);
+    transition: all var(--transition-base);
+    z-index: var(--z-fixed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-2xl);
+}
+
+.chat-widget.open ~ .chat-toggle-btn {
+    display: none;
+}
+
+/* Badge de notification */
+.chat-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #E53935;
+    color: var(--white);
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    font-size: var(--fs-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+/* Animation de typing */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: var(--spacing-sm);
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background: var(--medium-gray);
+    border-radius: var(--radius-full);
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Quick replies */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.quick-reply-btn {
+    padding: 0.4rem 0.8rem;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.quick-reply-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
