@@ -1,0 +1,1070 @@
+/**
+ * ==========================================
+ * ANIMAUX PAGE - PAGE ANIMAUX
+ * ==========================================
+ *
+ * Fichier: animaux.css
+ * Description: Styles spécifiques à la page animaux.html (SANS media queries)
+ * Auteur: Équipe Développement Madagascar Tourisme
+ * Version: 2.0.0
+ *
+ * IMPORTANT: Ce fichier ne contient AUCUNE media query.
+ * Toutes les règles responsive sont dans animaux-mobile.css
+ *
+ * Sections:
+ * 1. Hero Section
+ * 2. Section Biodiversité
+ * 3. Section Espèces en Danger
+ * 4. Section Comment Aider
+ * 5. Section Galerie
+ * 6. Modals
+ * ==========================================
+ */
+
+/* ==========================================
+   1. HERO SECTION
+   ========================================== */
+
+.hero--small {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero--small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 1;
+}
+
+.hero--small .hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero--small .hero__content h1 {
+    font-size: var(--fs-5xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero--small .hero__content p {
+    font-size: var(--fs-xl);
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* ==========================================
+   2. SECTION BIODIVERSITÉ
+   ========================================== */
+
+.biodiversity-section {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(180deg, var(--white) 0%, #F8F9FA 100%);
+    position: relative;
+}
+
+.biodiversity-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, var(--white));
+    pointer-events: none;
+}
+
+/* En-tête de section */
+.biodiversity-section .subtitle {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-xs);
+}
+
+.biodiversity-section .subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-primary);
+}
+
+.biodiversity-section .section-title {
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.biodiversity-section .section-description {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Statistiques */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-3xl) 0;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-base);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+    border-color: var(--primary-color);
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-lg);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-2xl);
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3);
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.15) rotate(360deg);
+    box-shadow: 0 12px 24px rgba(255, 107, 53, 0.4);
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--fs-4xl);
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-heading);
+    line-height: 1;
+}
+
+.stat-description {
+    color: var(--medium-gray);
+    font-size: var(--fs-base);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Contenu Biodiversité avec Écosystème */
+.biodiversity-content {
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFC947 100%);
+    padding: var(--spacing-4xl) var(--spacing-3xl);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: var(--spacing-3xl);
+}
+
+.biodiversity-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.2) 0%, transparent 60%);
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(30px, -30px) rotate(5deg);
+    }
+}
+
+.ecosystem-section {
+    position: relative;
+    z-index: 1;
+    padding: var(--spacing-3xl) var(--spacing-2xl) var(--spacing-4xl);
+}
+
+.ecosystem-section .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.ecosystem-section .section-header {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.ecosystem-section .section-header .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-lg);
+}
+
+.ecosystem-section .section-header .subtitle::after {
+    background: var(--white);
+}
+
+.ecosystem-section h2 {
+    color: var(--white);
+    font-size: var(--fs-4xl);
+    margin-bottom: var(--spacing-xl);
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+}
+
+.ecosystem-section p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--fs-lg);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Features Écosystème */
+.ecosystem-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-3xl);
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-15px);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.95);
+    color: #FF6B35;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-3xl);
+    transition: all var(--transition-base);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item:hover .feature-icon {
+    transform: scale(1.15) rotate(360deg);
+    background: var(--white);
+    border-color: var(--white);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.feature-item h3 {
+    color: var(--white);
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--fs-lg);
+    margin: 0;
+    line-height: 1.6;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Bouton Découvrir */
+.btn-discover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-3xl);
+    background: var(--white);
+    color: #FF6B35;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-top: var(--spacing-lg);
+}
+
+.btn-discover:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    color: #FF6B35;
+    background: var(--white);
+    text-decoration: none;
+}
+
+.btn-discover i {
+    transition: transform var(--transition-base);
+    font-size: var(--fs-xl);
+}
+
+.btn-discover:hover i {
+    transform: translateX(8px);
+}
+
+/* ==========================================
+   3. SECTION ESPÈCES EN DANGER
+   ========================================== */
+
+.endangered-species-section {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 50%, #FFD5D5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.endangered-species-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.endangered-species-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.endangered-species-section .subtitle {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #DC2626;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    background: rgba(220, 38, 38, 0.1);
+    border-radius: var(--radius-full);
+}
+
+.endangered-species-section .section-title {
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.endangered-species-section .section-description {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.endangered-species-section .stat-card {
+    background: var(--white);
+    border: 2px solid rgba(220, 38, 38, 0.1);
+}
+
+.endangered-species-section .stat-card::before {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+}
+
+.endangered-species-section .stat-card:hover {
+    border-color: #DC2626;
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+}
+
+.endangered-species-section .stat-icon {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    box-shadow: 0 8px 16px rgba(220, 38, 38, 0.3);
+}
+
+.endangered-species-section .stat-card:hover .stat-icon {
+    box-shadow: 0 12px 24px rgba(220, 38, 38, 0.4);
+}
+
+/* ==========================================
+   4. SECTION COMMENT AIDER
+   ========================================== */
+
+.help-section {
+    padding: var(--spacing-4xl) 0;
+    background: var(--white);
+}
+
+.help-section .subtitle {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-xs);
+}
+
+.help-section .subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-primary);
+}
+
+.help-section .section-title {
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.help-section .section-description {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.action-cards-container {
+    margin-top: var(--spacing-3xl);
+}
+
+.action-card {
+    background: var(--white);
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all var(--transition-base);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.action-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
+    border-color: var(--primary-color);
+}
+
+.action-card:hover::before {
+    transform: scaleX(1);
+}
+
+.action-card .icon-container {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto var(--spacing-xl);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-3xl);
+    transition: all var(--transition-base);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.action-card:hover .icon-container {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+}
+
+.action-card h3 {
+    font-size: var(--fs-2xl);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.action-card > p {
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+    font-size: var(--fs-base);
+}
+
+.action-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-2xl) 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.action-card ul li {
+    padding: var(--spacing-sm) 0;
+    color: var(--dark-gray);
+    position: relative;
+    padding-left: var(--spacing-xl);
+    line-height: 1.6;
+    font-size: var(--fs-base);
+}
+
+.action-card ul li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: var(--fs-lg);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.action-card .btn {
+    margin-top: auto;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all var(--transition-base);
+}
+
+.action-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* ==========================================
+   5. SECTION GALERIE
+   ========================================== */
+
+.gallery-section {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(180deg, #F8F9FA 0%, var(--white) 100%);
+}
+
+.gallery-section .display-4 {
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.gallery-section .lead {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-3xl);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-base);
+    aspect-ratio: 1;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 1;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   6. MODALS
+   ========================================== */
+
+/* Modal Header */
+.modal-header {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-bottom: none;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.modal-title-wrapper i {
+    font-size: var(--fs-2xl);
+}
+
+.modal-title-wrapper .modal-title {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-modal {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: var(--white);
+    font-size: var(--fs-2xl);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    line-height: 1;
+}
+
+.close-modal:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+    padding: var(--spacing-2xl);
+}
+
+/* Modal Don */
+.donation-intro {
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+}
+
+.donation-intro p {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+}
+
+.donation-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.donation-section .section-title {
+    font-size: var(--fs-lg);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.donation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.donation-btn {
+    flex: 1;
+    min-width: 100px;
+    padding: var(--spacing-lg);
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    color: var(--dark-color);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: var(--fs-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.donation-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.donation-btn.active {
+    border-color: var(--primary-color);
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.custom-amount-input {
+    margin-top: var(--spacing-lg);
+}
+
+.selected-donation {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: var(--radius-md);
+    text-align: center;
+    border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.selected-amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.selected-amount-wrapper i {
+    color: #10B981;
+    font-size: var(--fs-xl);
+}
+
+.selected-amount {
+    font-weight: 700;
+    font-size: var(--fs-xl);
+    color: var(--primary-color);
+}
+
+.thank-you-section {
+    text-align: center;
+    padding: var(--spacing-3xl);
+}
+
+.thank-you-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-xl);
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-5xl);
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Modal Bénévole */
+.benevole-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.benevole-intro h2 {
+    font-size: var(--fs-2xl);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.benevole-intro p {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+}
+
+.benevole-form .form-group {
+    margin-bottom: var(--spacing-xl);
+}
+
+.benevole-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--fs-base);
+}
+
+.benevole-form .form-control {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 2px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-base);
+    transition: all var(--transition-base);
+    font-family: var(--font-body);
+}
+
+.benevole-form .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.benevole-form .btn {
+    width: 100%;
+    padding: var(--spacing-lg);
+    font-size: var(--fs-lg);
+    font-weight: 700;
+}
+
+/* Modal Confirmation Bénévole */
+.confirmation-icon {
+    color: var(--primary-color);
+}
+
+.confirmation-title {
+    font-size: var(--fs-2xl);
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.confirmation-text {
+    color: var(--medium-gray);
+    line-height: 1.8;
+    font-size: var(--fs-base);
+}
+
+/* Modal Sensibiliser */
+.sensibiliser-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.sensibiliser-intro h2 {
+    font-size: var(--fs-2xl);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.sensibiliser-intro p {
+    font-size: var(--fs-lg);
+    color: var(--medium-gray);
+    line-height: 1.8;
+}
+
+.share-options {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.share-option {
+    padding: var(--spacing-2xl);
+    background: var(--light-gray);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.share-option:hover {
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.share-option i {
+    font-size: var(--fs-5xl);
+    margin-bottom: var(--spacing-lg);
+    transition: transform var(--transition-base);
+}
+
+.share-option:hover i {
+    transform: scale(1.2);
+}
+
+.share-option.facebook i {
+    color: #1877F2;
+}
+
+.share-option.twitter i {
+    color: #1DA1F2;
+}
+
+.share-option.email i {
+    color: var(--primary-color);
+}
+
+.share-option h3 {
+    font-size: var(--fs-xl);
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.share-option p {
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.btn-share {
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border: none;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: var(--fs-base);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn-share.facebook {
+    background: #1877F2;
+    color: var(--white);
+}
+
+.btn-share.facebook:hover {
+    background: #166FE5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.btn-share.twitter {
+    background: #1DA1F2;
+    color: var(--white);
+}
+
+.btn-share.twitter:hover {
+    background: #1A91DA;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+.btn-share.email {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.btn-share.email:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}

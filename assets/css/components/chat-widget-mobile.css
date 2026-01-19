@@ -22,7 +22,8 @@
 
     .chat-toggle-btn {
         bottom: 20px;
-        right: 20px;
+        right: auto;
+        left: 20px;
         width: 55px;
         height: 55px;
         font-size: var(--fs-xl);

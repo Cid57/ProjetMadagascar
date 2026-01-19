@@ -21,6 +21,7 @@
     const chat = {
         widget: document.getElementById('chatWidget'),
         header: document.getElementById('chatHeader'),
+        toggleBtn: document.getElementById('chatToggleBtn'),
         messages: document.getElementById('chatMessages'),
         input: document.getElementById('messageInput'),
         sendButton: document.getElementById('sendButton'),
@@ -138,6 +139,13 @@
             // Écouter le clic sur le header pour ouvrir/fermer
             if (this.header) {
                 this.header.addEventListener('click', () => {
+                    this.toggle();
+                });
+            }
+
+            // Écouter le clic sur le bouton toggle
+            if (this.toggleBtn) {
+                this.toggleBtn.addEventListener('click', () => {
                     this.toggle();
                 });
             }

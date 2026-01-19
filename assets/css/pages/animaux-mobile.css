@@ -1,0 +1,197 @@
+/**
+ * ==========================================
+ * ANIMAUX PAGE MOBILE - VERSION RESPONSIVE
+ * ==========================================
+ *
+ * Fichier: animaux-mobile.css
+ * Description: Styles responsive pour la page animaux.html (AVEC media queries)
+ * Auteur: Équipe Développement Madagascar Tourisme
+ * Version: 1.0.0
+ *
+ * IMPORTANT: Ce fichier contient UNIQUEMENT les media queries.
+ * Les styles de base sont dans animaux.css
+ *
+ * Breakpoints:
+ * - 992px (tablettes)
+ * - 768px (mobiles)
+ * - 480px (petits mobiles)
+ * ==========================================
+ */
+
+/* ==========================================
+   TABLETTES (max-width: 992px)
+   ========================================== */
+
+@media (max-width: 992px) {
+    .biodiversity-content {
+        padding: var(--spacing-2xl);
+    }
+
+    .action-card .icon-container {
+        width: 70px;
+        height: 70px;
+        font-size: var(--fs-2xl);
+    }
+
+    .share-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   MOBILES (max-width: 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .biodiversity-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .biodiversity-content {
+        padding: var(--spacing-xl);
+    }
+
+    .endangered-species-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .help-section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .action-card {
+        padding: var(--spacing-xl);
+    }
+
+    .action-card .icon-container {
+        width: 60px;
+        height: 60px;
+        font-size: var(--fs-xl);
+    }
+
+    .action-card h3 {
+        font-size: var(--fs-lg);
+    }
+
+    .action-card ul li {
+        font-size: var(--fs-sm);
+    }
+
+    /* Modal adjustments */
+    .modal-dialog {
+        margin: var(--spacing-md);
+    }
+
+    .donation-buttons {
+        flex-direction: column;
+    }
+
+    .donation-btn {
+        min-width: 100%;
+    }
+
+    .benevole-intro h2,
+    .sensibiliser-intro h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .share-option i {
+        font-size: var(--fs-3xl);
+    }
+}
+
+/* ==========================================
+   PETITS MOBILES (max-width: 480px)
+   ========================================== */
+
+@media (max-width: 480px) {
+    .biodiversity-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .biodiversity-content {
+        padding: var(--spacing-md);
+    }
+
+    .endangered-species-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .help-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .action-card {
+        padding: var(--spacing-md);
+    }
+
+    .action-card .icon-container {
+        width: 50px;
+        height: 50px;
+        font-size: var(--fs-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .action-card h3 {
+        font-size: var(--fs-md);
+    }
+
+    .action-card p {
+        font-size: var(--fs-sm);
+    }
+
+    .action-card ul li {
+        font-size: var(--fs-xs);
+        padding-left: var(--spacing-md);
+    }
+
+    /* Modal adjustments */
+    .modal-header {
+        padding: var(--spacing-md);
+    }
+
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+
+    .thank-you-icon {
+        width: 80px;
+        height: 80px;
+        font-size: var(--fs-3xl);
+    }
+
+    .donation-section .section-title {
+        font-size: var(--fs-sm);
+    }
+
+    .donation-btn {
+        padding: var(--spacing-sm);
+        font-size: var(--fs-sm);
+    }
+
+    .benevole-intro h2,
+    .sensibiliser-intro h2 {
+        font-size: var(--fs-lg);
+    }
+
+    .share-option {
+        padding: var(--spacing-md);
+    }
+
+    .share-option i {
+        font-size: var(--fs-2xl);
+    }
+
+    .share-option h3 {
+        font-size: var(--fs-md);
+    }
+
+    .share-option p {
+        font-size: var(--fs-xs);
+    }
+
+    .btn-share {
+        padding: var(--spacing-xs) var(--spacing-lg);
+        font-size: var(--fs-sm);
+    }
+}
