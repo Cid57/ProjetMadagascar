@@ -81,19 +81,12 @@
 
 .biodiversity-section {
     padding: var(--spacing-4xl) 0;
-    background: linear-gradient(180deg, var(--white) 0%, #F8F9FA 100%);
+    background: var(--light-gray);
     position: relative;
 }
 
 .biodiversity-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent, var(--white));
-    pointer-events: none;
+    display: none;
 }
 
 /* En-tête de section */
@@ -141,7 +134,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-xl);
-    margin: var(--spacing-3xl) 0;
+    margin: var(--spacing-3xl) 0 0 0;
 }
 
 .stat-card {
@@ -215,79 +208,62 @@
     margin: 0;
 }
 
-/* Contenu Biodiversité avec Écosystème */
-.biodiversity-content {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFC947 100%);
-    padding: var(--spacing-3xl) var(--spacing-lg);
-    border-radius: var(--radius-xl);
-    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+/* ==========================================
+   2.5 SECTION ÉCOSYSTÈME
+   ========================================== */
+
+.ecosystem-outer-section {
+    padding: var(--spacing-4xl) 0;
+    background: var(--white);
     position: relative;
-    overflow: visible;
-    margin-top: var(--spacing-3xl);
-    width: 100%;
-    max-width: 100%;
-}
-
-.biodiversity-content::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.2) 0%, transparent 60%);
-    pointer-events: none;
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-        transform: translate(30px, -30px) rotate(5deg);
-    }
 }
 
 .ecosystem-section {
     position: relative;
     z-index: 1;
-    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
-}
-
-.ecosystem-section .container {
-    max-width: 100%;
-    padding: 0 var(--spacing-lg);
 }
 
 .ecosystem-section .section-header {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-3xl);
+    text-align: center;
 }
 
 .ecosystem-section .section-header .subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: var(--spacing-lg);
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    padding-bottom: var(--spacing-xs);
 }
 
 .ecosystem-section .section-header .subtitle::after {
-    background: var(--white);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-secondary);
 }
 
 .ecosystem-section h2 {
-    color: var(--white);
+    color: var(--dark-color);
     font-size: var(--fs-4xl);
-    margin-bottom: var(--spacing-xl);
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    margin-bottom: var(--spacing-md);
     font-weight: 700;
 }
 
 .ecosystem-section p {
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--medium-gray);
     font-size: var(--fs-lg);
     line-height: 1.8;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0;
 }
 
 /* Features Écosystème */
@@ -296,63 +272,57 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-xl);
     margin-top: var(--spacing-3xl);
-    padding: 0;
 }
 
 .feature-item {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    background: var(--white);
+    padding: var(--spacing-2xl) var(--spacing-xl);
     border-radius: var(--radius-lg);
     text-align: center;
     transition: all var(--transition-base);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--light-gray);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .feature-item:hover {
-    background: rgba(255, 255, 255, 0.35);
-    transform: translateY(-15px);
-    border-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    border-color: var(--secondary-light);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.1);
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin: 0 auto var(--spacing-lg);
-    background: rgba(255, 255, 255, 0.95);
-    color: #FF6B35;
+    background: rgba(46, 125, 50, 0.1);
+    color: var(--secondary-color);
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--fs-2xl);
     transition: all var(--transition-base);
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .feature-item:hover .feature-icon {
-    transform: scale(1.15) rotate(360deg);
-    background: var(--white);
-    border-color: var(--white);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
+    background: var(--gradient-secondary);
+    color: var(--white);
+    box-shadow: 0 8px 16px rgba(46, 125, 50, 0.3);
 }
 
 .feature-item h3 {
-    color: var(--white);
+    color: var(--dark-color);
     font-size: var(--fs-xl);
     margin-bottom: var(--spacing-sm);
     font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .feature-item p {
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--medium-gray);
     font-size: var(--fs-base);
     margin: 0;
-    line-height: 1.5;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    line-height: 1.6;
 }
 
 /* Bouton Découvrir */
@@ -362,37 +332,30 @@
     justify-content: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-md) var(--spacing-2xl);
-    background: var(--white);
-    color: #FF6B35;
-    font-size: var(--fs-md);
+    background: var(--gradient-secondary);
+    color: var(--white);
+    font-size: var(--fs-base);
     font-weight: 700;
     text-decoration: none;
     border-radius: var(--radius-full);
     transition: all var(--transition-base);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    white-space: nowrap;
-    margin-top: var(--spacing-xl);
 }
 
 .btn-discover:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    color: #FF6B35;
-    background: var(--white);
-    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
+    color: var(--white);
 }
 
 .btn-discover i {
     transition: transform var(--transition-base);
-    font-size: var(--fs-xl);
 }
 
 .btn-discover:hover i {
-    transform: translateX(8px);
+    transform: translateX(5px);
 }
 
 /* ==========================================
@@ -401,31 +364,14 @@
 
 .endangered-species-section {
     padding: var(--spacing-4xl) 0;
-    background: linear-gradient(135deg, #FFF5F5 0%, #FFE5E5 50%, #FFD5D5 100%);
+    background: var(--light-gray);
     position: relative;
     overflow: hidden;
 }
 
-.endangered-species-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.endangered-species-section::before,
 .endangered-species-section::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 .endangered-species-section .subtitle {
@@ -459,16 +405,18 @@
 
 .endangered-species-section .stat-card {
     background: var(--white);
-    border: 2px solid rgba(220, 38, 38, 0.1);
-}
-
-.endangered-species-section .stat-card::before {
-    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    border: 1px solid transparent;
+    transition: all var(--transition-base);
 }
 
 .endangered-species-section .stat-card:hover {
     border-color: #DC2626;
-    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-5px);
+}
+
+.endangered-species-section .stat-card::before {
+    display: none;
 }
 
 .endangered-species-section .stat-icon {
@@ -533,15 +481,15 @@
 
 .action-card {
     background: var(--white);
-    padding: var(--spacing-3xl) var(--spacing-2xl);
-    border-radius: var(--radius-xl);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: var(--spacing-xl); /* Beaucoup plus compact (était 3xl) */
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Ombre très légère au repos */
     text-align: center;
     transition: all var(--transition-base);
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 2px solid transparent;
+    border: 1px solid var(--light-gray); /* Bordure subtile */
     position: relative;
     overflow: hidden;
 }
@@ -551,17 +499,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    height: 5px;
+    width: 100%;
+    height: 3px;
     background: var(--gradient-primary);
     transform: scaleX(0);
     transition: transform var(--transition-base);
+    transform-origin: left;
 }
 
 .action-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(255, 107, 53, 0.15);
-    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
 }
 
 .action-card:hover::before {
@@ -569,65 +518,64 @@
 }
 
 .action-card .icon-container {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto var(--spacing-xl);
-    background: var(--gradient-primary);
-    color: var(--white);
+    width: 60px; /* Réduit de 90px à 60px */
+    height: 60px;
+    margin: 0 auto var(--spacing-lg);
+    background: rgba(255, 107, 53, 0.1); /* Fond subtil au lieu du dégradé fort */
+    color: var(--primary-color);
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--fs-3xl);
+    font-size: var(--fs-xl); /* Icône plus fine */
     transition: all var(--transition-base);
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    box-shadow: none;
 }
 
 .action-card:hover .icon-container {
-    transform: scale(1.15) rotate(15deg);
-    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
 
 .action-card h3 {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl); /* Titre un peu plus petit */
     color: var(--dark-color);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     font-weight: 700;
 }
 
 .action-card > p {
     color: var(--medium-gray);
-    margin-bottom: var(--spacing-xl);
-    line-height: 1.8;
-    font-size: var(--fs-base);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+    font-size: var(--fs-sm); /* Description plus fine */
 }
 
 .action-card ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 var(--spacing-2xl) 0;
-    text-align: left;
+    margin: 0 0 var(--spacing-xl) 0;
+    text-align: center; /* Centré pour l'équilibre */
     flex-grow: 1;
 }
 
 .action-card ul li {
-    padding: var(--spacing-sm) 0;
+    padding: var(--spacing-xs) 0;
     color: var(--dark-gray);
-    position: relative;
-    padding-left: var(--spacing-xl);
-    line-height: 1.6;
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm); /* Texte plus petit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
 }
 
 .action-card ul li::before {
-    content: '\2713';
-    position: absolute;
-    left: 0;
+    content: '•'; /* Puce simple et élégante au lieu du check */
     color: var(--primary-color);
     font-weight: 700;
     font-size: var(--fs-lg);
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .action-card .btn {
@@ -650,7 +598,7 @@
 
 .gallery-section {
     padding: var(--spacing-4xl) 0;
-    background: linear-gradient(180deg, #F8F9FA 0%, var(--white) 100%);
+    background: var(--light-gray);
 }
 
 .gallery-section .display-4 {
