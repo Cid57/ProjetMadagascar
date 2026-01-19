@@ -121,35 +121,33 @@
     </nav>
 
     <!-- Hero Section -->
-    <section
-      class="hero hero--small"
-      style="
-        background-image: url('../assets/images/animaux/header-cameleon.jpg');
-      "
-                >
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <div class="container">
-          <h1 class="with-underline">Faune Unique</h1>
-          <p>Découvrez les espèces emblématiques de Madagascar</p>
+    <section class="hero hero--small" id="accueil">
+        <div class="hero-image">
+            <img src="../assets/images/animaux/header-cameleon.jpg" alt="Caméléon de Madagascar">
         </div>
-      </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="container">
+                <h1 class="display-3 mb-4 text-white" data-aos="fade-up" data-aos-delay="100">Faune Unique</h1>
+                <p class="lead mb-5 text-white" data-aos="fade-up" data-aos-delay="300">Découvrez les espèces emblématiques de Madagascar</p>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <div class="mouse"><div class="wheel"></div></div>
+            <div class="arrow-scroll"><span></span><span></span><span></span></div>
+        </div>
     </section>
 
     <!-- Section Biodiversité -->
-    <section
-      class="biodiversity-section py-5"
-                >
+    <section class="biodiversity-section py-5">
       <div class="container">
         <!-- En-tête de section -->
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <span class="subtitle">DÉCOUVERTE</span>
-          <h2 class="section-title">
+          <h2 class="display-4 mb-3">
             Une Biodiversité Exceptionnelle
           </h2>
-          <p
-            class="section-description"
-                                  >
+          <p class="lead text-muted mx-auto" style="max-width: 800px;">
             Madagascar abrite une faune unique au monde, avec plus de 90%
             d'espèces endémiques.
           </p>
@@ -157,7 +155,7 @@
 
         <!-- Statistiques -->
         <div class="stats-container">
-          <div class="stat-card">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
             <div class="stat-icon">
               <i class="fas fa-paw"></i>
             </div>
@@ -165,7 +163,7 @@
             <p class="stat-description">d'espèces endémiques</p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
             <div class="stat-icon">
               <i class="fas fa-leaf"></i>
             </div>
@@ -173,7 +171,7 @@
             <p class="stat-description">plantes endémiques</p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
             <div class="stat-icon">
               <i class="fas fa-spider"></i>
             </div>
@@ -181,13 +179,14 @@
             <p class="stat-description">espèces de lémuriens</p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
             <div class="stat-icon">
               <i class="fas fa-feather"></i>
             </div>
             <span class="stat-number" data-value="280">0</span>
             <p class="stat-description">espèces d'oiseaux</p>
           </div>
+        </div>
       </div>
     </section>
 
@@ -195,10 +194,10 @@
     <section class="ecosystem-outer-section py-5">
       <div class="container">
         <div class="ecosystem-section">
-          <div class="section-header text-center">
+          <div class="section-header text-center" data-aos="fade-up">
             <span class="subtitle">MADAGASCAR</span>
-            <h2>Un Écosystème Unique</h2>
-            <p>
+            <h2 class="display-4 mb-3">Un Écosystème Unique</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 800px;">
               La Grande Île abrite certaines des espèces les plus rares
               et les plus fascinantes au monde. Son isolement
               géographique a permis le développement d'une biodiversité
@@ -207,7 +206,7 @@
           </div>
 
           <div class="ecosystem-features">
-            <div class="feature-item">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
               <div class="feature-icon">
                 <i class="fas fa-leaf"></i>
               </div>
@@ -215,7 +214,7 @@
               <p>Des espèces uniques au monde</p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
               <div class="feature-icon">
                 <i class="fas fa-tree"></i>
               </div>
@@ -223,7 +222,7 @@
               <p>Des écosystèmes protégés</p>
             </div>
 
-            <div class="feature-item">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
               <div class="feature-icon">
                 <i class="fas fa-paw"></i>
               </div>
@@ -232,7 +231,7 @@
             </div>
           </div>
 
-          <div class="text-center mt-5">
+          <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
             <a href="#gallery" class="btn-discover">
               DÉCOUVRIR LA GALERIE
               <i class="fas fa-arrow-right"></i>
@@ -245,20 +244,20 @@
     <!-- Section Espèces en Danger -->
     <section class="endangered-species-section py-5">
       <div class="container text-center">
-        <span class="subtitle mb-3">PROTECTION</span>
-        <h2 class="section-title mb-4">
-          Espèces en Danger
-        </h2>
-        <p
-          class="section-description mb-5"
-                            >
-          Madagascar fait face à des défis majeurs pour la protection de sa
-          faune unique. Découvrez les chiffres alarmants qui soulignent
-          l'urgence d'agir pour préserver ce patrimoine naturel exceptionnel.
-        </p>
+        <div data-aos="fade-up">
+            <span class="subtitle mb-3">PROTECTION</span>
+            <h2 class="display-4 mb-4">
+              Espèces en Danger
+            </h2>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 800px;">
+              Madagascar fait face à des défis majeurs pour la protection de sa
+              faune unique. Découvrez les chiffres alarmants qui soulignent
+              l'urgence d'agir pour préserver ce patrimoine naturel exceptionnel.
+            </p>
+        </div>
 
         <div class="stats-container">
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
             <div class="stat-icon">
               <i class="fas fa-exclamation-triangle"></i>
             </div>
@@ -268,7 +267,7 @@
             </p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-icon">
               <i class="fas fa-tree"></i>
             </div>
@@ -278,7 +277,7 @@
             </p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-icon">
               <i class="fas fa-leaf"></i>
             </div>
@@ -286,7 +285,7 @@
             <p class="stat-description">plantes endémiques menacées</p>
           </div>
 
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
             <div class="stat-icon">
               <i class="fas fa-globe"></i>
             </div>
@@ -300,14 +299,12 @@
     <!-- Section Comment Aider -->
     <section class="help-section py-5">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <span class="subtitle">AGIR</span>
-          <h2 class="section-title">
+          <h2 class="display-4 mb-3">
             Comment Aider ?
           </h2>
-          <p
-            class="section-description"
-                                  >
+          <p class="lead text-muted mx-auto" style="max-width: 800px;">
             Découvrez comment vous pouvez contribuer à la protection de la
             biodiversité malgache
           </p>
@@ -316,9 +313,7 @@
         <div class="action-cards-container">
           <div class="row g-4 justify-content-center">
             <!-- Carte Don -->
-            <div
-              class="col-md-4"
-                                                      >
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
               <div class="action-card">
                 <div class="icon-container">
                   <i class="fas fa-heart"></i>
@@ -341,9 +336,7 @@
             </div>
 
             <!-- Carte Bénévolat -->
-            <div
-              class="col-md-4"
-                                                      >
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
               <div class="action-card">
                 <div class="icon-container">
                   <i class="fas fa-users"></i>
@@ -366,9 +359,7 @@
             </div>
 
             <!-- Carte Sensibilisation -->
-            <div
-              class="col-md-4"
-                                                      >
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
               <div class="action-card">
                 <div class="icon-container">
                   <i class="fas fa-bullhorn"></i>
@@ -397,7 +388,8 @@
     <!-- Section Nos Plus Beaux Clichés -->
     <section class="gallery-section py-5" id="gallery">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="subtitle">INSTANTS CHOISIS</span>
           <h2 class="display-4 mb-3">Nos Plus Beaux Clichés</h2>
           <p class="lead text-muted">
             Les plus belles photos de la faune malgache
@@ -406,7 +398,7 @@
 
         <!-- Version Desktop -->
         <div class="gallery-grid d-none d-md-grid">
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
             <a
               href="../assets/images/animaux/sifaka-6027010_1280.jpg"
               data-lightbox="gallery"
@@ -416,9 +408,12 @@
                 src="../assets/images/animaux/sifaka-6027010_1280.jpg"
                 alt="Sifaka"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
             <a
               href="../assets/images/animaux/animal10.jpg"
               data-lightbox="gallery"
@@ -428,9 +423,12 @@
                 src="../assets/images/animaux/animal10.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
             <a
               href="../assets/images/animaux/animal2.jpg"
               data-lightbox="gallery"
@@ -440,9 +438,12 @@
                 src="../assets/images/animaux/animal2.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
             <a
               href="../assets/images/animaux/animal5.jpg"
               data-lightbox="gallery"
@@ -452,9 +453,12 @@
                 src="../assets/images/animaux/animal5.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
             <a
               href="../assets/images/animaux/animal6.jpg"
               data-lightbox="gallery"
@@ -464,9 +468,12 @@
                 src="../assets/images/animaux/animal6.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
             <a
               href="../assets/images/animaux/animal7.jpg"
               data-lightbox="gallery"
@@ -476,9 +483,12 @@
                 src="../assets/images/animaux/animal7.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
             <a
               href="../assets/images/animaux/animal8.jpg"
               data-lightbox="gallery"
@@ -488,9 +498,12 @@
                 src="../assets/images/animaux/animal8.jpg"
                 alt="Animal de Madagascar"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800">
             <a
               href="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
               data-lightbox="gallery"
@@ -500,6 +513,9 @@
                 src="../assets/images/animaux/david-clode-EQJekpaK3vA-unsplash.jpg"
                 alt="Caméléon"
               />
+              <div class="gallery-overlay">
+                  <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
         </div>
