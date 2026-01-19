@@ -25,32 +25,15 @@
    ========================================== */
 
 .stats-section {
-    background: linear-gradient(135deg, #FFF8F3 0%, #FFE8D6 50%, #FFD9BD 100%);
+    background: var(--light-gray);
     padding: var(--spacing-3xl) 0;
     position: relative;
     overflow: hidden;
 }
 
-.stats-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.stats-section::before,
 .stats-section::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 .stats-container {
@@ -116,31 +99,14 @@
 .weather-section {
     padding: var(--spacing-3xl) 0;
     margin-top: 0;
-    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
 
-.weather-section::before {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: 10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.weather-section::before,
 .weather-section::after {
-    content: '';
-    position: absolute;
-    bottom: -15%;
-    right: 15%;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(0, 172, 193, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 /* Cartes météo personnalisées */
@@ -267,33 +233,16 @@
    ========================================== */
 
 .testimonials {
-    background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 50%, #C5E1A5 100%);
+    background: var(--light-gray);
     padding: var(--spacing-3xl) 0;
     margin-top: 0;
     position: relative;
     overflow: hidden;
 }
 
-.testimonials::before {
-    content: '';
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(46, 125, 50, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.testimonials::before,
 .testimonials::after {
-    content: '';
-    position: absolute;
-    bottom: 5%;
-    left: 10%;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(139, 195, 74, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 .testimonials .section-title {
@@ -353,31 +302,14 @@
 .gallery-section {
     padding: var(--spacing-3xl) 0;
     margin-top: 0;
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 50%, #FFCC80 100%);
+    background: var(--white);
     position: relative;
     overflow: hidden;
 }
 
-.gallery-section::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.gallery-section::before,
 .gallery-section::after {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    right: -8%;
-    width: 450px;
-    height: 450px;
-    background: radial-gradient(circle, rgba(255, 183, 77, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 /* Swiper Gallery pour mobile */
