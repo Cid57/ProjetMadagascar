@@ -117,6 +117,11 @@
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
 
+                    // Ignorer les liens avec data-lightbox (galerie)
+                    if (this.hasAttribute('data-lightbox')) {
+                        return;
+                    }
+
                     // Ignorer les liens vides ou juste "#"
                     if (href === '#' || href === '') {
                         e.preventDefault();
