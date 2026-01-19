@@ -75,41 +75,46 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('../assets/images/visites/header-excursion.jpg');" data-aos="fade">
+    <section class="hero" id="accueil">
+        <div class="hero-image">
+            <img src="../assets/images/visites/header-excursion.jpg" alt="Paysage de Madagascar">
+        </div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
             <div class="container">
-                <h1 class="with-underline">Visites & Découvertes</h1>
-                <p>Explorez les merveilles de Madagascar</p>
+                <h1 class="display-3 mb-4 text-white" data-aos="fade-up" data-aos-delay="100">Visites & Découvertes</h1>
+                <p class="lead mb-5 text-white" data-aos="fade-up" data-aos-delay="300">Explorez les merveilles de Madagascar</p>
             </div>
+        </div>
+        <div class="scroll-down">
+            <div class="mouse"><div class="wheel"></div></div>
+            <div class="arrow-scroll"><span></span><span></span><span></span></div>
         </div>
     </section>
 
     <!-- Section Introduction -->
-    <section class="section" data-aos="fade-up">
+    <section class="section pb-0" data-aos="fade-up">
         <div class="container">
-            <div class="text-center mb-5 mt-header">
+            <div class="text-center mb-4 mt-header">
                 <span class="subtitle">DÉCOUVERTE</span>
-                <h2 class="section-title">Sites Incontournables</h2>
-                <p class="section-description">
+                <h2 class="display-4 mb-3">Sites Incontournables</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
                     Partez à la découverte des plus beaux sites naturels et culturels de Madagascar
                 </p>
             </div>
 
             <!-- Filtres -->
-            <section class="section">
-                <div class="container">
-                    <div class="filters" data-aos="fade-up">
-                        <div class="d-flex justify-content-center flex-wrap gap-3">
-                            <button class="btn-filter active" data-filter="all">Tous</button>
-                            <button class="btn-filter" data-filter="parcs">Parcs</button>
-                            <button class="btn-filter" data-filter="plages">Plages</button>
-                            <button class="btn-filter" data-filter="villes">Villes</button>
-                        </div>
-                    </div>
+            <div class="filters" data-aos="fade-up">
+                <div class="d-flex justify-content-center flex-wrap gap-3">
+                    <button class="btn-filter active" data-filter="all">Tous</button>
+                    <button class="btn-filter" data-filter="parcs">Parcs</button>
+                    <button class="btn-filter" data-filter="plages">Plages</button>
+                    <button class="btn-filter" data-filter="villes">Villes</button>
+                </div>
+            </div>
 
-                    <!-- Galerie -->
-                    <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+            <!-- Galerie -->
+            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
                         <!-- Parc National -->
                         <div class="gallery-item parcs">
                             <div class="gallery-card">
@@ -248,12 +253,13 @@
             <!-- Section Expériences -->
             <section class="section section-experiences">
                 <div class="container">
-                    <div class="section__title" data-aos="fade-up">
-                        <h2>Expériences Uniques</h2>
-                        <p>Vivez des moments inoubliables</p>
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <span class="subtitle">IMMERSION</span>
+                        <h2 class="display-4 mb-3">Expériences Uniques</h2>
+                        <p class="lead text-muted">Vivez des moments inoubliables au cœur de la Grande Île</p>
                     </div>
-                    <div class="experiences-grid" data-aos="fade-up" data-aos-delay="100">
-                        <div class="experience-card">
+                    <div class="experiences-grid">
+                        <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="experience-icon">
                                 <i class="fas fa-hiking"></i>
                             </div>
@@ -266,7 +272,7 @@
                             </ul>
                         </div>
 
-                        <div class="experience-card">
+                        <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="experience-icon">
                                 <i class="fas fa-water"></i>
                             </div>
@@ -279,7 +285,7 @@
                             </ul>
                         </div>
 
-                        <div class="experience-card">
+                        <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="experience-icon">
                                 <i class="fas fa-camera"></i>
                             </div>
@@ -292,7 +298,7 @@
                             </ul>
                         </div>
 
-                        <div class="experience-card">
+                        <div class="experience-card" data-aos="fade-up" data-aos-delay="400">
                             <div class="experience-icon">
                                 <i class="fas fa-utensils"></i>
                             </div>
@@ -308,14 +314,17 @@
                 </div>
             </section>
 
-  
             <!-- Top Destinations Section -->
             <section class="top-destinations py-5">
                 <div class="container">
-                    <h2 class="section-title text-center mb-5" data-aos="fade-up">Top Destinations</h2>
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <span class="subtitle">SÉLECTION</span>
+                        <h2 class="display-4 mb-3">Top Destinations</h2>
+                        <p class="lead text-muted">Les lieux les plus prisés par nos voyageurs</p>
+                    </div>
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="destination-card">
+                            <div class="destination-card-v2">
                                 <div class="destination-image">
                                     <img src="../assets/images/visites/baobabs-2708289_1280.jpg" alt="Allée des Baobabs">
                                     <div class="destination-type">Incontournable</div>
@@ -324,54 +333,54 @@
                                     <h3>Allée des Baobabs</h3>
                                     <div class="destination-info">
                                         <span><i class="fas fa-map-marker-alt"></i> Morondava</span>
-                                        <span><i class="fas fa-clock"></i> 2-3h de visite</span>
+                                        <span><i class="fas fa-clock"></i> 2-3h</span>
                                     </div>
-                                    <p>Une route bordée de baobabs géants, particulièrement spectaculaire au coucher du soleil.</p>
+                                    <p>Une route bordée de baobabs géants, spectaculaire au coucher du soleil.</p>
                                     <div class="destination-features">
-                                        <span><i class="fas fa-camera"></i> Point photo</span>
-                                        <span><i class="fas fa-sun"></i> Coucher de soleil</span>
+                                        <span><i class="fas fa-camera"></i> Photo</span>
+                                        <span><i class="fas fa-sun"></i> Sunset</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="destination-card">
+                            <div class="destination-card-v2">
                                 <div class="destination-image">
                                     <img src="../assets/images/visites/excursions/tsingy.jpg" alt="Tsingy de Bemaraha">
-                                    <div class="destination-type">Patrimoine UNESCO</div>
+                                    <div class="destination-type">UNESCO</div>
                                 </div>
                                 <div class="destination-content">
                                     <h3>Tsingy de Bemaraha</h3>
                                     <div class="destination-info">
                                         <span><i class="fas fa-map-marker-alt"></i> Bekopaka</span>
-                                        <span><i class="fas fa-clock"></i> 1-2 jours</span>
+                                        <span><i class="fas fa-clock"></i> 1-2 j</span>
                                     </div>
-                                    <p>Un paysage karstique unique au monde avec ses formations rocheuses spectaculaires.</p>
+                                    <p>Un paysage karstique unique au monde avec ses formations rocheuses.</p>
                                     <div class="destination-features">
-                                        <span><i class="fas fa-hiking"></i> Randonnée</span>
-                                        <span><i class="fas fa-mountain"></i> Escalade</span>
+                                        <span><i class="fas fa-hiking"></i> Trek</span>
+                                        <span><i class="fas fa-mountain"></i> Roc</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="destination-card">
+                            <div class="destination-card-v2">
                                 <div class="destination-image">
                                     <img src="../assets/images/visites/plage1.jpg" alt="Nosy Be">
-                                    <div class="destination-type">Plage & Nature</div>
+                                    <div class="destination-type">Plage</div>
                                 </div>
                                 <div class="destination-content">
                                     <h3>Nosy Be</h3>
                                     <div class="destination-info">
                                         <span><i class="fas fa-map-marker-alt"></i> Nord-Ouest</span>
-                                        <span><i class="fas fa-clock"></i> 3-7 jours</span>
+                                        <span><i class="fas fa-clock"></i> 3-7 j</span>
                                     </div>
                                     <p>L'île aux parfums avec ses plages paradisiaques et ses eaux cristallines.</p>
                                     <div class="destination-features">
                                         <span><i class="fas fa-swimming-pool"></i> Plongée</span>
-                                        <span><i class="fas fa-umbrella-beach"></i> Plage</span>
+                                        <span><i class="fas fa-umbrella-beach"></i> Détente</span>
                                     </div>
                                 </div>
                             </div>
@@ -385,94 +394,119 @@
             <!-- Section Meilleure Période et Météo -->
             <section class="section section-weather-info">
                 <div class="container">
-                    <h2 class="section-title text-center mb-5" data-aos="fade-up">Quand Visiter ?</h2>
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <span class="subtitle">PLANIFICATION</span>
+                        <h2 class="display-4 mb-3">Quand Visiter ?</h2>
+                        <p class="lead text-muted">Adaptez votre voyage selon les microclimats de l'île</p>
+                    </div>
                     <div class="row g-4">
                         <!-- Antananarivo -->
-                        <div class="col-lg-4" data-aos="fade-up">
-                            <div class="season-card">
-                                <h3>Antananarivo</h3>
-                                <div class="best-season">
-                                    <h4>Meilleure période</h4>
-                                    <span class="season-tag">Avril à Octobre</span>
-                                    <p>Saison sèche avec des températures agréables</p>
-                                </div>
-                                <div class="season-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-thermometer-half"></i>
-                                        <span>15°C - 25°C</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-umbrella"></i>
-                                        <span>Faibles précipitations</span>
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="weather-dash-card">
+                                <div class="dash-header">
+                                    <div class="dash-icon"><i class="fas fa-city"></i></div>
+                                    <div class="dash-title">
+                                        <h3>Antananarivo</h3>
+                                        <span>Les Hautes Terres</span>
                                     </div>
                                 </div>
-                                <div class="season-tips">
-                                    <h4>Conseils</h4>
-                                    <ul>
-                                        <li>Prévoir des vêtements légers</li>
-                                        <li>Protection solaire recommandée</li>
-                                        <li>Éviter la saison des pluies (novembre-mars)</li>
-                                    </ul>
+                                <div class="dash-body">
+                                    <div class="dash-season-badge">
+                                        <i class="fas fa-check-circle"></i> Meilleure période : <strong>Avril - Octobre</strong>
+                                    </div>
+                                    <div class="dash-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-thermometer-half"></i></div>
+                                            <span class="stat-val">15 - 25°C</span>
+                                            <span class="stat-label">Température</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-tint-slash"></i></div>
+                                            <span class="stat-val">Sec</span>
+                                            <span class="stat-label">Pluviométrie</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tips">
+                                        <h4>Le conseil de l'expert</h4>
+                                        <ul>
+                                            <li><i class="fas fa-tshirt"></i> Prévoyez une petite laine pour les soirées</li>
+                                            <li><i class="fas fa-sun"></i> Luminosité parfaite pour la photo</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Parc National d'Andasibe -->
-                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="season-card">
-                                <h3>Parc d'Andasibe</h3>
-                                <div class="best-season">
-                                    <h4>Meilleure période</h4>
-                                    <span class="season-tag">Septembre à Novembre</span>
-                                    <p>Idéal pour observer les lémuriens dans leur habitat naturel</p>
-                                </div>
-                                <div class="season-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-thermometer-half"></i>
-                                        <span>18°C - 28°C</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-cloud"></i>
-                                        <span>Climat tropical humide</span>
+                        <!-- Andasibe -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="weather-dash-card">
+                                <div class="dash-header">
+                                    <div class="dash-icon"><i class="fas fa-leaf"></i></div>
+                                    <div class="dash-title">
+                                        <h3>Andasibe</h3>
+                                        <span>Forêt Tropicale</span>
                                     </div>
                                 </div>
-                                <div class="season-tips">
-                                    <h4>Conseils</h4>
-                                    <ul>
-                                        <li>Chaussures de randonnée obligatoires</li>
-                                        <li>Vêtements imperméables conseillés</li>
-                                        <li>Pour une meilleure visibilité, privilégiez le matin</li>
-                                    </ul>
+                                <div class="dash-body">
+                                    <div class="dash-season-badge dash-season-badge--alt">
+                                        <i class="fas fa-leaf"></i> Top Observation : <strong>Sept - Nov</strong>
+                                    </div>
+                                    <div class="dash-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-thermometer-three-quarters"></i></div>
+                                            <span class="stat-val">18 - 28°C</span>
+                                            <span class="stat-label">Température</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-cloud-showers-heavy"></i></div>
+                                            <span class="stat-val">Humide</span>
+                                            <span class="stat-label">Climat</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tips">
+                                        <h4>Le conseil de l'expert</h4>
+                                        <ul>
+                                            <li><i class="fas fa-boot-heeled"></i> Chaussures de rando imperméables</li>
+                                            <li><i class="fas fa-binoculars"></i> Meilleure écoute des Indri-Indri</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Nosy Be -->
-                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="season-card">
-                                <h3>Nosy Be</h3>
-                                <div class="best-season">
-                                    <h4>Meilleure période</h4>
-                                    <span class="season-tag">Mai à Novembre</span>
-                                    <p>Profitez de la saison sèche, parfaite pour la plage</p>
-                                </div>
-                                <div class="season-details">
-                                    <div class="detail-item">
-                                        <i class="fas fa-thermometer-half"></i>
-                                        <span>22°C - 32°C</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="fas fa-sun"></i>
-                                        <span>Climat tropical</span>
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="weather-dash-card">
+                                <div class="dash-header">
+                                    <div class="dash-icon"><i class="fas fa-umbrella-beach"></i></div>
+                                    <div class="dash-title">
+                                        <h3>Nosy Be</h3>
+                                        <span>Archipel du Nord</span>
                                     </div>
                                 </div>
-                                <div class="season-tips">
-                                    <h4>Conseils</h4>
-                                    <ul>
-                                        <li>Protection solaire indispensable</li>
-                                        <li>Activités nautiques le matin</li>
-                                        <li>Éviter la saison cyclonique (décembre-mars)</li>
-                                    </ul>
+                                <div class="dash-body">
+                                    <div class="dash-season-badge dash-season-badge--sea">
+                                        <i class="fas fa-sun"></i> Saison Balnéaire : <strong>Mai - Nov</strong>
+                                    </div>
+                                    <div class="dash-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-temperature-high"></i></div>
+                                            <span class="stat-val">22 - 32°C</span>
+                                            <span class="stat-label">Température</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-circle"><i class="fas fa-water"></i></div>
+                                            <span class="stat-val">28°C</span>
+                                            <span class="stat-label">Eau de mer</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tips">
+                                        <h4>Le conseil de l'expert</h4>
+                                        <ul>
+                                            <li><i class="fas fa-ship"></i> Idéal pour la croisière en catamaran</li>
+                                            <li><i class="fas fa-fish"></i> Visibilité sous-marine maximale</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -607,53 +641,81 @@
             <!-- Section Conseils -->
             <section class="section section-conseils">
                 <div class="container">
-                    <div class="section__title" data-aos="fade-up">
-                        <h2>Conseils pour votre Visite</h2>
-                        <p>Préparez au mieux votre séjour</p>
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <span class="subtitle">GUIDE PRATIQUE</span>
+                        <h2 class="display-4 mb-3">Conseils Voyageurs</h2>
+                        <p class="lead text-muted">L'essentiel pour un séjour en toute sérénité</p>
                     </div>
-                    <div class="conseils-grid" data-aos="fade-up" data-aos-delay="100">
-                        <div class="conseil-item">
-                            <div class="conseil-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="conseil-content">
-                                <h3>Meilleure période</h3>
-                                <p>D'avril à novembre, pendant la saison sèche. Le climat est plus agréable et les routes sont plus praticables.</p>
-                                <ul class="conseil-details">
-                                    <li><i class="fas fa-sun"></i> Temps sec et ensoleillé</li>
-                                    <li><i class="fas fa-temperature-low"></i> Températures modérées</li>
-                                    <li><i class="fas fa-road"></i> Routes plus accessibles</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="conseil-item">
-                            <div class="conseil-icon">
-                                <i class="fas fa-route"></i>
-                            </div>
-                            <div class="conseil-content">
-                                <h3>Transport</h3>
-                                <p>Location de 4x4 recommandée pour les longues distances. Les routes peuvent être difficiles, surtout en saison des pluies.</p>
-                                <ul class="conseil-details">
-                                    <li><i class="fas fa-car"></i> Location de 4x4 conseillée</li>
-                                    <li><i class="fas fa-plane"></i> Vols intérieurs disponibles</li>
-                                    <li><i class="fas fa-bus"></i> Taxi-brousse pour courtes distances</li>
-                                </ul>
+                    <div class="row g-4">
+                        <!-- Meilleure Période -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="tip-card-pro">
+                                <div class="tip-bg-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="tip-header">
+                                    <div class="tip-icon-box">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <h3>Quand partir ?</h3>
+                                </div>
+                                <div class="tip-body">
+                                    <p>Privilégiez la saison sèche pour profiter pleinement de toutes les régions.</p>
+                                    <ul class="tip-checklist">
+                                        <li><i class="fas fa-check"></i> <strong>Avril - Nov :</strong> Saison idéale</li>
+                                        <li><i class="fas fa-check"></i> <strong>Juil - Août :</strong> Fraîcheur (Hautes Terres)</li>
+                                    </ul>
+                                </div>
+                                <div class="tip-footer">
+                                    <span class="tip-badge">À noter</span>
+                                    <p>Réservez 3-6 mois à l'avance pour la haute saison.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="conseil-item">
-                            <div class="conseil-icon">
-                                <i class="fas fa-bed"></i>
+                        <!-- Transport -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="tip-card-pro">
+                                <div class="tip-bg-icon"><i class="fas fa-route"></i></div>
+                                <div class="tip-header">
+                                    <div class="tip-icon-box">
+                                        <i class="fas fa-car-side"></i>
+                                    </div>
+                                    <h3>Se Déplacer</h3>
+                                </div>
+                                <div class="tip-body">
+                                    <p>Les distances sont grandes et les routes parfois difficiles. Le temps de trajet compte plus que les km.</p>
+                                    <ul class="tip-checklist">
+                                        <li><i class="fas fa-check"></i> <strong>4x4 avec chauffeur :</strong> Recommandé</li>
+                                        <li><i class="fas fa-check"></i> <strong>Vols intérieurs :</strong> Gain de temps</li>
+                                    </ul>
+                                </div>
+                                <div class="tip-footer">
+                                    <span class="tip-badge">Astuce</span>
+                                    <p>Comptez toujours une marge de sécurité pour les trajets.</p>
+                                </div>
                             </div>
-                            <div class="conseil-content">
-                                <h3>Hébergement</h3>
-                                <p>Réserver à l'avance pendant la haute saison. Large choix d'hébergements, des lodges luxueux aux gîtes authentiques.</p>
-                                <ul class="conseil-details">
-                                    <li><i class="fas fa-hotel"></i> Hôtels et lodges de qualité</li>
-                                    <li><i class="fas fa-home"></i> Gîtes et chambres d'hôtes</li>
-                                    <li><i class="fas fa-campground"></i> Camping possible</li>
-                                </ul>
+                        </div>
+
+                        <!-- Vie Pratique -->
+                        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="tip-card-pro">
+                                <div class="tip-bg-icon"><i class="fas fa-suitcase"></i></div>
+                                <div class="tip-header">
+                                    <div class="tip-icon-box">
+                                        <i class="fas fa-passport"></i>
+                                    </div>
+                                    <h3>Vie Pratique</h3>
+                                </div>
+                                <div class="tip-body">
+                                    <p>Quelques règles simples pour faciliter votre quotidien sur place.</p>
+                                    <ul class="tip-checklist">
+                                        <li><i class="fas fa-check"></i> <strong>Visa :</strong> À l'arrivée (35€)</li>
+                                        <li><i class="fas fa-check"></i> <strong>Santé :</strong> Anti-moustiques vital</li>
+                                    </ul>
+                                </div>
+                                <div class="tip-footer">
+                                    <span class="tip-badge">Important</span>
+                                    <p>Prévoyez des espèces (Ariary), la carte n'est pas acceptée partout.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

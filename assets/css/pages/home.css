@@ -21,19 +21,122 @@
  */
 
 /* ==========================================
+   0. HERO SECTION & ANIMATIONS
+   ========================================== */
+
+/* Ken Burns Effect */
+@keyframes kenBurns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+.hero-image img {
+    animation: kenBurns 25s infinite alternate ease-in-out;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* Scroll Down Indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+}
+
+.mouse {
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.wheel {
+    width: 3px;
+    height: 6px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 15px); opacity: 0; }
+}
+
+.arrow-scroll span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: -5px auto;
+    animation: scrollArrow 2s infinite;
+}
+
+.arrow-scroll span:nth-child(2) { animation-delay: -0.2s; }
+.arrow-scroll span:nth-child(3) { animation-delay: -0.4s; }
+
+@keyframes scrollArrow {
+    0% { opacity: 0; transform: rotate(45deg) translate(-5px, -5px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(5px, 5px); }
+}
+
+/* Hero Typography & UI Enhancements */
+.hero__content h1 {
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    letter-spacing: -0.5px;
+}
+
+.hero__content p {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    font-weight: 400;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
    1. SECTION STATISTIQUES
    ========================================== */
 
 .stats-section {
     background: var(--light-gray);
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
-.stats-section::before,
-.stats-section::after {
-    display: none;
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
 }
 
 .stats-container {
@@ -50,25 +153,35 @@
     text-align: center;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    border-top: 4px solid transparent;
+    border-bottom: 3px solid transparent;
+    height: 100%;
 }
 
 .stat-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
-    border-top-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
 }
 
 .stat-icon {
-    font-size: var(--fs-4xl);
+    width: 80px;
+    height: 80px;
+    background: var(--light-gray);
     color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
-    display: inline-block;
-    transition: transform var(--transition-base);
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-3xl);
+    transition: all var(--transition-base);
+    position: relative;
 }
 
 .stat-card:hover .stat-icon {
-    transform: scale(1.2) rotate(10deg);
+    transform: rotateY(360deg);
+    background: var(--primary-color);
+    color: var(--white);
 }
 
 .stat-number {
@@ -97,7 +210,7 @@
    ========================================== */
 
 .weather-section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     margin-top: 0;
     background: var(--white);
     position: relative;
@@ -110,47 +223,67 @@
 }
 
 /* Cartes météo personnalisées */
-.weather-card h3 {
-    font-size: var(--fs-xl);
+.weather-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    height: 100%;
+    border: 1px solid var(--light-gray);
+}
+
+.weather-card--live {
+    background: var(--gradient-ocean);
+    color: var(--white);
+    border: none;
+    text-align: center;
+}
+
+.weather-card--live h3, 
+.weather-card--live .temperature,
+.weather-card--live .weather-desc {
+    color: var(--white);
+}
+
+.weather-card--live .current-time {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.weather-card--live .current-time i {
+    color: var(--white);
+}
+
+.weather-card--live .weather-details {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.weather-card--live .weather-details span,
+.weather-card--live .weather-details i {
+    color: var(--white);
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.weather-icon {
+    font-size: var(--fs-5xl);
+    color: #FFA726;
+    margin-bottom: var(--spacing-md);
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.weather-card--live .weather-icon {
+    color: var(--white);
+}
+
+.temperature {
+    font-size: var(--fs-5xl);
+    font-weight: 700;
     color: var(--dark-color);
-    margin-bottom: var(--spacing-md);
-}
-
-.current-time {
-    font-size: var(--fs-md);
-    color: var(--medium-gray);
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
-}
-
-.current-time i {
-    color: var(--primary-color);
-}
-
-.weather-desc {
-    color: var(--medium-gray);
-    margin-bottom: var(--spacing-md);
-}
-
-.weather-details {
-    display: flex;
-    justify-content: space-around;
-    margin-top: var(--spacing-md);
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--light-gray);
-}
-
-.weather-details span {
-    font-size: var(--fs-sm);
-    color: var(--medium-gray);
-}
-
-.weather-details i {
-    color: var(--primary-color);
-    margin-right: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
 }
 
 /* Meilleures périodes */
@@ -234,19 +367,70 @@
 
 .testimonials {
     background: var(--light-gray);
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     margin-top: 0;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
-.testimonials::before,
-.testimonials::after {
-    display: none;
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+    z-index: -1;
 }
 
-.testimonials .section-title {
-    margin-bottom: var(--spacing-2xl);
+.testimonial-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-lg);
+    max-width: 800px;
+    margin: 20px auto 60px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.testimonial-quote {
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.testimonial-rating {
+    color: #FFD700;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-content {
+    font-size: var(--fs-md);
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.testimonial-author h4 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.testimonial-author p {
+    font-size: var(--fs-sm);
+    color: var(--medium-gray);
+    margin: 0;
 }
 
 /* Contrôles du carousel */
@@ -254,45 +438,65 @@
 .carousel-control-next {
     width: 50px;
     height: 50px;
-    background: rgba(255, 107, 53, 0.8);
+    background: var(--white);
+    color: var(--primary-color);
     border-radius: var(--radius-full);
     opacity: 1;
     top: 50%;
     transform: translateY(-50%);
     transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+    border: none;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     background: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
 .carousel-control-prev {
-    left: -60px;
+    left: -30px;
 }
 
 .carousel-control-next {
-    right: -60px;
+    right: -30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(48%) sepia(89%) saturate(1832%) hue-rotate(345deg) brightness(101%) contrast(101%);
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
 }
 
 /* Indicateurs */
 .carousel-indicators {
-    margin-bottom: -50px;
+    bottom: -10px;
 }
 
 .carousel-indicators button {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: var(--radius-full);
-    background: var(--primary-color);
-    opacity: 0.5;
+    background: var(--primary-color) !important;
+    opacity: 0.3;
     border: none;
+    margin: 0 5px;
     transition: all var(--transition-base);
 }
 
 .carousel-indicators button.active {
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.3);
+    width: 25px;
+    border-radius: 10px;
 }
 
 /* ==========================================
@@ -300,7 +504,7 @@
    ========================================== */
 
 .gallery-section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     margin-top: 0;
     background: var(--white);
     position: relative;

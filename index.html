@@ -124,16 +124,28 @@
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <div class="container">
-          <h1 class="display-3 mb-4 text-white">Bienvenue à Madagascar</h1>
-          <p class="lead mb-5 text-white">
+          <h1 class="display-3 mb-4 text-white" data-aos="fade-up" data-aos-delay="100">Bienvenue à Madagascar</h1>
+          <p class="lead mb-5 text-white" data-aos="fade-up" data-aos-delay="300">
             Découvrez la magie de la Grande Île, ses paysages uniques et sa
             biodiversité exceptionnelle
           </p>
-          <a
-            href="#destinations"
-            class="btn btn-custom btn-custom--primary btn-lg"
-            >Découvrir</a
-          >
+          <div data-aos="fade-up" data-aos-delay="500">
+            <a
+              href="#destinations"
+              class="btn btn-custom btn-custom--primary btn-lg"
+              >Découvrir</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow-scroll">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </section>
@@ -141,14 +153,14 @@
     <!-- Section Destinations -->
     <section class="section" id="destinations">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <span class="subtitle">DÉCOUVERTE</span>
           <h2 class="display-4 mb-3">Destinations Populaires</h2>
           <p class="lead text-muted">Explorez les merveilles de Madagascar</p>
         </div>
         <div class="row g-4">
           <!-- Carte Animaux -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="destination-card">
               <h3 class="destination-card__title">Faune Unique</h3>
               <img
@@ -157,6 +169,7 @@
                 class="destination-card__img"
               />
               <div class="destination-card__content">
+                <div class="destination-card__category">Nature</div>
                 <p>
                   Découvrez les lémuriens et autres espèces endémiques de
                   Madagascar
@@ -171,7 +184,7 @@
           </div>
 
           <!-- Carte Visites -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="destination-card">
               <h3 class="destination-card__title">Sites Naturels</h3>
               <img
@@ -180,6 +193,7 @@
                 class="destination-card__img"
               />
               <div class="destination-card__content">
+                <div class="destination-card__category">Paysages</div>
                 <p>
                   Explorez les paysages spectaculaires et les sites naturels
                   uniques
@@ -194,7 +208,7 @@
           </div>
 
           <!-- Carte Excursions -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="destination-card">
               <h3 class="destination-card__title">Aventures</h3>
               <img
@@ -203,6 +217,7 @@
                 class="destination-card__img"
               />
               <div class="destination-card__content">
+                <div class="destination-card__category">Aventure</div>
                 <p>Participez à des excursions passionnantes à travers l'île</p>
                 <a
                   href="pages/excursions.html"
@@ -219,14 +234,14 @@
     <!-- Section Statistiques Biodiversité -->
     <section class="stats-section">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <h2 class="display-4 mb-3">Biodiversité Exceptionnelle</h2>
           <p class="lead text-muted">
             Madagascar abrite une faune et une flore uniques au monde
           </p>
         </div>
         <div class="row g-4">
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="stat-card">
               <div class="stat-icon">
                 <i class="fas fa-paw"></i>
@@ -235,7 +250,7 @@
               <div class="stat-label">Espèces de Lémuriens</div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="stat-card">
               <div class="stat-icon">
                 <i class="fas fa-tree"></i>
@@ -244,7 +259,7 @@
               <div class="stat-label">Espèces Endémiques</div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="stat-card">
               <div class="stat-icon">
                 <i class="fas fa-leaf"></i>
@@ -253,7 +268,7 @@
               <div class="stat-label">Espèces Végétales</div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="stat-card">
               <div class="stat-icon">
                 <i class="fas fa-mountain"></i>
@@ -269,7 +284,7 @@
     <!-- Section Météo -->
     <section class="weather-section">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
           <h2 class="display-4 mb-3">Climat à Madagascar</h2>
           <p class="lead text-muted">
             Découvrez la météo et planifiez votre voyage au meilleur moment
@@ -277,8 +292,8 @@
         </div>
         <div class="row g-4">
           <!-- Carte Météo Actuelle -->
-          <div class="col-md-4">
-            <div class="weather-card">
+          <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="weather-card weather-card--live">
               <div class="weather-icon">
                 <i class="fas fa-sun"></i>
               </div>
@@ -296,7 +311,7 @@
           </div>
 
           <!-- Meilleures Périodes -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="weather-card">
               <h3>Meilleures Périodes</h3>
               <div class="best-periods">
@@ -322,7 +337,7 @@
           </div>
 
           <!-- Conseils Voyage -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
             <div class="weather-card">
               <h3>Conseils Voyage</h3>
               <div class="travel-tips">
@@ -360,7 +375,8 @@
     <!-- Section Témoignages -->
     <section class="testimonials">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="subtitle">AVIS CLIENTS</span>
           <h2 class="display-4 mb-3">Ce que disent nos visiteurs</h2>
         </div>
         <div
@@ -368,15 +384,27 @@
           class="carousel slide"
           data-bs-ride="carousel"
           data-bs-interval="5000"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="testimonial-card">
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-content">
                   <p>
                     "Un voyage inoubliable à Madagascar ! L'équipe a été
-                    formidable et les paysages sont à couper le souffle."
+                    formidable et les paysages sont à couper le souffle. L'organisation était parfaite."
                   </p>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-info">
@@ -388,11 +416,21 @@
             </div>
             <div class="carousel-item">
               <div class="testimonial-card">
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-content">
                   <p>
                     "La diversité de la faune et de la flore est incroyable. Les
-                    guides sont passionnés et très professionnels."
+                    guides sont passionnés et très professionnels. Je recommande vivement !"
                   </p>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-info">
@@ -404,11 +442,21 @@
             </div>
             <div class="carousel-item">
               <div class="testimonial-card">
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-content">
                   <p>
                     "Une expérience authentique et enrichissante. Les rencontres
-                    avec la population locale ont été magiques."
+                    avec la population locale ont été magiques. Merci pour tout."
                   </p>
+                </div>
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
                 <div class="testimonial-author">
                   <div class="author-info">
@@ -462,7 +510,8 @@
     <!-- Section Galerie -->
     <section class="gallery-section" id="galerie">
       <div class="container">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="subtitle">INSTANTS CHOISIS</span>
           <h2 class="display-4 mb-3">Galerie Photo</h2>
           <p class="lead text-muted">
             Découvrez la beauté de Madagascar en images
@@ -471,7 +520,7 @@
 
         <!-- Version Desktop -->
         <div class="gallery-grid d-none d-md-grid">
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
             <a
               href="assets/images/visites/baobabs-2708289_1280.jpg"
               data-lightbox="gallery"
@@ -481,9 +530,12 @@
                 src="assets/images/visites/baobabs-2708289_1280.jpg"
                 alt="Avenue des Baobabs"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
             <a
               href="assets/images/visites/plage1.jpg"
               data-lightbox="gallery"
@@ -493,9 +545,12 @@
                 src="assets/images/visites/plage1.jpg"
                 alt="Plage de Madagascar"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
             <a
               href="assets/images/animaux/sifaka-6027010_1280.jpg"
               data-lightbox="gallery"
@@ -505,9 +560,12 @@
                 src="assets/images/animaux/sifaka-6027010_1280.jpg"
                 alt="Lémuriens"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
             <a
               href="assets/images/visites/nature-1568850_1280.jpg"
               data-lightbox="gallery"
@@ -517,9 +575,12 @@
                 src="assets/images/visites/nature-1568850_1280.jpg"
                 alt="Paysage naturel"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
             <a
               href="assets/images/animaux/animal2.jpg"
               data-lightbox="gallery"
@@ -529,9 +590,12 @@
                 src="assets/images/animaux/animal2.jpg"
                 alt="Faune de Madagascar"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
             <a
               href="assets/images/visites/bateau.jpg"
               data-lightbox="gallery"
@@ -541,6 +605,9 @@
                 src="assets/images/visites/bateau.jpg"
                 alt="Bateau traditionnel"
               />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
             </a>
           </div>
         </div>
@@ -628,32 +695,49 @@
     <section class="about-section" id="a-propos">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="subtitle" style="justify-content: flex-start;">NOTRE HISTOIRE</span>
             <h2 class="display-4 mb-4">À Propos de Madagascar</h2>
             <p class="lead mb-4">
               Madagascar, quatrième plus grande île du monde, est un véritable
               paradis de la biodiversité. Avec ses paysages variés, allant des
               forêts tropicales aux déserts en passant par les plages
-              paradisiaques, l'île offre une expérience unique à chaque
-              visiteur.
+              paradisiaques.
             </p>
-            <p class="mb-4">
-              Plus de 90% de sa faune et de sa flore sont endémiques, faisant de
-              Madagascar une destination incontournable pour les amateurs de
-              nature et d'aventure.
-            </p>
+            <div class="about-features mb-4">
+                <div class="about-feature">
+                    <i class="fas fa-mask"></i>
+                    <div>
+                        <h5>Culture Riche</h5>
+                        <p>Une mosaïque de traditions et de sourires.</p>
+                    </div>
+                </div>
+                <div class="about-feature">
+                    <i class="fas fa-Globe-africa"></i>
+                    <div>
+                        <h5>Nature Unique</h5>
+                        <p>90% d'espèces endémiques mondiales.</p>
+                    </div>
+                </div>
+            </div>
             <a
               href="pages/visites.html"
               class="btn btn-lg btn-custom btn-custom--primary"
               >Découvrir nos sites</a
             >
           </div>
-          <div class="col-lg-6">
-            <div class="about-image">
-              <img
-                src="assets/images/visites/baobab-577761_1280.jpg"
-                alt="Baobab de Madagascar"
-              />
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="about-image-container">
+                <div class="about-image">
+                    <img
+                        src="assets/images/visites/baobab-577761_1280.jpg"
+                        alt="Baobab de Madagascar"
+                    />
+                </div>
+                <div class="about-experience-badge">
+                    <span>15+</span>
+                    <p>Ans d'Expertise</p>
+                </div>
             </div>
           </div>
         </div>

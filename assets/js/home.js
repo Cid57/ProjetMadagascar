@@ -150,21 +150,55 @@
         },
 
         /**
-         * Ajouter un effet parallax simple au hero
+         * Ajouter un effet parallax (Contenu + Image)
          */
         initParallaxEffect: function() {
-            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero__content');
+            const heroImage = document.querySelector('.hero-image');
 
-            if (!hero) return;
+            if (!heroContent) return;
 
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
-                const parallaxSpeed = 0.5;
+                
+                // Optimisation : ne pas animer si hors champ
+                if (scrolled > window.innerHeight) return;
 
-                hero.style.backgroundPositionY = `${scrolled * parallaxSpeed}px`;
+                // Parallax sur le texte (monte moins vite que le scroll)
+                // et fondu progressif
+                heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+                heroContent.style.opacity = 1 - (scrolled / 600);
+
+                // Parallax sur l'image (pour simuler le background-attachment: fixed)
+                // L'image descend à moitié de la vitesse du scroll
+                if (heroImage) {
+                    heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
             });
 
             console.log('✅ Effet parallax initialisé');
+        },
+
+        /**
+         * Initialiser le bouton de défilement vers le bas
+         */
+        initScrollDown: function() {
+            const scrollBtn = document.querySelector('.scroll-down');
+            
+            if (scrollBtn) {
+                scrollBtn.addEventListener('click', () => {
+                    const nextSection = document.querySelector('#destinations') || document.querySelector('section:nth-of-type(2)');
+                    
+                    if (nextSection) {
+                        const offsetTop = nextSection.offsetTop - 80; // Compenser la navbar
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+                console.log('✅ Scroll Down initialisé');
+            }
         },
 
         /**
@@ -184,6 +218,7 @@
             this.initTestimonialsCarousel();
             this.handleNewsletterForm();
             this.initParallaxEffect();
+            this.initScrollDown();
 
             console.log('✅ Page d\'accueil initialisée');
         }
