@@ -225,7 +225,10 @@
          * Initialiser Lightbox si présent
          */
         initLightbox: function() {
-            if (typeof lightbox !== 'undefined') {
+            // Vérifier si Lightbox est chargé via jQuery
+            if (typeof $ !== 'undefined' && $.fn.lightbox !== 'undefined') {
+                console.log('✅ Lightbox détecté et prêt');
+            } else if (typeof lightbox !== 'undefined') {
                 lightbox.option({
                     'resizeDuration': 200,
                     'wrapAround': true,
@@ -233,6 +236,9 @@
                     'fadeDuration': 300,
                     'imageFadeDuration': 300
                 });
+                console.log('✅ Lightbox configuré');
+            } else {
+                console.warn('⚠️ Lightbox non détecté');
             }
         }
     };
