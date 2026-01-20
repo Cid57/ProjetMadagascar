@@ -1,0 +1,160 @@
+/**
+ * ==========================================
+ * EXCURSIONS PAGE MOBILE - VERSION RESPONSIVE
+ * ==========================================
+ *
+ * Fichier: excursions-mobile.css
+ * Description: Styles responsive pour la page excursions.html
+ * Version: 1.0.0
+ *
+ * Breakpoints:
+ * - Tablette: max-width 992px
+ * - Mobile: max-width 768px
+ * - Petit mobile: max-width 480px
+ * ==========================================
+ */
+
+/* ==========================================
+   TABLETTE (max-width: 992px)
+   ========================================== */
+@media (max-width: 992px) {
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-4xl);
+    }
+
+    .feature-card-simple {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================
+   MOBILE (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hero__content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-3xl);
+        margin-bottom: var(--spacing-sm) !important;
+    }
+
+    .hero__content p {
+        font-size: var(--fs-base) !important;
+        margin-bottom: var(--spacing-lg) !important;
+    }
+
+    .scroll-down {
+        display: none; /* Hide scroll indicator on small mobile */
+    }
+
+    /* Section Headers */
+    .section {
+        padding: var(--spacing-xl) 0 !important;
+    }
+
+    .display-4 {
+        font-size: var(--fs-2xl) !important;
+    }
+
+    .subtitle {
+        font-size: var(--fs-xs);
+        gap: 10px;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+        width: 25px;
+    }
+
+    /* Feature Cards */
+    .feature-card-simple {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .feature-card-simple .icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    /* Excursion Cards */
+    .excursion-thumb {
+        height: 200px;
+    }
+
+    .excursion-body {
+        padding: var(--spacing-md);
+    }
+
+    .excursion-body h3 {
+        font-size: var(--fs-xl);
+    }
+
+    .excursion-price {
+        font-size: var(--fs-lg);
+    }
+}
+
+/* ==========================================
+   PETIT MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    /* Hero */
+    .hero {
+        min-height: 45vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    .hero__content p {
+        font-size: var(--fs-sm) !important;
+    }
+
+    /* Section titles */
+    .display-4 {
+        font-size: var(--fs-xl) !important;
+    }
+
+    /* Padding adjustments */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Feature Cards */
+    .feature-card-simple {
+        padding: 1.25rem;
+    }
+
+    .feature-card-simple h3 {
+        font-size: var(--fs-base);
+    }
+
+    /* Excursion Cards */
+    .excursion-card {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .excursion-body h3 {
+        font-size: var(--fs-lg);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: var(--fs-sm);
+    }
+}

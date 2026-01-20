@@ -1,0 +1,187 @@
+/**
+ * ==========================================
+ * PAGE VISITES MOBILE - VERSION RESPONSIVE
+ * ==========================================
+ *
+ * Fichier: visites-mobile.css
+ * Description: Styles responsive pour la page visites.html
+ * Version: 1.0.0
+ *
+ * Breakpoints:
+ * - Tablette: max-width 992px
+ * - Mobile: max-width 768px
+ * - Petit mobile: max-width 480px
+ * ==========================================
+ */
+
+/* ==========================================
+   TABLETTE (max-width: 992px)
+   ========================================== */
+@media (max-width: 992px) {
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-4xl);
+    }
+
+    /* Grids to 2 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experiences-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================
+   MOBILE (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hero__content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-3xl);
+        margin-bottom: var(--spacing-sm) !important;
+    }
+
+    .hero__content p {
+        font-size: var(--fs-base) !important;
+        margin-bottom: var(--spacing-lg) !important;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    /* Section Headers */
+    .section {
+        padding: var(--spacing-xl) 0 !important;
+    }
+
+    .section-title, .display-4 {
+        font-size: var(--fs-2xl) !important;
+    }
+
+    .subtitle {
+        font-size: var(--fs-xs);
+    }
+
+    .section-description {
+        font-size: var(--fs-base);
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Filters */
+    .filters .d-flex {
+        gap: 10px !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        /* Hide scrollbar */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .filters .d-flex::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-filter {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .gallery-card {
+        height: 250px;
+    }
+
+    /* Experiences */
+    .experiences-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Top Destinations */
+    .destination-card-v2 {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .destination-image {
+        height: 200px;
+    }
+
+    /* Weather / Dashboard Cards */
+    .weather-dash-card {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .dash-header {
+        padding: 15px;
+    }
+
+    .dash-body {
+        padding: 15px;
+    }
+
+    .dash-stats {
+        gap: 10px;
+    }
+
+    /* Circuits */
+    .circuit-card {
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Tips */
+    .tip-card-pro {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* ==========================================
+   PETIT MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+    /* Hero */
+    .hero {
+        min-height: 45vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    .display-4 {
+        font-size: var(--fs-xl) !important;
+    }
+
+    /* Gallery Card overlay always visible or different style? 
+       Keeping hover/tap for now but adjusting text size */
+    .gallery-card__overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Stats in weather card */
+    .stat-val {
+        font-size: 0.9rem;
+    }
+}

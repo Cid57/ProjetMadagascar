@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -48,13 +48,26 @@
     <link rel="stylesheet" href="../assets/css/components/navbar.css" />
     <link rel="stylesheet" href="../assets/css/components/footer.css" />
     <link rel="stylesheet" href="../assets/css/components/buttons.css" />
-    <link rel="stylesheet" href="../assets/css/components/floating-buttons.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/floating-buttons.css"
+    />
     <link rel="stylesheet" href="../assets/css/components/chat-widget.css" />
     <link rel="stylesheet" href="../assets/css/components/loader.css" />
     <link rel="stylesheet" href="../assets/css/pages/excursions.css" />
 
     <!-- CSS Responsive -->
     <link rel="stylesheet" href="../assets/css/components/navbar-mobile.css" />
+    <link rel="stylesheet" href="../assets/css/components/buttons-mobile.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/floating-buttons-mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/chat-widget-mobile.css"
+    />
+    <link rel="stylesheet" href="../assets/css/pages/excursions-mobile.css" />
   </head>
   <body>
     <!-- Loader -->
@@ -108,52 +121,85 @@
 
     <!-- Hero Section -->
     <section class="hero" id="accueil">
-        <div class="hero-image">
-            <img src="../assets/images/visites/header-excursion.jpg" alt="Aventure à Madagascar">
+      <div class="hero-image">
+        <img
+          src="../assets/images/visites/header-excursion.jpg"
+          alt="Aventure à Madagascar"
+        />
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="container">
+          <h1
+            class="display-3 mb-4 text-white"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Excursions & Aventures
+          </h1>
+          <p
+            class="lead mb-5 text-white"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            Découvrez les trésors cachés de Madagascar à travers nos circuits
+            guidés
+          </p>
         </div>
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <div class="container">
-                <h1 class="display-3 mb-4 text-white" data-aos="fade-up" data-aos-delay="100">Excursions & Aventures</h1>
-                <p class="lead mb-5 text-white" data-aos="fade-up" data-aos-delay="300">
-                    Découvrez les trésors cachés de Madagascar à travers nos circuits guidés
-                </p>
-            </div>
-        </div>
-        <div class="scroll-down">
-            <div class="mouse"><div class="wheel"></div></div>
-            <div class="arrow-scroll"><span></span><span></span><span></span></div>
-        </div>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse"><div class="wheel"></div></div>
+        <div class="arrow-scroll"><span></span><span></span><span></span></div>
+      </div>
     </section>
 
     <!-- Section Expertise (Introduction) -->
     <section class="section py-5 bg-white">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <span class="subtitle">EXPERTISE</span>
-            <h2 class="display-4 mb-3">Pourquoi voyager avec nous ?</h2>
-            <p class="lead text-muted mx-auto" style="max-width: 800px;">Nous créons des moments authentiques dans le respect de la nature et de la culture malgache.</p>
+          <span class="subtitle">EXPERTISE</span>
+          <h2 class="display-4 mb-3">Pourquoi voyager avec nous ?</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 800px">
+            Nous créons des moments authentiques dans le respect de la nature et
+            de la culture malgache.
+          </p>
         </div>
         <div class="row g-4">
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="feature-card-simple">
               <div class="icon-box">
                 <i class="fas fa-user-tie"></i>
               </div>
               <h3>Guides Experts</h3>
-              <p>Des locaux passionnés qui connaissent chaque recoin de l'île.</p>
+              <p>
+                Des locaux passionnés qui connaissent chaque recoin de l'île.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="feature-card-simple">
               <div class="icon-box">
                 <i class="fas fa-users"></i>
               </div>
               <h3>Immersion Totale</h3>
-              <p>Des petits groupes pour favoriser les rencontres et l'échange.</p>
+              <p>
+                Des petits groupes pour favoriser les rencontres et l'échange.
+              </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="feature-card-simple">
               <div class="icon-box">
                 <i class="fas fa-leaf"></i>
@@ -162,7 +208,11 @@
               <p>Une démarche de tourisme durable certifiée.</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="feature-card-simple">
               <div class="icon-box">
                 <i class="fas fa-shield-alt"></i>
@@ -179,64 +229,111 @@
     <section class="section py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <span class="subtitle">AVENTURES</span>
-            <h2 class="display-4 mb-3">Nos Circuits Incontournables</h2>
-            <p class="lead text-muted">Sélectionnés pour leur beauté et leur authenticité</p>
+          <span class="subtitle">AVENTURES</span>
+          <h2 class="display-4 mb-3">Nos Circuits Incontournables</h2>
+          <p class="lead text-muted">
+            Sélectionnés pour leur beauté et leur authenticité
+          </p>
         </div>
         <div class="row g-4">
           <!-- Carte 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="excursion-card">
               <div class="excursion-thumb">
-                <img src="../assets/images/visites/baobabs-2708289_1280.jpg" alt="Baobabs">
+                <img
+                  src="../assets/images/visites/baobabs-2708289_1280.jpg"
+                  alt="Baobabs"
+                />
                 <div class="excursion-badges">
-                    <span class="badge bg-success">Facile</span>
-                    <span class="badge bg-dark">4h</span>
+                  <span class="badge bg-success">Facile</span>
+                  <span class="badge bg-dark">4h</span>
                 </div>
               </div>
               <div class="excursion-body">
                 <h3>Randonnée des Baobabs</h3>
-                <p>Une marche magique au cœur de l'allée millénaire au coucher du soleil.</p>
+                <p>
+                  Une marche magique au cœur de l'allée millénaire au coucher du
+                  soleil.
+                </p>
                 <div class="excursion-price">Dès 45€</div>
-                <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#reservationModal">Réserver</button>
+                <button
+                  class="btn btn-outline-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reservationModal"
+                >
+                  Réserver
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Carte 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="excursion-card">
               <div class="excursion-thumb">
-                <img src="../assets/images/visites/plage1.jpg" alt="Nosy Be">
+                <img src="../assets/images/visites/plage1.jpg" alt="Nosy Be" />
                 <div class="excursion-badges">
-                    <span class="badge bg-warning text-dark">Modéré</span>
-                    <span class="badge bg-dark">6h</span>
+                  <span class="badge bg-warning text-dark">Modéré</span>
+                  <span class="badge bg-dark">6h</span>
                 </div>
               </div>
               <div class="excursion-body">
                 <h3>Sanctuaire Marin</h3>
-                <p>Exploration des récifs coralliens et nage avec les tortues géantes.</p>
+                <p>
+                  Exploration des récifs coralliens et nage avec les tortues
+                  géantes.
+                </p>
                 <div class="excursion-price">Dès 85€</div>
-                <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#reservationModal">Réserver</button>
+                <button
+                  class="btn btn-outline-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reservationModal"
+                >
+                  Réserver
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Carte 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="excursion-card">
               <div class="excursion-thumb">
-                <img src="../assets/images/visites/excursions/tsingy.jpg" alt="Tsingy">
+                <img
+                  src="../assets/images/visites/excursions/tsingy.jpg"
+                  alt="Tsingy"
+                />
                 <div class="excursion-badges">
-                    <span class="badge bg-danger">Difficile</span>
-                    <span class="badge bg-dark">8h</span>
+                  <span class="badge bg-danger">Difficile</span>
+                  <span class="badge bg-dark">8h</span>
                 </div>
               </div>
               <div class="excursion-body">
                 <h3>Labyrinthe Minéral</h3>
-                <p>Aventure sportive et spectaculaire dans les pics calcaires du Tsingy.</p>
+                <p>
+                  Aventure sportive et spectaculaire dans les pics calcaires du
+                  Tsingy.
+                </p>
                 <div class="excursion-price">Dès 120€</div>
-                <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#reservationModal">Réserver</button>
+                <button
+                  class="btn btn-outline-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#reservationModal"
+                >
+                  Réserver
+                </button>
               </div>
             </div>
           </div>
@@ -250,7 +347,10 @@
         <div class="footer-content">
           <div class="footer-section">
             <h3>À propos de Madagascar</h3>
-            <p>Découvrez la beauté unique de Madagascar, son incroyable biodiversité et ses paysages à couper le souffle.</p>
+            <p>
+              Découvrez la beauté unique de Madagascar, son incroyable
+              biodiversité et ses paysages à couper le souffle.
+            </p>
             <div class="social-links">
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
@@ -271,9 +371,13 @@
           <div class="footer-section">
             <h3>Contact</h3>
             <div class="contact-info">
-              <p><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar
+              </p>
               <p><i class="fas fa-phone"></i> +261 20 12 345 67</p>
-              <p><i class="fas fa-envelope"></i> info@madagascar-tourisme.com</p>
+              <p>
+                <i class="fas fa-envelope"></i> info@madagascar-tourisme.com
+              </p>
             </div>
           </div>
           <div class="footer-section">
@@ -288,47 +392,57 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Madagascar Tourisme. Tous droits réservés.</p>
+          <p>&copy; 2026 Madagascar Tourisme. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
 
     <!-- Boutons Flottants -->
     <a href="#" class="floating-btn back-to-top" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
     <a href="#" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp"></i>
     </a>
     <a href="#" class="floating-btn email-btn" aria-label="Email">
-        <i class="fas fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </a>
 
     <!-- Modal Reservation -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Réserver une excursion</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Contactez-nous pour organiser votre aventure sur mesure.</p>
-                    <!-- Formulaire simplifié -->
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Nom</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="reservationModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Réserver une excursion</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Contactez-nous pour organiser votre aventure sur mesure.</p>
+            <!-- Formulaire simplifié -->
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nom</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" />
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -336,7 +450,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    
+
     <!-- Scripts Personnalisés -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/navbar.js"></script>

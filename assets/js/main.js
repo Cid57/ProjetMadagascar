@@ -275,7 +275,8 @@
                 easing: 'ease-in-out',
                 once: false,
                 mirror: false,
-                offset: 100
+                offset: 100,
+                disable: 'mobile'
             });
         }
 
