@@ -32,7 +32,7 @@
       rel="stylesheet"
     />
 
-    <!-- CSS -->
+    <!-- CSS Externes -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -41,6 +41,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -49,6 +50,33 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
+
+    <!-- CSS Personnalisés -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/components/hero.css" />
+    <link rel="stylesheet" href="../assets/css/components/footer.css" />
+    <link rel="stylesheet" href="../assets/css/components/buttons.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/floating-buttons.css"
+    />
+    <link rel="stylesheet" href="../assets/css/components/chat-widget.css" />
+    <link rel="stylesheet" href="../assets/css/components/loader.css" />
+    <link rel="stylesheet" href="../assets/css/pages/contact.css" />
+
+    <!-- CSS Responsive -->
+    <link rel="stylesheet" href="../assets/css/components/navbar-mobile.css" />
+    <link rel="stylesheet" href="../assets/css/components/buttons-mobile.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/floating-buttons-mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/components/chat-widget-mobile.css"
+    />
+    <link rel="stylesheet" href="../assets/css/pages/contact-mobile.css" />
   </head>
   <body>
     <!-- Loader -->
@@ -98,23 +126,36 @@
     </nav>
 
     <!-- Hero Section -->
-    <section
-      class="hero hero--small"
-      style="
-        background-image: url(&quot;../assets/images/contact/header-contact.jpg&quot;);
-        background-size: cover;
-        background-position: center;
-      "
-    >
+    <section class="hero" id="contact">
+      <div class="hero-image">
+        <img
+          src="../assets/images/contact/header-contact.jpg"
+          alt="Contactez-nous"
+        />
+      </div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <div class="container">
-          <h1 class="with-underline">Contactez-nous</h1>
-          <p>
+          <h1
+            class="display-3 mb-4 text-white"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Contactez-nous
+          </h1>
+          <p
+            class="lead mb-5 text-white"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             Notre équipe est là pour vous aider à planifier votre voyage à
             Madagascar
           </p>
         </div>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse"><div class="wheel"></div></div>
+        <div class="arrow-scroll"><span></span><span></span><span></span></div>
       </div>
     </section>
 
@@ -123,7 +164,8 @@
       <div class="container">
         <div class="row g-4 mb-5">
           <!-- Adresse -->
-          <div class="col-md-4">
+          <!-- Adresse -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-info-card">
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
@@ -134,7 +176,7 @@
             </div>
           </div>
           <!-- Email -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="contact-info-card">
               <div class="contact-icon">
                 <i class="fas fa-envelope"></i>
@@ -145,7 +187,7 @@
             </div>
           </div>
           <!-- Téléphone -->
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="contact-info-card">
               <div class="contact-icon">
                 <i class="fas fa-phone"></i>
@@ -159,7 +201,7 @@
 
         <div class="row g-4">
           <!-- Formulaire de contact -->
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <div class="contact-form bg-white p-4 rounded shadow-sm">
@@ -232,7 +274,7 @@
           </div>
 
           <!-- Carte -->
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <div class="map-container mb-4">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242638.21514195518!2d47.41015549771733!3d-18.91311785599945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07de34f1f4eb3%3A0xdf110608bcc082f9!2sAntananarivo%2C%20Madagascar!5e0!3m2!1sfr!2sfr!4v1703786155599!5m2!1sfr!2sfr"
@@ -248,9 +290,10 @@
     <!-- Réservation Rapide -->
     <section class="quick-booking-section py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">Réservation Rapide</h2>
-        <div class="booking-form bg-white p-4 rounded shadow-sm">
-          <form id="quickBookingForm" class="row g-3">
+        <h2 class="text-center mb-5" data-aos="fade-up">Réservation Rapide</h2>
+        <div class="booking-form-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="booking-form">
+            <form id="quickBookingForm" class="row g-3">
             <!-- Nom et Email -->
             <div class="col-md-6">
               <input
@@ -395,28 +438,124 @@
       </div>
     </footer>
 
+    <!-- Boutons Flottants -->
+    <a href="#" class="floating-btn back-to-top" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a
+      href="https://wa.me/261201234567"
+      class="floating-btn whatsapp-btn"
+      aria-label="Contactez-nous sur WhatsApp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a
+      href="mailto:info@madagascar-tourisme.com"
+      class="floating-btn email-btn"
+      aria-label="Envoyez-nous un email"
+    >
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+      <div id="chatHeader" class="chat-header">
+        <div class="chat-header-text">
+          <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-title">
+          <h3>Découvrez Madagascar</h3>
+          <p>Votre guide virtuel pour explorer l'île</p>
+        </div>
+      </div>
+      <div id="chatBody" class="chat-body">
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Écrivez votre message..."
+          />
+          <button id="sendButton">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button
+      id="chatToggleBtn"
+      class="chat-toggle-btn"
+      aria-label="Ouvrir le chat"
+    >
+      <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Scripts Externes -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Scripts Personnalisés -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/floating-buttons.js"></script>
+    <script src="../assets/js/chat.js"></script>
+
     <script>
-      // Active link
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".nav-link");
-        const currentLocation = window.location.pathname;
-
-        navLinks.forEach((link) => {
-          if (link.getAttribute("href") === currentLocation.split("/").pop()) {
-            link.classList.add("active");
-          }
-        });
-      });
-
       // Form submission
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          // Ici vous pouvez ajouter le code pour envoyer le formulaire
-          alert("Message envoyé avec succès !");
-          this.reset();
+          // Simulation d'envoi
+          const btn = this.querySelector('button[type="submit"]');
+          const originalText = btn.innerHTML;
+
+          btn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+          btn.disabled = true;
+
+          setTimeout(() => {
+            document.getElementById("contactSuccess").style.display = "block";
+            this.reset();
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+
+            // Masquer le message après 5 secondes
+            setTimeout(() => {
+              document.getElementById("contactSuccess").style.display = "none";
+            }, 5000);
+          }, 1500);
         });
+
+      // Quick Booking submission
+      const quickBookingForm = document.getElementById("quickBookingForm");
+      if (quickBookingForm) {
+        quickBookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const btn = this.querySelector('button[type="submit"]');
+          const originalText = btn.innerHTML;
+
+          btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+          btn.disabled = true;
+
+          setTimeout(() => {
+            alert(
+              "Demande de devis envoyée avec succès ! Nous vous contacterons rapidement.",
+            );
+            this.reset();
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }, 1500);
+        });
+      }
     </script>
   </body>
 </html>

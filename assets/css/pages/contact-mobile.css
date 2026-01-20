@@ -1,0 +1,110 @@
+/* ==========================================
+   CONTACT MOBILE CSS - Styles Responsives
+   ========================================== */
+
+@media (max-width: 991px) {
+    /* --- Section Hero --- */
+    .hero--small {
+        min-height: 40vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-3xl);
+    }
+
+    .hero__content p {
+        font-size: var(--fs-md);
+    }
+
+    /* --- Cartes d'information --- */
+    .contact-info-card {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* --- Formulaire & Map --- */
+    .contact-form {
+        padding: var(--spacing-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .contact-form h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .map-container {
+        min-height: 350px;
+        border-width: 4px;
+    }
+
+    /* --- Réservation Rapide --- */
+    .booking-form {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    /* --- Général --- */
+    .contact-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    /* --- Section Hero --- */
+    .hero--small {
+        min-height: 35vh;
+    }
+
+    .hero__content h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    /* --- Cartes d'information --- */
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .contact-info-card h3 {
+        font-size: var(--fs-lg);
+    }
+
+    .contact-info-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* --- Formulaire --- */
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* --- Map --- */
+    .map-container {
+        min-height: 300px;
+    }
+
+    /* --- Réservation Rapide --- */
+    .quick-booking-section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .quick-booking-section h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .booking-form {
+        padding: var(--spacing-lg);
+    }
+}
