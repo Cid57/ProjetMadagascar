@@ -271,11 +271,11 @@
         // Initialiser AOS (Animate On Scroll)
         if (typeof AOS !== 'undefined') {
             AOS.init({
-                duration: 1000,
-                easing: 'ease-in-out',
-                once: false,
-                mirror: false,
-                offset: 100,
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50,
+                delay: 0,
                 disable: 'mobile'
             });
         }

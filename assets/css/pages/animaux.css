@@ -162,19 +162,38 @@
    2.5 SECTION ÉCOSYSTÈME
    ========================================== */
 
+/* ==========================================
+   2.5 SECTION ÉCOSYSTÈME (DESIGN EXPERT UX)
+   ========================================== */
+
 .ecosystem-outer-section {
     padding: var(--spacing-4xl) 0;
-    background: #f8f9fa;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Élément décoratif d'arrière-plan */
+.ecosystem-outer-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(46, 125, 50, 0.05) 0%, transparent 70%);
+    z-index: -1;
 }
 
 .ecosystem-section {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ecosystem-section .section-header {
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-4xl);
     text-align: center;
 }
 
@@ -197,15 +216,16 @@
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
-    height: 2px;
+    height: 3px;
     background: var(--gradient-secondary);
+    border-radius: 3px;
 }
 
 .ecosystem-section h2 {
     color: var(--dark-color);
     font-size: var(--fs-4xl);
     margin-bottom: var(--spacing-md);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .ecosystem-section p {
@@ -216,51 +236,70 @@
     margin: 0 auto;
 }
 
-/* Features Écosystème */
+/* Features Écosystème - Design Staggered */
 .ecosystem-features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-2xl);
-    margin-top: var(--spacing-4xl);
+    gap: 40px;
+    margin-top: 80px; /* Espace pour les icônes flottantes */
+    align-items: center;
 }
 
 .feature-item {
     background: var(--white);
-    padding: var(--spacing-3xl) var(--spacing-xl);
+    padding: 0 var(--spacing-xl) var(--spacing-2xl); /* Padding top 0 car icône flottante */
     border-radius: var(--radius-xl);
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
     position: relative;
-    top: 0;
+    margin-top: 0;
+}
+
+/* Carte du milieu surélevée */
+.feature-item:nth-child(2) {
+    transform: translateY(-30px);
+    box-shadow: 0 25px 50px rgba(46, 125, 50, 0.1);
+    z-index: 2;
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 .feature-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.15);
-    border-color: var(--secondary-color);
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(46, 125, 50, 0.15);
+}
+
+/* Hover spécifique pour la carte du milieu */
+.feature-item:nth-child(2):hover {
+    transform: translateY(-45px);
+    box-shadow: 0 35px 60px rgba(46, 125, 50, 0.2);
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--spacing-xl);
-    background: rgba(46, 125, 50, 0.06);
+    width: 100px;
+    height: 100px;
+    margin: -50px auto var(--spacing-lg); /* Marge négative pour l'effet flottant */
+    background: var(--white);
     color: var(--secondary-color);
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 3;
+    border: 5px solid #f8f9fa; /* Bordure pour fondre avec le background */
 }
 
 .feature-item:hover .feature-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: var(--secondary-color);
+    transform: scale(1.1) rotate(10deg);
+    background: var(--gradient-secondary);
     color: var(--white);
-    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.25);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.3);
+    border-color: var(--white);
 }
 
 .feature-item h3 {
